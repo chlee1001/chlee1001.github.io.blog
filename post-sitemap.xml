@@ -9,6 +9,94 @@
 
 
     <url>
+        <loc>https://chlee1001.github.io/2021/07/30/BAEKJOON-10820-21-07-30/</loc>
+        <lastmod>2021-08-05T07:32:21.359Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
+        <loc>https://chlee1001.github.io/2021/08/04/BAEKJOON-1720-21-08-04/</loc>
+        <lastmod>2021-08-05T07:30:21.297Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
+        <loc>https://chlee1001.github.io/2021/08/02/BAEKJOON-10162-21-08-02/</loc>
+        <lastmod>2021-08-05T07:29:00.514Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
+        <loc>https://chlee1001.github.io/2021/08/03/BAEKJOON-1789-21-08-03/</loc>
+        <lastmod>2021-08-05T07:28:55.540Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
+        <loc>https://chlee1001.github.io/2021/08/05/AWS-MYSQL2-21-08-05/</loc>
+        <lastmod>2021-08-05T07:18:08.974Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
+        <loc>https://chlee1001.github.io/2021/08/05/AWS-MYSQL1-21-08-05/</loc>
+        <lastmod>2021-08-05T06:56:50.744Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
+        <loc>https://chlee1001.github.io/2021/06/16/AWS-2-21-06-16/</loc>
+        <lastmod>2021-08-05T06:31:31.800Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
+        <loc>https://chlee1001.github.io/2021/05/05/AWS-1-21-05-05/</loc>
+        <lastmod>2021-08-05T06:22:43.595Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
+        <loc>https://chlee1001.github.io/2021/07/26/GITHUB-Branch-21-07-26/</loc>
+        <lastmod>2021-08-05T06:17:42.637Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
+        <loc>https://chlee1001.github.io/2021/07/21/GITHUB-Korean-21-07-21/</loc>
+        <lastmod>2021-08-05T06:17:38.331Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
+        <loc>https://chlee1001.github.io/1999/07/13/Docekr-Install1-21-07-13/</loc>
+        <lastmod>2021-08-05T06:16:39.535Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
         <loc>https://chlee1001.github.io/2021/08/04/21-08-04-IT_News/</loc>
         <lastmod>2021-08-04T01:38:44.772Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -83,22 +171,6 @@
     <url>
         <loc>https://chlee1001.github.io/2021/07/29/RASP-CRIU-21-07-29/</loc>
         <lastmod>2021-07-29T15:21:54.342Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-
-    </url>
-
-    <url>
-        <loc>https://chlee1001.github.io/2021/07/26/GITHUB-Branch-21-07-26/</loc>
-        <lastmod>2021-07-29T15:03:59.563Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-
-    </url>
-
-    <url>
-        <loc>https://chlee1001.github.io/2021/07/21/GITHUB-Korean-21-07-21/</loc>
-        <lastmod>2021-07-29T15:03:56.279Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
 
@@ -451,14 +523,6 @@
     <url>
         <loc>https://chlee1001.github.io/2021/07/16/SPRINGBOOT-JPA-21-07-16/</loc>
         <lastmod>2021-07-16T11:12:37.625Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-
-    </url>
-
-    <url>
-        <loc>https://chlee1001.github.io/1999/07/13/Docekr-Install1-21-07-13/</loc>
-        <lastmod>2021-07-16T09:39:16.928Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
 
@@ -921,14 +985,6 @@
     </url>
 
     <url>
-        <loc>https://chlee1001.github.io/2021/06/16/AWS-2-21-06-16/</loc>
-        <lastmod>2021-06-16T08:35:20.369Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-
-    </url>
-
-    <url>
         <loc>https://chlee1001.github.io/2021/06/16/21-06-16-IT_News/</loc>
         <lastmod>2021-06-16T04:34:20.207Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1235,14 +1291,6 @@
     <url>
         <loc>https://chlee1001.github.io/2021/05/06/BAEKJOON-15903-21-05-06/</loc>
         <lastmod>2021-05-06T05:22:52.573Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-
-    </url>
-
-    <url>
-        <loc>https://chlee1001.github.io/2021/05/05/AWS-1-21-05-05/</loc>
-        <lastmod>2021-05-04T23:29:25.913Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
 
