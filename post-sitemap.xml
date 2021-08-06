@@ -9,6 +9,14 @@
 
 
     <url>
+        <loc>https://chlee1001.github.io/2021/08/06/21-08-04-IT_News/</loc>
+        <lastmod>2021-08-06T11:26:24.580Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
         <loc>https://chlee1001.github.io/2021/07/30/BAEKJOON-10820-21-07-30/</loc>
         <lastmod>2021-08-05T07:32:21.359Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -91,14 +99,6 @@
     <url>
         <loc>https://chlee1001.github.io/1999/07/13/Docekr-Install1-21-07-13/</loc>
         <lastmod>2021-08-05T06:16:39.535Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-
-    </url>
-
-    <url>
-        <loc>https://chlee1001.github.io/2021/08/04/21-08-04-IT_News/</loc>
-        <lastmod>2021-08-04T01:38:44.772Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
 
