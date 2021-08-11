@@ -9,8 +9,64 @@
     <atom:link href="https://chlee1001.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Chaehyeon&#39;s Dev Blog</description>
-    <pubDate>Wed, 11 Aug 2021 00:06:42 GMT</pubDate>
+    <pubDate>Wed, 11 Aug 2021 16:45:53 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[백준] 14659번 한조서열정리하고옴ㅋㅋ</title>
+      <link>https://chlee1001.github.io/2021/08/11/BAEKJOON-14659-21-08-11/</link>
+      <guid>https://chlee1001.github.io/2021/08/11/BAEKJOON-14659-21-08-11/</guid>
+      <pubDate>Wed, 11 Aug 2021 14:26:50 GMT</pubDate>
+      
+      <description>&lt;p&gt;출처: &lt;a href=&quot;https://www.acmicpc.net/problem/14659&quot;&gt;[백준] 14659번 한조서열정리하고옴ㅋㅋ&lt;/a&gt; &lt;/p&gt;
+&lt;hr&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;left&quot;&gt;시간 제한&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;메모리 제한&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;제출&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;정답&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;맞은 사람&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;정답 비율&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;2 초&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;256 MB&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;4488&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;1959&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;1548&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;43.180%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;문제&quot;&gt;&lt;a href=&quot;#문제&quot; class=&quot;headerlink&quot; title=&quot;문제&quot;&gt;&lt;/a&gt;문제&lt;/h2&gt;</description>
+      
+      
+      
+      <content:encoded><![CDATA[<p>출처: <a href="https://www.acmicpc.net/problem/14659">[백준] 14659번 한조서열정리하고옴ㅋㅋ</a> </p><hr><table><thead><tr><th align="left">시간 제한</th><th align="left">메모리 제한</th><th align="left">제출</th><th align="left">정답</th><th align="left">맞은 사람</th><th align="left">정답 비율</th></tr></thead><tbody><tr><td align="left">2 초</td><td align="left">256 MB</td><td align="left">4488</td><td align="left">1959</td><td align="left">1548</td><td align="left">43.180%</td></tr></tbody></table><hr><h2 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h2><p>“반갑다. 내 이름은 반고흐#31555! 조선 최고의 활잡이지. 오늘도 난 금강산 위에서 적들을 노리고 있지. 내 앞에 있는 적들이라면 누구도 놓치지 않아! 좋아, 이제 곧 월식이 시작되는군. 월식이 시작되면 용이 적들을 집어삼킬 것이다. 잘 봐두어라! 마장동 활잡이 반고흐#31555님의 실력을-!”</p><p>반고흐#31555는 자기 뒤쪽 봉우리에 덩기#3958이 있음을 전혀 모르고 있었다. 덩기#3958도 반고흐#31555와 마찬가지로 월식이 시작되면 용을 불러내어 눈앞에 있는 다른 활잡이들을 모두 처치할 생각이다. 사실, 반고흐#31555와 덩기#3958 뿐만 아니라 금강 산맥의 N개 봉우리에 있는 모든 활잡이들이 같은 생각을 가지고 있다.</p><p>반고흐#31555가 있는 금강 산맥에는 총 N개의 봉우리가 있고, 모든 봉우리마다 한 명의 활잡이가 서서 월식이 시작되기만을 기다리고 있다. 다만, 애석하게도, 천계에 맥도날드가 생겨 용들이 살이 찐 탓에 용들은 자신보다 낮은 봉우리에 서있는 적들만 처치할 수 있게 되었다. 또한 용들은 처음 출발한 봉우리보다 높은 봉우리를 만나면 그대로 공격을 포기하고 금강산자락에 드러누워 낮잠을 청한다고 한다. 봉우리의 높이는 모두 다르고 모든 용들은 오른쪽으로만 나아가며, 중간에 방향을 틀거나, 봉우리가 무너지거나 솟아나는 경우는 없다.</p><p>“달에 마구니가 끼었구나.”</p><p>드디어 월식이 시작됐다! 과연 이들 활잡이 중 최고의 활잡이는 누구일까? 최고의 활잡이가 최대 몇 명의 적을 처치할 수 있는지 알아보자.</p><hr><h2 id="입력"><a href="#입력" class="headerlink" title="입력"></a>입력</h2><p>첫째 줄에 봉우리의 수 겸 활잡이의 수 N이 주어진다. (1 ≤ N ≤ 30,000) 둘째 줄에 N개 봉우리의 높이가 왼쪽 봉우리부터 순서대로 주어진다. (1 ≤ 높이 ≤ 100,000) 각각 봉우리의 높이는 중복 없이 유일하다.</p><hr><h2 id="출력"><a href="#출력" class="headerlink" title="출력"></a>출력</h2><p>최고의 활잡이가 처치할 수 있는 적의 최대 숫자를 출력한다.</p><hr><h2 id="예제-입력-1"><a href="#예제-입력-1" class="headerlink" title="예제 입력 1"></a>예제 입력 1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">7</span><br><span class="line">6 4 10 2 5 7 11</span><br></pre></td></tr></table></figure><h2 id="예제-출력-1"><a href="#예제-출력-1" class="headerlink" title="예제 출력 1"></a>예제 출력 1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure><hr><h2 id="힌트"><a href="#힌트" class="headerlink" title="힌트"></a>힌트</h2><p>높이 10 봉우리에 있는 활잡이가 높이 2, 5, 7 봉우리에 있는 활잡이들을 처치할 수 있다.</p><hr><h2 id="출처"><a href="#출처" class="headerlink" title="출처"></a>출처</h2><ul><li><a href="https://www.acmicpc.net/category/97">High School</a> &gt; <a href="https://www.acmicpc.net/category/394">선린인터넷고등학교</a> &gt; <a href="https://www.acmicpc.net/category/detail/1749">제1회 천하제일 코딩대회 본선</a> J번<ul><li>데이터를 추가한 사람: <a href="https://www.acmicpc.net/user/YunGoon">YunGoon</a></li></ul></li></ul><hr><h2 id="알고리즘-분류"><a href="#알고리즘-분류" class="headerlink" title="알고리즘 분류"></a>알고리즘 분류</h2><ul><li><a href="https://www.acmicpc.net/problem/tag/33">그리디 알고리즘</a></li></ul><hr><h2 id="소스코드-최초"><a href="#소스코드-최초" class="headerlink" title="소스코드 (최초)"></a>소스코드 (최초)</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="built_in">input</span> = sys.stdin.readline</span><br><span class="line"></span><br><span class="line">N = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">archer = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">int</span>, <span class="built_in">input</span>().split()))</span><br><span class="line">scores = [<span class="number">0</span>] * N</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i + <span class="number">1</span>, N):</span><br><span class="line">        <span class="keyword">if</span> archer[i] &lt; archer[j]:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            scores[i] += <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">max</span>(scores))</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="소스코드-수정"><a href="#소스코드-수정" class="headerlink" title="소스코드 (수정)"></a>소스코드 (수정)</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="built_in">input</span> = sys.stdin.readline</span><br><span class="line"></span><br><span class="line">N = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">heights = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">int</span>, <span class="built_in">input</span>().split()))</span><br><span class="line">maxHeight = <span class="number">0</span></span><br><span class="line">score = <span class="number">0</span></span><br><span class="line">result = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> height <span class="keyword">in</span> heights:</span><br><span class="line">    <span class="keyword">if</span> height &gt; maxHeight:</span><br><span class="line">        maxHeight = height</span><br><span class="line">        score = <span class="number">0</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        score += <span class="number">1</span></span><br><span class="line">    result = <span class="built_in">max</span>(result, score)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(result)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      
+      <category domain="https://chlee1001.github.io/categories/Algorithm/">Algorithm</category>
+      
+      <category domain="https://chlee1001.github.io/categories/Algorithm/Python/">Python</category>
+      
+      
+      <category domain="https://chlee1001.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">알고리즘</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EB%B0%B1%EC%A4%80/">백준</category>
+      
+      <category domain="https://chlee1001.github.io/tags/Python/">Python</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EA%B7%B8%EB%A6%AC%EB%94%94%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">그리디알고리즘</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EA%B7%B8%EB%A6%AC%EB%94%94/">그리디</category>
+      
+      
+      <comments>https://chlee1001.github.io/2021/08/11/BAEKJOON-14659-21-08-11/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>2021년 08월 11일 수요일 IT뉴스</title>
@@ -59,6 +115,124 @@
       
       
       <comments>https://chlee1001.github.io/2021/08/11/21-08-11-IT_News/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[백준] 15904번 UCPC는 무엇의 약자일까?</title>
+      <link>https://chlee1001.github.io/2021/08/10/BAEKJOON-15904-21-08-10/</link>
+      <guid>https://chlee1001.github.io/2021/08/10/BAEKJOON-15904-21-08-10/</guid>
+      <pubDate>Tue, 10 Aug 2021 03:26:50 GMT</pubDate>
+      
+      <description>&lt;p&gt;출처: &lt;a href=&quot;https://www.acmicpc.net/problem/15904&quot;&gt;[백준] 15904번 UCPC는 무엇의 약자일까?&lt;/a&gt; &lt;/p&gt;
+&lt;hr&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;left&quot;&gt;시간 제한&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;메모리 제한&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;제출&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;정답&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;맞은 사람&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;정답 비율&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;1 초 (추가 시간 없음)&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;512 MB&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;5119&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;2068&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;1745&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;41.776%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;문제&quot;&gt;&lt;a href=&quot;#문제&quot; class=&quot;headerlink&quot; title=&quot;문제&quot;&gt;&lt;/a&gt;문제&lt;/h2&gt;</description>
+      
+      
+      
+      <content:encoded><![CDATA[<p>출처: <a href="https://www.acmicpc.net/problem/15904">[백준] 15904번 UCPC는 무엇의 약자일까?</a> </p><hr><table><thead><tr><th align="left">시간 제한</th><th align="left">메모리 제한</th><th align="left">제출</th><th align="left">정답</th><th align="left">맞은 사람</th><th align="left">정답 비율</th></tr></thead><tbody><tr><td align="left">1 초 (추가 시간 없음)</td><td align="left">512 MB</td><td align="left">5119</td><td align="left">2068</td><td align="left">1745</td><td align="left">41.776%</td></tr></tbody></table><hr><h2 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h2><p>UCPC는 ‘전국 대학생 프로그래밍 대회 동아리 연합 여름 대회’의 줄임말로 알려져있다. 하지만 이 줄임말이 정확히 어떻게 구성되었는지는 아무도 모른다. UCPC 2018을 준비하던 ntopia는 여러 사람들에게 UCPC가 정확히 무엇의 줄임말인지 물어보았지만, 아무도 정확한 답을 제시해주지 못했다. ntopia가 들은 몇 가지 답을 아래에 적어보았다.</p><ul><li>Union of Computer Programming Contest club contest</li><li>Union of Computer Programming contest Club contest</li><li>Union of Computer Programming contest club Contest</li><li>Union of Collegiate Programming Contest club contest</li><li>Union of Collegiate Programming contest Club contest</li><li>Union of Collegiate Programming contest club Contest</li><li>University Computer Programming Contest</li><li>University Computer Programming Club contest</li><li>University Computer Programming club Contest</li><li>University Collegiate Programming Contest</li><li>University CPC</li><li>…</li></ul><p>ntopia는 이렇게 다양한 답을 듣고는 UCPC가 무엇의 약자인지는 아무도 모른다고 결론내렸다. 적당히 슥삭해서 UCPC를 남길 수 있으면 모두 UCPC의 약자인 것이다!</p><p>문자열이 주어지면 이 문자열을 적절히 축약해서 “UCPC”로 만들 수 있는지 확인하는 프로그램을 만들어보자.</p><p>축약이라는 것은 문자열에서 임의의 문자들을 제거하는 행동을 뜻한다. 예를 들면, “apple”에서 a와 e를 지워 “ppl”로 만들 수 있고, “University Computer Programming Contest”에서 공백과 소문자를 모두 지워 “UCPC”로 만들 수 있다.</p><p>문자열을 비교할 때는 대소문자를 구분해 정확히 비교한다. 예를 들어 “UCPC”와 “UCpC”는 다른 문자열이다. 따라서 “University Computer programming Contest”를 “UCPC”로 축약할 수 있는 방법은 없다.</p><p>그나저나 UCPC는 정말 무엇의 약자였을까? 정확히 아시는 분은 제보 부탁드립니다.</p><hr><h2 id="입력"><a href="#입력" class="headerlink" title="입력"></a>입력</h2><p>첫 번째 줄에 알파벳 대소문자, 공백으로 구성된 문자열이 주어진다. 문자열의 길이는 최대 1,000자이다. 문자열의 맨 앞과 맨 끝에 공백이 있는 경우는 없고, 공백이 연속해서 2번 이상 주어지는 경우도 없다.</p><hr><h2 id="출력"><a href="#출력" class="headerlink" title="출력"></a>출력</h2><p>첫 번째 줄에 입력으로 주어진 문자열을 적절히 축약해 “UCPC”로 만들 수 있으면 “<code>I love UCPC</code>“를 출력하고, 만들 수 없으면 “<code>I hate UCPC</code>“를 출력한다.</p><hr><h2 id="예제-입력-1"><a href="#예제-입력-1" class="headerlink" title="예제 입력 1"></a>예제 입력 1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Union of Computer Programming Contest club contest</span><br></pre></td></tr></table></figure><h2 id="예제-출력-1"><a href="#예제-출력-1" class="headerlink" title="예제 출력 1"></a>예제 출력 1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">I love UCPC</span><br></pre></td></tr></table></figure><h2 id="예제-입력-2"><a href="#예제-입력-2" class="headerlink" title="예제 입력 2"></a>예제 입력 2</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">University Computer Programming</span><br></pre></td></tr></table></figure><h2 id="예제-출력-2"><a href="#예제-출력-2" class="headerlink" title="예제 출력 2"></a>예제 출력 2</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">I hate UCPC</span><br></pre></td></tr></table></figure><hr><h2 id="출처"><a href="#출처" class="headerlink" title="출처"></a>출처</h2><ul><li><a href="https://www.acmicpc.net/category/5">University</a> &gt; <a href="https://www.acmicpc.net/category/318">전국 대학생 프로그래밍 대회 동아리 연합 여름 대회</a> &gt; <a href="https://www.acmicpc.net/category/detail/1891">UCPC 2018 예선</a> G번<ul><li>문제를 만든 사람: <a href="https://www.acmicpc.net/user/ntopia">ntopia</a></li><li>잘못된 데이터를 찾은 사람: <a href="https://www.acmicpc.net/user/skdty87">skdty87</a></li></ul></li></ul><hr><h2 id="알고리즘-분류"><a href="#알고리즘-분류" class="headerlink" title="알고리즘 분류"></a>알고리즘 분류</h2><ul><li><a href="https://www.acmicpc.net/problem/tag/158">문자열</a></li><li><a href="https://www.acmicpc.net/problem/tag/33">그리디 알고리즘</a></li></ul><hr><h2 id="소스코드"><a href="#소스코드" class="headerlink" title="소스코드"></a>소스코드</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="built_in">input</span> = sys.stdin.readline</span><br><span class="line"></span><br><span class="line">string = <span class="built_in">input</span>().rstrip()</span><br><span class="line"></span><br><span class="line">check_alpha = [<span class="string">&#x27;U&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, <span class="string">&#x27;P&#x27;</span>, <span class="string">&#x27;C&#x27;</span>]</span><br><span class="line"></span><br><span class="line">flag = <span class="literal">True</span></span><br><span class="line"><span class="keyword">for</span> alpha <span class="keyword">in</span> check_alpha:</span><br><span class="line">    <span class="keyword">if</span> alpha <span class="keyword">in</span> string:</span><br><span class="line">        string = string[string.index(alpha) + <span class="number">1</span>:]</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        flag = <span class="literal">False</span></span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;I love UCPC&quot;</span>) <span class="keyword">if</span> flag <span class="keyword">else</span> <span class="built_in">print</span>(<span class="string">&quot;I hate UCPC&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      
+      <category domain="https://chlee1001.github.io/categories/Algorithm/">Algorithm</category>
+      
+      <category domain="https://chlee1001.github.io/categories/Algorithm/Python/">Python</category>
+      
+      
+      <category domain="https://chlee1001.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">알고리즘</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EB%B0%B1%EC%A4%80/">백준</category>
+      
+      <category domain="https://chlee1001.github.io/tags/Python/">Python</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EB%AC%B8%EC%9E%90%EC%97%B4/">문자열</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EA%B7%B8%EB%A6%AC%EB%94%94%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">그리디알고리즘</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EA%B7%B8%EB%A6%AC%EB%94%94/">그리디</category>
+      
+      
+      <comments>https://chlee1001.github.io/2021/08/10/BAEKJOON-15904-21-08-10/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[백준] 1543번 문서 검색</title>
+      <link>https://chlee1001.github.io/2021/08/09/BAEKJOON-1543-21-08-09/</link>
+      <guid>https://chlee1001.github.io/2021/08/09/BAEKJOON-1543-21-08-09/</guid>
+      <pubDate>Mon, 09 Aug 2021 03:26:50 GMT</pubDate>
+      
+      <description>&lt;p&gt;출처: &lt;a href=&quot;https://www.acmicpc.net/problem/1543&quot;&gt;[백준] 1543번 문서 검색&lt;/a&gt; &lt;/p&gt;
+&lt;hr&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;left&quot;&gt;시간 제한&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;메모리 제한&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;제출&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;정답&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;맞은 사람&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;정답 비율&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;2 초&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;128 MB&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;10226&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;3896&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;3092&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;37.671%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;문제&quot;&gt;&lt;a href=&quot;#문제&quot; class=&quot;headerlink&quot; title=&quot;문제&quot;&gt;&lt;/a&gt;문제&lt;/h2&gt;</description>
+      
+      
+      
+      <content:encoded><![CDATA[<p>출처: <a href="https://www.acmicpc.net/problem/1543">[백준] 1543번 문서 검색</a> </p><hr><table><thead><tr><th align="left">시간 제한</th><th align="left">메모리 제한</th><th align="left">제출</th><th align="left">정답</th><th align="left">맞은 사람</th><th align="left">정답 비율</th></tr></thead><tbody><tr><td align="left">2 초</td><td align="left">128 MB</td><td align="left">10226</td><td align="left">3896</td><td align="left">3092</td><td align="left">37.671%</td></tr></tbody></table><hr><h2 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h2><p>세준이는 영어로만 이루어진 어떤 문서를 검색하는 함수를 만들려고 한다. 이 함수는 어떤 단어가 총 몇 번 등장하는지 세려고 한다. 그러나, 세준이의 함수는 중복되어 세는 것은 빼고 세야 한다. 예를 들어, 문서가 abababa이고, 그리고 찾으려는 단어가 ababa라면, 세준이의 이 함수는 이 단어를 0번부터 찾을 수 있고, 2번부터도 찾을 수 있다. 그러나 동시에 셀 수는 없다.</p><p>세준이는 문서와 검색하려는 단어가 주어졌을 때, 그 단어가 최대 몇 번 중복되지 않게 등장하는지 구하는 프로그램을 작성하시오.</p><hr><h2 id="입력"><a href="#입력" class="headerlink" title="입력"></a>입력</h2><p>첫 번째 줄에 알파벳 대소문자, 공백으로 구성된 문자열이 주어진다. 문자열의 길이는 최대 1,000자이다. 문자열첫째 줄에 문서가 주어진다. 문서의 길이는 최대 2500이다. 둘째 줄에 검색하고 싶은 단어가 주어진다. 이 길이는 최대 50이다. 문서와 단어는 알파벳 소문자와 공백으로 이루어져 있다.</p><hr><h2 id="출력"><a href="#출력" class="headerlink" title="출력"></a>출력</h2><p>첫째 줄에 중복되지 않게 최대 몇 번 등장하는지 출력한다.</p><hr><h2 id="예제-입력-1"><a href="#예제-입력-1" class="headerlink" title="예제 입력 1"></a>예제 입력 1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ababababa</span><br><span class="line">aba</span><br></pre></td></tr></table></figure><h2 id="예제-출력-1"><a href="#예제-출력-1" class="headerlink" title="예제 출력 1"></a>예제 출력 1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure><h2 id="예제-입력-2"><a href="#예제-입력-2" class="headerlink" title="예제 입력 2"></a>예제 입력 2</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a a a a a</span><br><span class="line">a a</span><br></pre></td></tr></table></figure><h2 id="예제-출력-2"><a href="#예제-출력-2" class="headerlink" title="예제 출력 2"></a>예제 출력 2</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure><hr><h2 id="출처"><a href="#출처" class="headerlink" title="출처"></a>출처</h2><ul><li>문제를 번역한 사람: <a href="https://www.acmicpc.net/user/baekjoon">baekjoon</a></li><li>데이터를 추가한 사람: <a href="https://www.acmicpc.net/user/chan120317">chan120317</a>, <a href="https://www.acmicpc.net/user/jaehoo1">jaehoo1</a></li><li>문제의 오타를 찾은 사람: <a href="https://www.acmicpc.net/user/hist0613">hist0613</a></li></ul><hr><h2 id="알고리즘-분류"><a href="#알고리즘-분류" class="headerlink" title="알고리즘 분류"></a>알고리즘 분류</h2><ul><li><a href="https://www.acmicpc.net/problem/tag/158">문자열</a></li><li><a href="https://www.acmicpc.net/problem/tag/33">그리디 알고리즘</a></li><li><a href="https://www.acmicpc.net/problem/tag/125">브루트포스 알고리즘</a></li></ul><hr><h2 id="소스코드1"><a href="#소스코드1" class="headerlink" title="소스코드1"></a>소스코드1</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Counter</span><br><span class="line"></span><br><span class="line"><span class="built_in">input</span> = sys.stdin.readline</span><br><span class="line"></span><br><span class="line">doc = <span class="built_in">input</span>().rstrip()</span><br><span class="line">word = <span class="built_in">input</span>().rstrip()</span><br><span class="line">doc = doc.replace(word, <span class="string">&quot;?&quot;</span>)</span><br><span class="line"></span><br><span class="line">temp = <span class="built_in">dict</span>(Counter(<span class="built_in">list</span>(doc)))</span><br><span class="line"><span class="keyword">if</span> <span class="string">&#x27;?&#x27;</span> <span class="keyword">in</span> temp:</span><br><span class="line">    <span class="built_in">print</span>(temp[<span class="string">&#x27;?&#x27;</span>])</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="number">0</span>)</span><br></pre></td></tr></table></figure><h2 id="소스코드2"><a href="#소스코드2" class="headerlink" title="소스코드2"></a>소스코드2</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="built_in">input</span> = sys.stdin.readline</span><br><span class="line"></span><br><span class="line">doc = <span class="built_in">input</span>().rstrip()</span><br><span class="line">word = <span class="built_in">input</span>().rstrip()</span><br><span class="line"></span><br><span class="line">count = <span class="number">0</span></span><br><span class="line">idx = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> idx &lt;= <span class="built_in">len</span>(doc) - <span class="built_in">len</span>(word):</span><br><span class="line">    <span class="keyword">if</span> doc[idx:idx + <span class="built_in">len</span>(word)] == word:</span><br><span class="line">        count += <span class="number">1</span></span><br><span class="line">        idx += <span class="built_in">len</span>(word)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        idx += <span class="number">1</span></span><br><span class="line"><span class="built_in">print</span>(count)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      
+      <category domain="https://chlee1001.github.io/categories/Algorithm/">Algorithm</category>
+      
+      <category domain="https://chlee1001.github.io/categories/Algorithm/Python/">Python</category>
+      
+      
+      <category domain="https://chlee1001.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">알고리즘</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EB%B0%B1%EC%A4%80/">백준</category>
+      
+      <category domain="https://chlee1001.github.io/tags/Python/">Python</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EB%B8%8C%EB%A3%A8%ED%8A%B8%ED%8F%AC%EC%8A%A4/">브루트포스</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EB%AC%B8%EC%9E%90%EC%97%B4/">문자열</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EA%B7%B8%EB%A6%AC%EB%94%94%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">그리디알고리즘</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EA%B7%B8%EB%A6%AC%EB%94%94/">그리디</category>
+      
+      
+      <comments>https://chlee1001.github.io/2021/08/09/BAEKJOON-1543-21-08-09/#disqus_thread</comments>
       
     </item>
     
@@ -113,6 +287,62 @@
     </item>
     
     <item>
+      <title>[백준] 1110번 더하기 사이클</title>
+      <link>https://chlee1001.github.io/2021/08/07/BAEKJOON-1110-21-08-07/</link>
+      <guid>https://chlee1001.github.io/2021/08/07/BAEKJOON-1110-21-08-07/</guid>
+      <pubDate>Sat, 07 Aug 2021 03:26:50 GMT</pubDate>
+      
+      <description>&lt;p&gt;출처: &lt;a href=&quot;https://www.acmicpc.net/problem/1110&quot;&gt;[백준] 1110번 더하기 사이클&lt;/a&gt; &lt;/p&gt;
+&lt;hr&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;left&quot;&gt;시간 제한&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;메모리 제한&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;제출&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;정답&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;맞은 사람&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;정답 비율&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;2 초&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;128 MB&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;135236&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;64039&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;53523&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;47.801%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;문제&quot;&gt;&lt;a href=&quot;#문제&quot; class=&quot;headerlink&quot; title=&quot;문제&quot;&gt;&lt;/a&gt;문제&lt;/h2&gt;</description>
+      
+      
+      
+      <content:encoded><![CDATA[<p>출처: <a href="https://www.acmicpc.net/problem/1110">[백준] 1110번 더하기 사이클</a> </p><hr><table><thead><tr><th align="left">시간 제한</th><th align="left">메모리 제한</th><th align="left">제출</th><th align="left">정답</th><th align="left">맞은 사람</th><th align="left">정답 비율</th></tr></thead><tbody><tr><td align="left">2 초</td><td align="left">128 MB</td><td align="left">135236</td><td align="left">64039</td><td align="left">53523</td><td align="left">47.801%</td></tr></tbody></table><hr><h2 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h2><p>0보다 크거나 같고, 99보다 작거나 같은 정수가 주어질 때 다음과 같은 연산을 할 수 있다. 먼저 주어진 수가 10보다 작다면 앞에 0을 붙여 두 자리 수로 만들고, 각 자리의 숫자를 더한다. 그 다음, 주어진 수의 가장 오른쪽 자리 수와 앞에서 구한 합의 가장 오른쪽 자리 수를 이어 붙이면 새로운 수를 만들 수 있다. 다음 예를 보자.</p><p>26부터 시작한다. 2+6 = 8이다. 새로운 수는 68이다. 6+8 = 14이다. 새로운 수는 84이다. 8+4 = 12이다. 새로운 수는 42이다. 4+2 = 6이다. 새로운 수는 26이다.</p><p>위의 예는 4번만에 원래 수로 돌아올 수 있다. 따라서 26의 사이클의 길이는 4이다.</p><p>N이 주어졌을 때, N의 사이클의 길이를 구하는 프로그램을 작성하시오.</p><hr><h2 id="입력"><a href="#입력" class="headerlink" title="입력"></a>입력</h2><p>첫째 줄에 N이 주어진다. N은 0보다 크거나 같고, 99보다 작거나 같은 정수이다.</p><hr><h2 id="출력"><a href="#출력" class="headerlink" title="출력"></a>출력</h2><p>첫째 줄에 N의 사이클 길이를 출력한다.</p><hr><h2 id="예제-입력-1"><a href="#예제-입력-1" class="headerlink" title="예제 입력 1"></a>예제 입력 1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">26</span><br></pre></td></tr></table></figure><h2 id="예제-출력-1"><a href="#예제-출력-1" class="headerlink" title="예제 출력 1"></a>예제 출력 1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure><h2 id="예제-입력-2"><a href="#예제-입력-2" class="headerlink" title="예제 입력 2"></a>예제 입력 2</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">55</span><br></pre></td></tr></table></figure><h2 id="예제-출력-2"><a href="#예제-출력-2" class="headerlink" title="예제 출력 2"></a>예제 출력 2</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure><h2 id="예제-입력-3"><a href="#예제-입력-3" class="headerlink" title="예제 입력 3"></a>예제 입력 3</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1</span><br></pre></td></tr></table></figure><h2 id="예제-출력-3"><a href="#예제-출력-3" class="headerlink" title="예제 출력 3"></a>예제 출력 3</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">60</span><br></pre></td></tr></table></figure><h2 id="예제-입력-4"><a href="#예제-입력-4" class="headerlink" title="예제 입력 4"></a>예제 입력 4</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0</span><br></pre></td></tr></table></figure><h2 id="예제-출력-4"><a href="#예제-출력-4" class="headerlink" title="예제 출력 4"></a>예제 출력 4</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1</span><br></pre></td></tr></table></figure><hr><h2 id="출처"><a href="#출처" class="headerlink" title="출처"></a>출처</h2><ul><li>문제를 번역한 사람: <a href="https://www.acmicpc.net/user/baekjoon">baekjoon</a></li><li>어색한 표현을 찾은 사람: <a href="https://www.acmicpc.net/user/doju">doju</a></li><li>문제의 오타를 찾은 사람: <a href="https://www.acmicpc.net/user/eric00513">eric00513</a></li><li>데이터를 추가한 사람: <a href="https://www.acmicpc.net/user/jh05013">jh05013</a></li></ul><hr><h2 id="알고리즘-분류"><a href="#알고리즘-분류" class="headerlink" title="알고리즘 분류"></a>알고리즘 분류</h2><ul><li><a href="https://www.acmicpc.net/problem/tag/124">수학</a></li><li><a href="https://www.acmicpc.net/problem/tag/102">구현</a></li></ul><hr><h2 id="소스코드"><a href="#소스코드" class="headerlink" title="소스코드"></a>소스코드</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">N = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line"></span><br><span class="line">new_num = N</span><br><span class="line">result = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    ten = new_num // <span class="number">10</span></span><br><span class="line">    one = new_num % <span class="number">10</span></span><br><span class="line">    sum_num = ten + one</span><br><span class="line">    <span class="keyword">if</span> sum_num &gt;= <span class="number">10</span>:</span><br><span class="line">        sum_num = sum_num % <span class="number">10</span></span><br><span class="line"></span><br><span class="line">    new_num = one * <span class="number">10</span> + sum_num</span><br><span class="line"></span><br><span class="line">    result += <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> N == new_num:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(result)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      
+      <category domain="https://chlee1001.github.io/categories/Algorithm/">Algorithm</category>
+      
+      <category domain="https://chlee1001.github.io/categories/Algorithm/Python/">Python</category>
+      
+      
+      <category domain="https://chlee1001.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">알고리즘</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EB%B0%B1%EC%A4%80/">백준</category>
+      
+      <category domain="https://chlee1001.github.io/tags/Python/">Python</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EC%88%98%ED%95%99/">수학</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EA%B5%AC%ED%98%84/">구현</category>
+      
+      
+      <comments>https://chlee1001.github.io/2021/08/07/BAEKJOON-1110-21-08-07/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
       <title>2021년 08월 06일 금요일 IT뉴스</title>
       <link>https://chlee1001.github.io/2021/08/06/21-08-06-IT_News/</link>
       <guid>https://chlee1001.github.io/2021/08/06/21-08-06-IT_News/</guid>
@@ -149,6 +379,62 @@
       
       
       <comments>https://chlee1001.github.io/2021/08/06/21-08-06-IT_News/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[백준] 2847번 게임을 만든 동준이</title>
+      <link>https://chlee1001.github.io/2021/08/06/BAEKJOON-2847-21-08-06/</link>
+      <guid>https://chlee1001.github.io/2021/08/06/BAEKJOON-2847-21-08-06/</guid>
+      <pubDate>Fri, 06 Aug 2021 03:26:50 GMT</pubDate>
+      
+      <description>&lt;p&gt;출처: &lt;a href=&quot;https://www.acmicpc.net/problem/2847&quot;&gt;[백준] 2847번 게임을 만든 동준이&lt;/a&gt; &lt;/p&gt;
+&lt;hr&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;left&quot;&gt;시간 제한&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;메모리 제한&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;제출&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;정답&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;맞은 사람&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;정답 비율&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;1 초&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;128 MB&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;6784&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;3091&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;2711&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;45.794%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;문제&quot;&gt;&lt;a href=&quot;#문제&quot; class=&quot;headerlink&quot; title=&quot;문제&quot;&gt;&lt;/a&gt;문제&lt;/h2&gt;</description>
+      
+      
+      
+      <content:encoded><![CDATA[<p>출처: <a href="https://www.acmicpc.net/problem/2847">[백준] 2847번 게임을 만든 동준이</a> </p><hr><table><thead><tr><th align="left">시간 제한</th><th align="left">메모리 제한</th><th align="left">제출</th><th align="left">정답</th><th align="left">맞은 사람</th><th align="left">정답 비율</th></tr></thead><tbody><tr><td align="left">1 초</td><td align="left">128 MB</td><td align="left">6784</td><td align="left">3091</td><td align="left">2711</td><td align="left">45.794%</td></tr></tbody></table><hr><h2 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h2><p>학교에서 그래픽스 수업을 들은 동준이는 수업시간에 들은 내용을 바탕으로 스마트폰 게임을 만들었다. 게임에는 총 N개의 레벨이 있고, 각 레벨을 클리어할 때 마다 점수가 주어진다. 플레이어의 점수는 레벨을 클리어하면서 얻은 점수의 합으로, 이 점수를 바탕으로 온라인 순위를 매긴다. 동준이는 레벨을 난이도 순으로 배치했다. 하지만, 실수로 쉬운 레벨이 어려운 레벨보다 점수를 많이 받는 경우를 만들었다.</p><p>이 문제를 해결하기 위해 동준이는 특정 레벨의 점수를 감소시키려고 한다. 이렇게해서 각 레벨을 클리어할 때 주는 점수가 증가하게 만들려고 한다.</p><p>각 레벨을 클리어할 때 얻는 점수가 주어졌을 때, 몇 번 감소시키면 되는지 구하는 프로그램을 작성하시오. 점수는 항상 양수이어야 하고, 1만큼 감소시키는 것이 1번이다. 항상 답이 존재하는 경우만 주어진다. 정답이 여러 가지인 경우에는 점수를 내리는 것을 최소한으로 하는 방법을 찾아야 한다.</p><hr><h2 id="입력"><a href="#입력" class="headerlink" title="입력"></a>입력</h2><p>첫째 줄에 레벨의 수 N이 주어진다. (1 ≤ N ≤ 100) 다음 N개 줄에는 각 레벨을 클리어하면 얻는 점수가 첫 번째 레벨부터 마지막 레벨까지 순서대로 주어진다. 점수는 20,000보다 작은 양의 정수이다.</p><hr><h2 id="출력"><a href="#출력" class="headerlink" title="출력"></a>출력</h2><p>첫째 줄에 점수를 몇 번 감소시키면 되는지 출력한다.</p><hr><h2 id="예제-입력-1"><a href="#예제-입력-1" class="headerlink" title="예제 입력 1"></a>예제 입력 1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">5</span><br><span class="line">5</span><br><span class="line">5</span><br></pre></td></tr></table></figure><h2 id="예제-출력-1"><a href="#예제-출력-1" class="headerlink" title="예제 출력 1"></a>예제 출력 1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure><h2 id="예제-입력-2"><a href="#예제-입력-2" class="headerlink" title="예제 입력 2"></a>예제 입력 2</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">5</span><br><span class="line">3</span><br><span class="line">7</span><br><span class="line">5</span><br></pre></td></tr></table></figure><h2 id="예제-출력-2"><a href="#예제-출력-2" class="headerlink" title="예제 출력 2"></a>예제 출력 2</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">6</span><br></pre></td></tr></table></figure><hr><h2 id="출처"><a href="#출처" class="headerlink" title="출처"></a>출처</h2><ul><li><a href="https://www.acmicpc.net/category/45">Contest</a> &gt; <a href="https://www.acmicpc.net/category/17">Croatian Open Competition in Informatics</a> &gt; <a href="https://www.acmicpc.net/category/20">COCI 2010/2011</a> &gt; <a href="https://www.acmicpc.net/category/detail/80">Contest #6</a> 3번<ul><li>문제를 번역한 사람: <a href="https://www.acmicpc.net/user/baekjoon">baekjoon</a></li><li>문제의 오타를 찾은 사람: <a href="https://www.acmicpc.net/user/kdy312">kdy312</a>, <a href="https://www.acmicpc.net/user/occidere">occidere</a></li></ul></li></ul><hr><h2 id="알고리즘-분류"><a href="#알고리즘-분류" class="headerlink" title="알고리즘 분류"></a>알고리즘 분류</h2><ul><li><a href="https://www.acmicpc.net/problem/tag/33">그리디 알고리즘</a></li></ul><hr><h2 id="소스코드"><a href="#소스코드" class="headerlink" title="소스코드"></a>소스코드</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="built_in">input</span> = sys.stdin.readline</span><br><span class="line"></span><br><span class="line">N = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">levels = [<span class="built_in">int</span>(<span class="built_in">input</span>()) <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(N)]</span><br><span class="line"></span><br><span class="line">result = <span class="number">0</span></span><br><span class="line">max_level = levels[-<span class="number">1</span>]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N - <span class="number">2</span>, -<span class="number">1</span>, -<span class="number">1</span>):</span><br><span class="line">    <span class="keyword">if</span> levels[i] &gt;= max_level:</span><br><span class="line">        temp = max_level - <span class="number">1</span></span><br><span class="line">        result += levels[i] - temp</span><br><span class="line">        max_level = levels[i] = temp</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        max_level = levels[i]</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(result)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      
+      <category domain="https://chlee1001.github.io/categories/Algorithm/">Algorithm</category>
+      
+      <category domain="https://chlee1001.github.io/categories/Algorithm/Python/">Python</category>
+      
+      
+      <category domain="https://chlee1001.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">알고리즘</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EB%B0%B1%EC%A4%80/">백준</category>
+      
+      <category domain="https://chlee1001.github.io/tags/Python/">Python</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EA%B7%B8%EB%A6%AC%EB%94%94%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">그리디알고리즘</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EA%B7%B8%EB%A6%AC%EB%94%94/">그리디</category>
+      
+      
+      <comments>https://chlee1001.github.io/2021/08/06/BAEKJOON-2847-21-08-06/#disqus_thread</comments>
       
     </item>
     
@@ -231,6 +517,124 @@
       
       
       <comments>https://chlee1001.github.io/2021/08/05/AWS-MYSQL1-21-08-05/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[백준] 2810번 컵홀더</title>
+      <link>https://chlee1001.github.io/2021/08/05/BAEKJOON-2810-21-08-05/</link>
+      <guid>https://chlee1001.github.io/2021/08/05/BAEKJOON-2810-21-08-05/</guid>
+      <pubDate>Thu, 05 Aug 2021 03:26:50 GMT</pubDate>
+      
+      <description>&lt;p&gt;출처: &lt;a href=&quot;https://www.acmicpc.net/problem/2810&quot;&gt;[백준] 2810번 컵홀더&lt;/a&gt; &lt;/p&gt;
+&lt;hr&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;left&quot;&gt;시간 제한&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;메모리 제한&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;제출&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;정답&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;맞은 사람&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;정답 비율&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;1 초&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;128 MB&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;5819&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;2412&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;2094&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;40.787%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;문제&quot;&gt;&lt;a href=&quot;#문제&quot; class=&quot;headerlink&quot; title=&quot;문제&quot;&gt;&lt;/a&gt;문제&lt;/h2&gt;</description>
+      
+      
+      
+      <content:encoded><![CDATA[<p>출처: <a href="https://www.acmicpc.net/problem/2810">[백준] 2810번 컵홀더</a> </p><hr><table><thead><tr><th align="left">시간 제한</th><th align="left">메모리 제한</th><th align="left">제출</th><th align="left">정답</th><th align="left">맞은 사람</th><th align="left">정답 비율</th></tr></thead><tbody><tr><td align="left">1 초</td><td align="left">128 MB</td><td align="left">5819</td><td align="left">2412</td><td align="left">2094</td><td align="left">40.787%</td></tr></tbody></table><hr><h2 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h2><p>십년이면 강산이 변한다.</p><p>강산이네 동네에 드디어 극장이 생겼고, 강산이는 극장에 놀러갔다. 매점에서 콜라를 산 뒤, 자리에 앉은 강산이는 큰 혼란에 빠졌다. 양쪽 컵홀더를 이미 옆 사람들이 차지했기 때문에 콜라를 꽂을 컵 홀더가 없었기 때문이다. 영화를 보는 내내 콜라를 손에 들고 있던 강산이는 극장에 다시 왔을 때는 꼭 콜라를 컵 홀더에 놓겠다는 다짐을 한 후 집에 돌아갔다.</p><p>극장의 한 줄에는 자리가 N개가 있다. 서로 인접한 좌석 사이에는 컵홀더가 하나씩 있고, 양 끝 좌석에는 컵홀더가 하나씩 더 있다. 또, 이 극장에는 커플석이 있다. 커플석 사이에는 컵홀더가 없다.</p><p>극장의 한 줄의 정보가 주어진다. 이때, 이 줄에 사람들이 모두 앉았을 때, 컵홀더에 컵을 꽂을 수 있는 최대 사람의 수를 구하는 프로그램을 작성하시오. 모든 사람은 컵을 한 개만 들고 있고, 자신의 좌석의 양 옆에 있는 컵홀더에만 컵을 꽂을 수 있다.</p><p>S는 일반 좌석, L은 커플석을 의미하며, L은 항상 두개씩 쌍으로 주어진다.</p><p>어떤 좌석의 배치가 SLLLLSSLL일때, 컵홀더를 *로 표시하면 아래와 같다.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*S*LL*LL*S*S*LL*</span><br></pre></td></tr></table></figure><p>위의 예에서 적어도 두 명은 컵홀더를 사용할 수 없다.</p><hr><h2 id="입력"><a href="#입력" class="headerlink" title="입력"></a>입력</h2><p>첫째 줄에 좌석의 수 N이 주어진다. (1 ≤ N ≤ 50) 둘째 줄에는 좌석의 정보가 주어진다.</p><hr><h2 id="출력"><a href="#출력" class="headerlink" title="출력"></a>출력</h2><p>컵을 컵홀더에 놓을 수 있는 최대 사람의 수를 출력한다.</p><hr><h2 id="예제-입력-1"><a href="#예제-입력-1" class="headerlink" title="예제 입력 1"></a>예제 입력 1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">SSS</span><br></pre></td></tr></table></figure><h2 id="예제-출력-1"><a href="#예제-출력-1" class="headerlink" title="예제 출력 1"></a>예제 출력 1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure><h2 id="예제-입력-2"><a href="#예제-입력-2" class="headerlink" title="예제 입력 2"></a>예제 입력 2</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">SLLS</span><br></pre></td></tr></table></figure><h2 id="예제-출력-2"><a href="#예제-출력-2" class="headerlink" title="예제 출력 2"></a>예제 출력 2</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure><h2 id="예제-입력-3"><a href="#예제-입력-3" class="headerlink" title="예제 입력 3"></a>예제 입력 3</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">9</span><br><span class="line">SLLLLSSLL</span><br></pre></td></tr></table></figure><h2 id="예제-출력-3"><a href="#예제-출력-3" class="headerlink" title="예제 출력 3"></a>예제 출력 3</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">7</span><br></pre></td></tr></table></figure><hr><h2 id="출처"><a href="#출처" class="headerlink" title="출처"></a>출처</h2><ul><li><a href="https://www.acmicpc.net/category/45">Contest</a> &gt; <a href="https://www.acmicpc.net/category/17">Croatian Open Competition in Informatics</a> &gt; <a href="https://www.acmicpc.net/category/19">COCI 2011/2012</a> &gt; <a href="https://www.acmicpc.net/category/detail/71">Contest #4</a> 1번<ul><li>문제를 번역한 사람: <a href="https://www.acmicpc.net/user/baekjoon">baekjoon</a></li><li>문제의 오타를 찾은 사람: <a href="https://www.acmicpc.net/user/silvercube">silvercube</a></li></ul></li></ul><hr><h2 id="알고리즘-분류"><a href="#알고리즘-분류" class="headerlink" title="알고리즘 분류"></a>알고리즘 분류</h2><ul><li><a href="https://www.acmicpc.net/problem/tag/102">구현</a></li><li><a href="https://www.acmicpc.net/problem/tag/158">문자열</a></li><li><a href="https://www.acmicpc.net/problem/tag/33">그리디 알고리즘</a></li></ul><hr><h2 id="소스코드"><a href="#소스코드" class="headerlink" title="소스코드"></a>소스코드</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="built_in">input</span> = sys.stdin.readline</span><br><span class="line"></span><br><span class="line">N = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">seats = <span class="built_in">input</span>().rstrip()</span><br><span class="line"></span><br><span class="line">couples = seats.count(<span class="string">&#x27;LL&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> couples &lt; <span class="number">2</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">len</span>(seats))</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">len</span>(seats) - couples + <span class="number">1</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      
+      <category domain="https://chlee1001.github.io/categories/Algorithm/">Algorithm</category>
+      
+      <category domain="https://chlee1001.github.io/categories/Algorithm/Python/">Python</category>
+      
+      
+      <category domain="https://chlee1001.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">알고리즘</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EB%B0%B1%EC%A4%80/">백준</category>
+      
+      <category domain="https://chlee1001.github.io/tags/Python/">Python</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EA%B5%AC%ED%98%84/">구현</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EB%AC%B8%EC%9E%90%EC%97%B4/">문자열</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EA%B7%B8%EB%A6%AC%EB%94%94%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">그리디알고리즘</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EA%B7%B8%EB%A6%AC%EB%94%94/">그리디</category>
+      
+      
+      <comments>https://chlee1001.github.io/2021/08/05/BAEKJOON-2810-21-08-05/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[백준] 1783번 병든 나이트</title>
+      <link>https://chlee1001.github.io/2021/08/05/BAEKJOON-1783-21-08-05/</link>
+      <guid>https://chlee1001.github.io/2021/08/05/BAEKJOON-1783-21-08-05/</guid>
+      <pubDate>Thu, 05 Aug 2021 03:26:50 GMT</pubDate>
+      
+      <description>&lt;p&gt;출처: &lt;a href=&quot;https://www.acmicpc.net/problem/1783&quot;&gt;[백준] 1783번 병든 나이트&lt;/a&gt; &lt;/p&gt;
+&lt;hr&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;left&quot;&gt;시간 제한&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;메모리 제한&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;제출&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;정답&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;맞은 사람&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;정답 비율&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;2 초&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;128 MB&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;8302&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;3576&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;3048&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;42.827%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;문제&quot;&gt;&lt;a href=&quot;#문제&quot; class=&quot;headerlink&quot; title=&quot;문제&quot;&gt;&lt;/a&gt;문제&lt;/h2&gt;</description>
+      
+      
+      
+      <content:encoded><![CDATA[<p>출처: <a href="https://www.acmicpc.net/problem/1783">[백준] 1783번 병든 나이트</a> </p><hr><table><thead><tr><th align="left">시간 제한</th><th align="left">메모리 제한</th><th align="left">제출</th><th align="left">정답</th><th align="left">맞은 사람</th><th align="left">정답 비율</th></tr></thead><tbody><tr><td align="left">2 초</td><td align="left">128 MB</td><td align="left">8302</td><td align="left">3576</td><td align="left">3048</td><td align="left">42.827%</td></tr></tbody></table><hr><h2 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h2><p>병든 나이트가 N × M 크기 체스판의 가장 왼쪽아래 칸에 위치해 있다. 병든 나이트는 건강한 보통 체스의 나이트와 다르게 4가지로만 움직일 수 있다.</p><ol><li>2칸 위로, 1칸 오른쪽</li><li>1칸 위로, 2칸 오른쪽</li><li>1칸 아래로, 2칸 오른쪽</li><li>2칸 아래로, 1칸 오른쪽</li></ol><p>병든 나이트는 여행을 시작하려고 하고, 여행을 하면서 방문한 칸의 수를 최대로 하려고 한다. 병든 나이트의 이동 횟수가 4번보다 적지 않다면, 이동 방법을 모두 한 번씩 사용해야 한다. 이동 횟수가 4번보다 적은 경우(방문한 칸이 5개 미만)에는 이동 방법에 대한 제약이 없다.</p><p>체스판의 크기가 주어졌을 때, 병든 나이트가 여행에서 방문할 수 있는 칸의 최대 개수를 구해보자.</p><hr><h2 id="입력"><a href="#입력" class="headerlink" title="입력"></a>입력</h2><p>첫째 줄에 체스판의 세로 길이 N와 가로 길이 M이 주어진다. N과 M은 2,000,000,000보다 작거나 같은 자연수이다.</p><hr><h2 id="출력"><a href="#출력" class="headerlink" title="출력"></a>출력</h2><p>병든 나이트가 여행에서 방문할 수 있는 칸의 개수중 최댓값을 출력한다.</p><hr><h2 id="예제-입력-1"><a href="#예제-입력-1" class="headerlink" title="예제 입력 1"></a>예제 입력 1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">100 50</span><br></pre></td></tr></table></figure><h2 id="예제-출력-1"><a href="#예제-출력-1" class="headerlink" title="예제 출력 1"></a>예제 출력 1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">48</span><br></pre></td></tr></table></figure><h2 id="예제-입력-2"><a href="#예제-입력-2" class="headerlink" title="예제 입력 2"></a>예제 입력 2</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 1</span><br></pre></td></tr></table></figure><h2 id="예제-출력-2"><a href="#예제-출력-2" class="headerlink" title="예제 출력 2"></a>예제 출력 2</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1</span><br></pre></td></tr></table></figure><h2 id="예제-입력-3"><a href="#예제-입력-3" class="headerlink" title="예제 입력 3"></a>예제 입력 3</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">17 5</span><br></pre></td></tr></table></figure><h2 id="예제-출력-3"><a href="#예제-출력-3" class="headerlink" title="예제 출력 3"></a>예제 출력 3</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure><h2 id="예제-입력-4"><a href="#예제-입력-4" class="headerlink" title="예제 입력 4"></a>예제 입력 4</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2 4</span><br></pre></td></tr></table></figure><h2 id="예제-출력-4"><a href="#예제-출력-4" class="headerlink" title="예제 출력 4"></a>예제 출력 4</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure><h2 id="예제-입력-5"><a href="#예제-입력-5" class="headerlink" title="예제 입력 5"></a>예제 입력 5</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">20 4</span><br></pre></td></tr></table></figure><h2 id="예제-출력-5"><a href="#예제-출력-5" class="headerlink" title="예제 출력 5"></a>예제 출력 5</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure><hr><h2 id="출처"><a href="#출처" class="headerlink" title="출처"></a>출처</h2><ul><li>문제를 번역한 사람: <a href="https://www.acmicpc.net/user/baekjoon">baekjoon</a></li><li>문제의 오타를 찾은 사람: <a href="https://www.acmicpc.net/user/gudori888">gudori888</a>, <a href="https://www.acmicpc.net/user/han1g">han1g</a>, <a href="https://www.acmicpc.net/user/jh05013">jh05013</a>, <a href="https://www.acmicpc.net/user/luluctrl4">luluctrl4</a>, <a href="https://www.acmicpc.net/user/shnoh">shnoh</a></li></ul><hr><h2 id="알고리즘-분류"><a href="#알고리즘-분류" class="headerlink" title="알고리즘 분류"></a>알고리즘 분류</h2><ul><li><a href="https://www.acmicpc.net/problem/tag/102">구현</a></li><li><a href="https://www.acmicpc.net/problem/tag/33">그리디 알고리즘</a></li><li><a href="https://www.acmicpc.net/problem/tag/137">많은 조건 분기</a></li></ul><hr><h2 id="소스코드"><a href="#소스코드" class="headerlink" title="소스코드"></a>소스코드</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="built_in">input</span> = sys.stdin.readline</span><br><span class="line"></span><br><span class="line">N, M = <span class="built_in">map</span>(<span class="built_in">int</span>, <span class="built_in">input</span>().split())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4가지 모두 이용하려면, M&gt;6</span></span><br><span class="line">count = <span class="number">0</span></span><br><span class="line"><span class="keyword">if</span> N == <span class="number">1</span>:</span><br><span class="line">    count = <span class="number">1</span></span><br><span class="line"><span class="keyword">elif</span> N == <span class="number">2</span>:  <span class="comment"># 세로가 2이면, 2번/3번 방법만 사용가능 --&gt; 오른쪽으로 두칸씩</span></span><br><span class="line">    count = <span class="built_in">min</span>(<span class="number">4</span>, (M + <span class="number">1</span>) // <span class="number">2</span>)</span><br><span class="line"><span class="keyword">elif</span> M &lt; <span class="number">7</span>:  <span class="comment"># N&gt;=3, M&lt;7 --&gt; 오른쪽으로 한칸씩</span></span><br><span class="line">    count = <span class="built_in">min</span>(<span class="number">4</span>, M)</span><br><span class="line"><span class="keyword">else</span>:  <span class="comment"># N&gt;=3, M&gt;7 --&gt; 2,3번 한번 나머지 1,4번</span></span><br><span class="line">    count = M - <span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(count)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      
+      <category domain="https://chlee1001.github.io/categories/Algorithm/">Algorithm</category>
+      
+      <category domain="https://chlee1001.github.io/categories/Algorithm/Python/">Python</category>
+      
+      
+      <category domain="https://chlee1001.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">알고리즘</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EB%B0%B1%EC%A4%80/">백준</category>
+      
+      <category domain="https://chlee1001.github.io/tags/Python/">Python</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EA%B5%AC%ED%98%84/">구현</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EA%B7%B8%EB%A6%AC%EB%94%94%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">그리디알고리즘</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EA%B7%B8%EB%A6%AC%EB%94%94/">그리디</category>
+      
+      
+      <comments>https://chlee1001.github.io/2021/08/05/BAEKJOON-1783-21-08-05/#disqus_thread</comments>
       
     </item>
     
@@ -648,303 +1052,6 @@
       
       
       <comments>https://chlee1001.github.io/2021/07/30/21-07-30-IT_News/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[RPI] 라즈베리파이에서 CRIU 작동시키기</title>
-      <link>https://chlee1001.github.io/2021/07/29/RASP-CRIU-21-07-29/</link>
-      <guid>https://chlee1001.github.io/2021/07/29/RASP-CRIU-21-07-29/</guid>
-      <pubDate>Thu, 29 Jul 2021 14:26:50 GMT</pubDate>
-      
-      <description>&lt;p&gt;라즈베리파이, OS, Kernel, Docker, Criu… 이 다섯개의 각 버전들은 매우 다양하며 checkpoint와 restore 기능이 작동하는 적당한 버전을 찾기까지 많은 노가다 작업이 있었다.&lt;/p&gt;
-&lt;h2 id=&quot;사용-버전&quot;&gt;&lt;a href=&quot;#사용-버전&quot; class=&quot;headerlink&quot; title=&quot;사용 버전&quot;&gt;&lt;/a&gt;사용 버전&lt;/h2&gt;&lt;h4 id=&quot;기기-라즈베리파이-3B&quot;&gt;&lt;a href=&quot;#기기-라즈베리파이-3B&quot; class=&quot;headerlink&quot; title=&quot;기기: 라즈베리파이 3B&quot;&gt;&lt;/a&gt;기기: 라즈베리파이 3B&lt;/h4&gt;&lt;h4 id=&quot;OS-Ubuntu-Mate-16-04-2&quot;&gt;&lt;a href=&quot;#OS-Ubuntu-Mate-16-04-2&quot; class=&quot;headerlink&quot; title=&quot;OS: Ubuntu Mate 16.04.2&quot;&gt;&lt;/a&gt;OS: Ubuntu Mate 16.04.2&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://releases.ubuntu-mate.org/archived/&quot;&gt;라즈베리파이용 우분투 마테 Archive&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-      
-      
-      
-      <content:encoded><![CDATA[<p>라즈베리파이, OS, Kernel, Docker, Criu… 이 다섯개의 각 버전들은 매우 다양하며 checkpoint와 restore 기능이 작동하는 적당한 버전을 찾기까지 많은 노가다 작업이 있었다.</p><h2 id="사용-버전"><a href="#사용-버전" class="headerlink" title="사용 버전"></a>사용 버전</h2><h4 id="기기-라즈베리파이-3B"><a href="#기기-라즈베리파이-3B" class="headerlink" title="기기: 라즈베리파이 3B"></a>기기: 라즈베리파이 3B</h4><h4 id="OS-Ubuntu-Mate-16-04-2"><a href="#OS-Ubuntu-Mate-16-04-2" class="headerlink" title="OS: Ubuntu Mate 16.04.2"></a>OS: Ubuntu Mate 16.04.2</h4><ul><li><a href="https://releases.ubuntu-mate.org/archived/">라즈베리파이용 우분투 마테 Archive</a></li></ul><h4 id="Kernel-rpi-4-12-y"><a href="#Kernel-rpi-4-12-y" class="headerlink" title="Kernel: rpi-4.12.y"></a>Kernel: <a href="https://github.com/raspberrypi/linux/tree/rpi-4.12.y">rpi-4.12.y</a></h4><h4 id="Docker-version-17-06-0-CE"><a href="#Docker-version-17-06-0-CE" class="headerlink" title="Docker version: 17.06.0~CE"></a>Docker version: 17.06.0~CE</h4><ul><li><a href="https://download.docker.com/linux/ubuntu/dists/xenial/pool/stable/armhf/">라즈베리파이용(armhf) 도커 Archive</a></li></ul><h4 id="Criu-version-3-11"><a href="#Criu-version-3-11" class="headerlink" title="Criu version: 3.11"></a>Criu version: 3.11</h4><ul><li><a href="https://download.openvz.org/criu/">criu Archive</a></li></ul><hr><h1 id="작업"><a href="#작업" class="headerlink" title="작업"></a>작업</h1><h2 id="1-기기에-OS설치"><a href="#1-기기에-OS설치" class="headerlink" title="1. 기기에 OS설치"></a>1. 기기에 OS설치</h2><p>라즈베리파이 3B버전을 이용한 이유는 Ubuntu Mate 16.04버전이 4B버전을 지원하지 않아서다.</p><p><img src="https://chlee1001.github.io/images/posts/rpi/ubuntu_mate_version.png"></p><p>16.04버전을 사용하려는 이유를 대충 요약하자면 criu를 사용할 때, 안정적으로 동작한 Docker의 버전은 17.X이였고, 이 버전은 우분투 18.X 버전부터 정상적으로 동작하지 않았다. 그래서 16.04를 사용한다.</p><h2 id="2-Docker-설치"><a href="#2-Docker-설치" class="headerlink" title="2. Docker 설치"></a>2. Docker 설치</h2><p>wget을 이용하여 다운, dpkg를 이용하여 설치</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> wget https://download.docker.com/linux/ubuntu/dists/xenial/pool/stable/armhf/docker-ce_17.06.0~ce-0~ubuntu_armhf.deb</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> dpkg -i docker-ce_17.06.0~ce-0~ubuntu_armhf.deb</span></span><br></pre></td></tr></table></figure><h2 id="3-Criu-설치"><a href="#3-Criu-설치" class="headerlink" title="3. Criu 설치"></a>3. Criu 설치</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install criu</span><br></pre></td></tr></table></figure><p>위 코드로도 설치가 가능하나,  아래로 설치하겠음. (특정 버전 설치를 위함)</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">curl -O -sSL http://download.openvz.org/criu/criu-3.11.tar.bz2</span><br><span class="line">tar xjf criu-3.11.tar.bz2 </span><br><span class="line"><span class="built_in">cd</span> criu-3.11</span><br><span class="line">make</span><br><span class="line">cp ./criu/criu /usr/<span class="built_in">local</span>/bin</span><br><span class="line"><span class="built_in">cd</span></span><br></pre></td></tr></table></figure><h2 id="4-Kernel-config-수정"><a href="#4-Kernel-config-수정" class="headerlink" title="4. Kernel config 수정"></a>4. Kernel config 수정</h2><p>커널의 설정을 <a href="https://criu.org/Linux_kernel">criu linux kernel</a> 이 사이트대로 수정해야하지만, 이것은 x86_64 용인 것같고, arm용으로 설정을 약간 더 손봤다.</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">CONFIG_CHECKPOINT_RESTORE=y</span><br><span class="line">CONFIG_NAMESPACES=y </span><br><span class="line">CONFIG_UTS_NS=y</span><br><span class="line">CONFIG_IPC_NS=y</span><br><span class="line">CONFIG_SYSVIPC_SYSCTL=y</span><br><span class="line">CONFIG_PID_NS=y</span><br><span class="line">CONFIG_NET_NS=y </span><br><span class="line">CONFIG_FHANDLE=y </span><br><span class="line">CONFIG_EVENTFD=y </span><br><span class="line">CONFIG_EPOLL=y </span><br><span class="line">CONFIG_UNIX_DIAG=y </span><br><span class="line">CONFIG_INET_DIAG=y</span><br><span class="line">CONFIG_INET_UDP_DIAG=m</span><br><span class="line">CONFIG_PACKET_DIAG=y</span><br><span class="line">CONFIG_NETLINK_DIAG=y</span><br><span class="line">CONFIG_NETFILTER_XT_MARK=m</span><br><span class="line">CONFIG_TUN=y</span><br><span class="line"></span><br><span class="line">CONFIG_PROC_PAGE_MONITOR=y</span><br><span class="line">CONFIG_VDSO=n</span><br><span class="line">CONFIG_IDLE_PAGE_TRACKING=y</span><br></pre></td></tr></table></figure><p><a href="https://github.com/checkpoint-restore/criu/issues/446">참고</a></p><p>라즈베리파이… ARM는 soft-dirty기능을 미지원 à “CONFIG_MEM_SOFT_DIRTY”가 없음</p><p>대신 “CONFIG_PROC_PAGE_MONITOR=y” 이는 Dumpee 메모리 레이아웃에 대한 정보를 얻기 위해 필요하다고 함.</p><p>그리고 ARM에는 VDSO라는 매개변수가 없으므로 “CONFIG_VDSO=n” 셋팅을 해야 VDSO 때문에 덤프가 실패하는 것을 피할 수 있음. à 비활성화 시, signal trampoline(?)이 ARM의 VDSO페이지가 아닌 SIG페이지에 자동으로 배치됨.</p><p>컴파일 후에 적용하고 재부팅을 하면 기본 설정은 끝이다.</p><hr><h1 id="테스트"><a href="#테스트" class="headerlink" title="테스트"></a>테스트</h1><p>docker와 busy box를 이용하여 체크포인트와 복구를 테스트</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo docker run --name counter busybox /bin/sh -c &#x27;i=0; while true; do echo $i; i=$(expr $i + 1); sleep 1; done&#x27;</span><br><span class="line"></span><br><span class="line">sudo docker checkpoint create counter cp1</span><br><span class="line"></span><br><span class="line">sudo docker start -a --checkpoint cp1 counter</span><br></pre></td></tr></table></figure><p><a href="https://youtu.be/HsE7zlBa_Qw"><img src="https://chlee1001.github.io/images/posts/rpi/criu_test_1.png" alt="테스트영상"></a> </p>]]></content:encoded>
-      
-      
-      <category domain="https://chlee1001.github.io/categories/Linux/">Linux</category>
-      
-      <category domain="https://chlee1001.github.io/categories/Linux/Raspberry-Pi/">Raspberry Pi</category>
-      
-      
-      <category domain="https://chlee1001.github.io/tags/Docker/">Docker</category>
-      
-      <category domain="https://chlee1001.github.io/tags/RPI/">RPI</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B4/">라즈베리파이</category>
-      
-      <category domain="https://chlee1001.github.io/tags/CRIU/">CRIU</category>
-      
-      <category domain="https://chlee1001.github.io/tags/container/">container</category>
-      
-      <category domain="https://chlee1001.github.io/tags/checkpoint/">checkpoint</category>
-      
-      
-      <comments>https://chlee1001.github.io/2021/07/29/RASP-CRIU-21-07-29/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>2021년 07월 28일 수요일 IT뉴스</title>
-      <link>https://chlee1001.github.io/2021/07/28/21-07-28-IT_News/</link>
-      <guid>https://chlee1001.github.io/2021/07/28/21-07-28-IT_News/</guid>
-      <pubDate>Wed, 28 Jul 2021 02:30:19 GMT</pubDate>
-      
-      <description>&lt;h2 id=&quot;1-2분기-스팸건수-1분기보다-9만건-↑…대출·보험-유형&quot;&gt;&lt;a href=&quot;#1-2분기-스팸건수-1분기보다-9만건-↑…대출·보험-유형&quot; class=&quot;headerlink&quot; title=&quot;1. 2분기 스팸건수, 1분기보다 9만건 ↑…대출·보험 유형&quot;&gt;&lt;/a&gt;1. 2분기 스팸건수, 1분기보다 9만건 ↑…대출·보험 유형&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://news.naver.com/main/read.naver?mode=LSD&amp;mid=shm&amp;sid1=105&amp;oid=277&amp;aid=0004944731&quot;&gt;2분기 스팸건수, 1분기보다 9만건 ↑…대출·보험 유형&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://imgnews.pstatic.net/image/277/2021/07/28/0004944731_001_20210728105009857.jpg?type=w647&quot;&gt;&lt;/p&gt;
-&lt;p&gt;스팸 차단 애플리케이션 ‘후후’를 제공하는 후후앤컴퍼니는 2021년 2분기 후후 이용자들이 신고한 스팸 통계를 28일 발표했고, 전분기 대비 9만여건 증가한 692만건의 스팸 신고가 접수됐다. 주식·투자, 불법게임·도박 관련 스팸은 줄었지만, 대출·보험 가입 권유형 스팸이 급격히 늘었다.&lt;/p&gt;
-&lt;p&gt;개별 스팸 내용을 질적으로 분석해 본 결과 금융기관을 사칭해 대출·보험 등 금융 상품 상담을 명목으로 전화를 유도하는 수법이 증가했고금융과 전혀 관계 없는 보이스피싱 집단도 금융기관의 이름을 사칭할 수 있는 만큼 고객들의 세심한 주의가 필요하다.&lt;/p&gt;</description>
-      
-      
-      
-      <content:encoded><![CDATA[<h2 id="1-2분기-스팸건수-1분기보다-9만건-↑…대출·보험-유형"><a href="#1-2분기-스팸건수-1분기보다-9만건-↑…대출·보험-유형" class="headerlink" title="1. 2분기 스팸건수, 1분기보다 9만건 ↑…대출·보험 유형"></a>1. 2분기 스팸건수, 1분기보다 9만건 ↑…대출·보험 유형</h2><p><a href="https://news.naver.com/main/read.naver?mode=LSD&mid=shm&sid1=105&oid=277&aid=0004944731">2분기 스팸건수, 1분기보다 9만건 ↑…대출·보험 유형</a></p><p><img src="https://imgnews.pstatic.net/image/277/2021/07/28/0004944731_001_20210728105009857.jpg?type=w647"></p><p>스팸 차단 애플리케이션 ‘후후’를 제공하는 후후앤컴퍼니는 2021년 2분기 후후 이용자들이 신고한 스팸 통계를 28일 발표했고, 전분기 대비 9만여건 증가한 692만건의 스팸 신고가 접수됐다. 주식·투자, 불법게임·도박 관련 스팸은 줄었지만, 대출·보험 가입 권유형 스팸이 급격히 늘었다.</p><p>개별 스팸 내용을 질적으로 분석해 본 결과 금융기관을 사칭해 대출·보험 등 금융 상품 상담을 명목으로 전화를 유도하는 수법이 증가했고금융과 전혀 관계 없는 보이스피싱 집단도 금융기관의 이름을 사칭할 수 있는 만큼 고객들의 세심한 주의가 필요하다.</p><hr><h2 id="2-네이버-쇼핑에-AI-‘하이퍼클로바’-적용…“상품명-자동-교정”"><a href="#2-네이버-쇼핑에-AI-‘하이퍼클로바’-적용…“상품명-자동-교정”" class="headerlink" title="2. 네이버 쇼핑에 AI ‘하이퍼클로바’ 적용…“상품명 자동 교정”"></a>2. 네이버 쇼핑에 AI ‘하이퍼클로바’ 적용…“상품명 자동 교정”</h2><p><a href="http://www.digitaltoday.co.kr/news/articleView.html?idxno=411212">네이버 쇼핑에 AI ‘하이퍼클로바’ 적용…“상품명 자동 교정”</a></p><p><img src="https://cdn.digitaltoday.co.kr/news/photo/202107/411212_405983_3517.png" alt="하이퍼클로바 [사진: 네이버]"></p><p>네이버에 따르면 상품 코드나 상세 스펙, 이벤트 내용 등 많은 정보가 포함돼 복잡하고 긴 상품명이 쇼핑판에 노출되는 경우 이를 직관적이고 쉬운 상품명으로 하이퍼클로바가 자동 교정한다. 예를 들면 ‘0000(브랜드명) 남성 21SS 천연소가죽 멀티라인 슬림 댄디 스니커즈 FQKD1314GRT’와 같은 긴 상품명을 ‘0000(브랜드명) 천연소가죽 스니커즈’로 자동 변환해 사용자에게 노출하는 방식이다.</p><p>이밖에도 하이퍼클로바를 활용해 수천, 수만개의 쇼핑 리뷰를 한줄로 요약해주는 쇼핑 리뷰 요약 시스템도 서비스 적용을 앞두고 있다.</p><ul><li>네이버 관계자는 “하이퍼클로바는 방대한 한국어 학습량을 기반으로 스스로 핵심 내용을 요약하고 새로운 문장을 생성하는 데 뛰어난 능력을 보이고 있다”며 “이를 바탕으로 마치 사람이 큐레이션을 위해 문구를 작성한 것처럼 상품명을 교정할 수 있다”고 말했다.</li></ul><hr><h2 id="3-야놀자-고속버스-예매-서비스-오픈…”여행-슈퍼앱-전략-가속”"><a href="#3-야놀자-고속버스-예매-서비스-오픈…”여행-슈퍼앱-전략-가속”" class="headerlink" title="3. 야놀자, 고속버스 예매 서비스 오픈…”여행 슈퍼앱 전략 가속”"></a>3. 야놀자, 고속버스 예매 서비스 오픈…”여행 슈퍼앱 전략 가속”</h2><p><a href="http://www.digitaltoday.co.kr/news/articleView.html?idxno=411208">야놀자, 고속버스 예매 서비스 오픈…”여행 슈퍼앱 전략 가속”</a></p><p><img src="https://cdn.digitaltoday.co.kr/news/photo/202107/411208_405981_2648.jpg" alt="종합 여가 플랫폼 기업 야놀자가 고속버스 예매 서비스를 오픈했다. [사진: 야놀자]"></p><p>야놀자는 국내외 숙박·레저·레스토랑·교통(항공·철도·렌터카) 등 여행을 위한 모든 서비스를 통합 제공하고 있다. 특히 숙박, 레저 등 기존 사업과의 시너지를 위해 2019년 글로벌 항공권 검색 서비스를 시작으로 철도, 렌터카 등 교통 카테고리를 확대해 왔으며, 새로 선보인 고속버스 예매 서비스 역시 여행 슈퍼앱 전략의 일환으로, 보다 고도화된 모빌리티 환경을 구축하기 위해 마련했단 설명이다.</p><p>야놀자 앱 내 교통·항공 카테고리에선 전국 프리미엄·우등·일반 등 모든 등급의 고속버스를 확인할 수 있으며, 노선 검색부터 예매, 발권 등 고속버스 이용을 위한 모든 과정을 지원한다.</p><hr><h2 id="4-카뱅-‘휴면예금·보험금-찾기’-출시-이틀만에-11억원-지급"><a href="#4-카뱅-‘휴면예금·보험금-찾기’-출시-이틀만에-11억원-지급" class="headerlink" title="4. 카뱅 ‘휴면예금·보험금 찾기’ 출시 이틀만에 11억원 지급"></a>4. 카뱅 ‘휴면예금·보험금 찾기’ 출시 이틀만에 11억원 지급</h2><p><a href="http://www.digitaltoday.co.kr/news/articleView.html?idxno=410670">카뱅 ‘휴면예금·보험금 찾기’ 출시 이틀만에 11억원 지급</a></p><p><img src="https://cdn.digitaltoday.co.kr/news/photo/202107/410670_405712_386.jpg" alt="[사진: 카카오뱅크]"></p><p>카카오뱅크가 ‘휴면예금·보험금 찾기’ 서비스 출시 이틀 만에 지급액이 11억원을 돌파했다고 23일 밝혔으며, 카카오뱅크에 따르면 이틀 간 서비스를 조회한 이용자 수는 17만명이다. 약 5만8000건의 휴면예금과 휴면보험금이 원권리자에게 지급됐다. </p><p>카카오뱅크 관계자는 “고객들의 보다 편리한 금융생활을 위해 유용한 서비스를 지속 출시할 계획”이라고 말했다.</p>]]></content:encoded>
-      
-      
-      <category domain="https://chlee1001.github.io/categories/IT%EC%A0%95%EB%B3%B4/">IT정보</category>
-      
-      <category domain="https://chlee1001.github.io/categories/IT%EC%A0%95%EB%B3%B4/%EB%A7%A4%EC%9D%BC30%EB%B6%84-IT%EB%89%B4%EC%8A%A4/">매일30분 IT뉴스</category>
-      
-      
-      <category domain="https://chlee1001.github.io/tags/IT%EB%89%B4%EC%8A%A4/">IT뉴스</category>
-      
-      <category domain="https://chlee1001.github.io/tags/IT-Issues/">IT Issues</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EC%95%BC%EB%86%80%EC%9E%90/">야놀자</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EC%B9%B4%EC%B9%B4%EC%98%A4%EB%B1%85%ED%81%AC/">카카오뱅크</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%ED%95%98%EC%9D%B4%ED%8D%BC%ED%81%B4%EB%A1%9C%EB%B0%94/">하이퍼클로바</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EC%8A%A4%ED%8C%B8/">스팸</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%ED%9B%84%ED%9B%84/">후후</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EB%84%A4%EC%9D%B4%EB%B2%84%EC%87%BC%ED%95%91/">네이버쇼핑</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EC%8A%88%ED%8D%BC%EC%95%B1/">슈퍼앱</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EC%97%AC%ED%96%89/">여행</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EA%B3%A0%EC%86%8D%EB%B2%84%EC%8A%A4/">고속버스</category>
-      
-      
-      <comments>https://chlee1001.github.io/2021/07/28/21-07-28-IT_News/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[Spring Boot] 스프링부트 기초개념-Spring의 동작원리1</title>
-      <link>https://chlee1001.github.io/2021/07/28/SPRINGBOOT-Study3-21-07-28/</link>
-      <guid>https://chlee1001.github.io/2021/07/28/SPRINGBOOT-Study3-21-07-28/</guid>
-      <pubDate>Tue, 27 Jul 2021 15:26:50 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;https://chlee1001.github.io/images/posts/programming/springboot/study/Spring_study3_1.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://chlee1001.github.io/images/posts/programming/springboot/study/Spring_study3_2.png&quot;&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;img src=&quot;https://chlee1001.github.io/images/posts/programming/springboot/study/Spring_study3_3.png&quot;&gt;&lt;/p&gt;
-&lt;hr&gt;</description>
-      
-      
-      
-      <content:encoded><![CDATA[<p><img src="https://chlee1001.github.io/images/posts/programming/springboot/study/Spring_study3_1.png"></p><p><img src="https://chlee1001.github.io/images/posts/programming/springboot/study/Spring_study3_2.png"></p><hr><p><img src="https://chlee1001.github.io/images/posts/programming/springboot/study/Spring_study3_3.png"></p><hr>]]></content:encoded>
-      
-      
-      <category domain="https://chlee1001.github.io/categories/Programming/">Programming</category>
-      
-      <category domain="https://chlee1001.github.io/categories/Programming/Spring-Boot/">Spring Boot</category>
-      
-      
-      <category domain="https://chlee1001.github.io/tags/Programming/">Programming</category>
-      
-      <category domain="https://chlee1001.github.io/tags/Spring-Boot/">Spring Boot</category>
-      
-      <category domain="https://chlee1001.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://chlee1001.github.io/tags/Spring/">Spring</category>
-      
-      <category domain="https://chlee1001.github.io/tags/JPA/">JPA</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%ED%86%B0%EC%BA%A3/">톰캣</category>
-      
-      <category domain="https://chlee1001.github.io/tags/WAS/">WAS</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EC%9B%B9%EC%84%9C%EB%B2%84/">웹서버</category>
-      
-      
-      <comments>https://chlee1001.github.io/2021/07/28/SPRINGBOOT-Study3-21-07-28/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[Spring Boot] 스프링부트 기초개념-JPA란</title>
-      <link>https://chlee1001.github.io/2021/07/27/SPRINGBOOT-Study2-21-07-27/</link>
-      <guid>https://chlee1001.github.io/2021/07/27/SPRINGBOOT-Study2-21-07-27/</guid>
-      <pubDate>Tue, 27 Jul 2021 13:26:50 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;img src=&quot;https://chlee1001.github.io/images/posts/programming/springboot/study/Spring_study2_1.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://chlee1001.github.io/images/posts/programming/springboot/study/Spring_study2_2.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://chlee1001.github.io/images/posts/programming/springboot/study/Spring_study2_3.png&quot;&gt;&lt;/p&gt;
-</description>
-      
-      
-      
-      <content:encoded><![CDATA[<p><img src="https://chlee1001.github.io/images/posts/programming/springboot/study/Spring_study2_1.png"></p><p><img src="https://chlee1001.github.io/images/posts/programming/springboot/study/Spring_study2_2.png"></p><p><img src="https://chlee1001.github.io/images/posts/programming/springboot/study/Spring_study2_3.png"></p>]]></content:encoded>
-      
-      
-      <category domain="https://chlee1001.github.io/categories/Programming/">Programming</category>
-      
-      <category domain="https://chlee1001.github.io/categories/Programming/Spring-Boot/">Spring Boot</category>
-      
-      
-      <category domain="https://chlee1001.github.io/tags/Programming/">Programming</category>
-      
-      <category domain="https://chlee1001.github.io/tags/Spring-Boot/">Spring Boot</category>
-      
-      <category domain="https://chlee1001.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://chlee1001.github.io/tags/Spring/">Spring</category>
-      
-      <category domain="https://chlee1001.github.io/tags/JPA/">JPA</category>
-      
-      
-      <comments>https://chlee1001.github.io/2021/07/27/SPRINGBOOT-Study2-21-07-27/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[Git] 특정 Branch만 Clone하기</title>
-      <link>https://chlee1001.github.io/2021/07/26/GITHUB-Branch-21-07-26/</link>
-      <guid>https://chlee1001.github.io/2021/07/26/GITHUB-Branch-21-07-26/</guid>
-      <pubDate>Mon, 26 Jul 2021 11:26:50 GMT</pubDate>
-      
-      <description>&lt;p&gt;Git을 사용하면서 브랜치 전체 Clone하지 않고, 특정 브랜치 하나만 사용해야할 경우가 있다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://chlee1001.github.io/images/posts/git/git_branch1.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;하지만, 기본적으로 알고 있는 방법으로 git clone할 경우 Master가 바로 Clone됨으로, 특정 브랜치만 클론하는 방법을 알아보자&lt;/p&gt;
-&lt;hr&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git &lt;span class=&quot;built_in&quot;&gt;clone&lt;/span&gt; -b &amp;lt;branch명&amp;gt; --single-branch &amp;lt;저장소URL&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ex) git &lt;span class=&quot;built_in&quot;&gt;clone&lt;/span&gt; -b rpi-4.12.y --single-branch https://github.com/raspberrypi/linux&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</description>
-      
-      
-      
-      <content:encoded><![CDATA[<p>Git을 사용하면서 브랜치 전체 Clone하지 않고, 특정 브랜치 하나만 사용해야할 경우가 있다.</p><p><img src="https://chlee1001.github.io/images/posts/git/git_branch1.png"></p><p>하지만, 기본적으로 알고 있는 방법으로 git clone할 경우 Master가 바로 Clone됨으로, 특정 브랜치만 클론하는 방법을 알아보자</p><hr><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> -b &lt;branch명&gt; --single-branch &lt;저장소URL&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ex) git <span class="built_in">clone</span> -b rpi-4.12.y --single-branch https://github.com/raspberrypi/linux</span><br></pre></td></tr></table></figure><p><img src="https://chlee1001.github.io/images/posts/git/git_branch2.png"></p>]]></content:encoded>
-      
-      
-      <category domain="https://chlee1001.github.io/categories/Programming/">Programming</category>
-      
-      <category domain="https://chlee1001.github.io/categories/Programming/Git-Github/">Git/Github</category>
-      
-      
-      <category domain="https://chlee1001.github.io/tags/Programming/">Programming</category>
-      
-      <category domain="https://chlee1001.github.io/tags/Git/">Git</category>
-      
-      <category domain="https://chlee1001.github.io/tags/Github/">Github</category>
-      
-      <category domain="https://chlee1001.github.io/tags/branch/">branch</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EB%B8%8C%EB%9E%9C%EC%B9%98/">브랜치</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%ED%81%B4%EB%A1%A0/">클론</category>
-      
-      <category domain="https://chlee1001.github.io/tags/clone/">clone</category>
-      
-      
-      <comments>https://chlee1001.github.io/2021/07/26/GITHUB-Branch-21-07-26/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[Linux] 리눅스에서 압축 및 해제 하는법</title>
-      <link>https://chlee1001.github.io/2021/07/26/LINUX-ZIP-21-07-26/</link>
-      <guid>https://chlee1001.github.io/2021/07/26/LINUX-ZIP-21-07-26/</guid>
-      <pubDate>Mon, 26 Jul 2021 11:26:50 GMT</pubDate>
-      
-      <description>&lt;h2 id=&quot;1-tar-압축&quot;&gt;&lt;a href=&quot;#1-tar-압축&quot; class=&quot;headerlink&quot; title=&quot;1. tar 압축&quot;&gt;&lt;/a&gt;1. tar 압축&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; tar -cvf [파일명.tar] [폴더명]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ex) abc라는 폴더를 aaa.tar로 압축하고자 한다면&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;gt; tar -cvf aaa.tar abc&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;2-tar-압축풀기&quot;&gt;&lt;a href=&quot;#2-tar-압축풀기&quot; class=&quot;headerlink&quot; title=&quot;2. tar 압축풀기&quot;&gt;&lt;/a&gt;2. tar 압축풀기&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; tar -xvf [파일명.tar]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ex) aaa.tar라는 tar파일 압축을 풀고자 한다면&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;gt; tar -xvf aaa.tar&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;hr&gt;</description>
-      
-      
-      
-      <content:encoded><![CDATA[<h2 id="1-tar-압축"><a href="#1-tar-압축" class="headerlink" title="1. tar 압축"></a>1. tar 압축</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; tar -cvf [파일명.tar] [폴더명]</span><br><span class="line"></span><br><span class="line">ex) abc라는 폴더를 aaa.tar로 압축하고자 한다면</span><br><span class="line">    &gt; tar -cvf aaa.tar abc</span><br></pre></td></tr></table></figure><h2 id="2-tar-압축풀기"><a href="#2-tar-압축풀기" class="headerlink" title="2. tar 압축풀기"></a>2. tar 압축풀기</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; tar -xvf [파일명.tar]</span><br><span class="line"></span><br><span class="line">ex) aaa.tar라는 tar파일 압축을 풀고자 한다면</span><br><span class="line">    &gt; tar -xvf aaa.tar</span><br></pre></td></tr></table></figure><hr><h2 id="3-tar-gz-압축"><a href="#3-tar-gz-압축" class="headerlink" title="3. tar.gz 압축"></a>3. tar.gz 압축</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; tar -zcvf [파일명.tar.gz] [폴더명]</span><br><span class="line"></span><br><span class="line">ex) abc라는 폴더를 aaa.tar.gz로 압축하고자 한다면</span><br><span class="line">    &gt; tar -zcvf aaa.tar.gz abc</span><br></pre></td></tr></table></figure><h2 id="4-tar-gz-압축풀기"><a href="#4-tar-gz-압축풀기" class="headerlink" title="4. tar.gz 압축풀기"></a>4. tar.gz 압축풀기</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; tar -zxvf [파일명.tar.gz]</span><br><span class="line"></span><br><span class="line">ex) aaa.tar.gz라는 tar.gz파일 압축을 풀고자 한다면</span><br><span class="line">    &gt; tar -zxvf aaa.tar.gz</span><br></pre></td></tr></table></figure><hr><h2 id="5-zip-압축"><a href="#5-zip-압축" class="headerlink" title="5. zip 압축"></a>5. zip 압축</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; zip [파일명.zip] [폴더명]</span><br><span class="line"></span><br><span class="line">ex) abc라는 폴더를 aaa.zip으로 압축하고자 한다면</span><br><span class="line">    &gt; zip aaa.zip abc</span><br></pre></td></tr></table></figure><h2 id="6-zip-압축풀기"><a href="#6-zip-압축풀기" class="headerlink" title="6. zip 압축풀기"></a>6. zip 압축풀기</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt; unzip [파일명.zip]</span><br><span class="line"></span><br><span class="line">ex) aaa.zip라는 zip파일 압축을 풀고자 한다면</span><br><span class="line">    &gt; unzip aaa.zip</span><br><span class="line">     </span><br><span class="line">ex) 특정 폴더에 압축풀기</span><br><span class="line">&gt; unzip aaa.zip -d ./target</span><br></pre></td></tr></table></figure><hr><h2 id="자주-쓰는-tar-옵션-명령어"><a href="#자주-쓰는-tar-옵션-명령어" class="headerlink" title="자주 쓰는 tar 옵션 명령어"></a>자주 쓰는 tar 옵션 명령어</h2><table><thead><tr><th>옵션</th><th>설명</th></tr></thead><tbody><tr><td>-c</td><td>파일을 tar로 묶음</td></tr><tr><td>-p</td><td>파일 권한을 저장</td></tr><tr><td>-v</td><td>묶거나 파일을 풀 때 과정을 화면으로 출력</td></tr><tr><td>-f</td><td>파일 이름을 지정</td></tr><tr><td>-C</td><td>경로를 지정</td></tr><tr><td>-x</td><td>tar 압축을 풂</td></tr><tr><td>-z</td><td>gzip으로 압축하거나 해제함</td></tr></tbody></table>]]></content:encoded>
-      
-      
-      <category domain="https://chlee1001.github.io/categories/Linux/">Linux</category>
-      
-      
-      <category domain="https://chlee1001.github.io/tags/%EB%A6%AC%EB%88%85%EC%8A%A4/">리눅스</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EC%9A%B0%EB%B6%84%ED%88%AC/">우분투</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EC%95%95%EC%B6%95/">압축</category>
-      
-      
-      <comments>https://chlee1001.github.io/2021/07/26/LINUX-ZIP-21-07-26/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[백준] 13417번 카드 문자열</title>
-      <link>https://chlee1001.github.io/2021/07/26/BAEKJOON-13417-21-07-26/</link>
-      <guid>https://chlee1001.github.io/2021/07/26/BAEKJOON-13417-21-07-26/</guid>
-      <pubDate>Mon, 26 Jul 2021 01:26:50 GMT</pubDate>
-      
-      <description>&lt;p&gt;출처: &lt;a href=&quot;https://www.acmicpc.net/problem/13417&quot;&gt;[백준] 13417번 카드 문자열&lt;/a&gt; &lt;/p&gt;
-&lt;hr&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&quot;left&quot;&gt;시간 제한&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;메모리 제한&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;제출&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;정답&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;맞은 사람&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;정답 비율&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;1 초&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;256 MB&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;1290&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;798&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;696&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;65.108%&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;문제&quot;&gt;&lt;a href=&quot;#문제&quot; class=&quot;headerlink&quot; title=&quot;문제&quot;&gt;&lt;/a&gt;문제&lt;/h3&gt;</description>
-      
-      
-      
-      <content:encoded><![CDATA[<p>출처: <a href="https://www.acmicpc.net/problem/13417">[백준] 13417번 카드 문자열</a> </p><hr><table><thead><tr><th align="left">시간 제한</th><th align="left">메모리 제한</th><th align="left">제출</th><th align="left">정답</th><th align="left">맞은 사람</th><th align="left">정답 비율</th></tr></thead><tbody><tr><td align="left">1 초</td><td align="left">256 MB</td><td align="left">1290</td><td align="left">798</td><td align="left">696</td><td align="left">65.108%</td></tr></tbody></table><hr><h3 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h3><p>N장의 카드가 일렬로 놓여있다. 각 카드에는 알파벳이 하나씩 적혀있다. 태욱이는 가장 왼쪽에 있는 카드부터 차례대로 한 장씩 가져올 수 있다. 가장 처음에 가져온 카드는 자신의 앞에 놓는다. 그다음부터는 가져온 카드를 자신의 앞에 놓인 카드들의 가장 왼쪽, 또는 가장 오른쪽에 놓는다. 태욱이는 모든 카드를 다 가져온 후에 자신의 앞에 놓인 카드를 순서대로 이어 붙여 카드 문자열을 만들려고 한다.</p><p>예를 들어 3장의 카드가 [M, K, U] 순으로 놓여있다고 하자. 태욱이는 먼저 가장 왼쪽에 있는 “M”이 적힌 카드를 가져와서 자신의 앞에 놓는다. 다음으로 남은 카드 중 가장 왼쪽에 있는 “K”가 적힌 카드를 가져와서 가장 왼쪽에 두고, 이어서 “U”가 적힌 카드를 가져와서 다시 가장 왼쪽에 두면 “UKM”이라는 문자열을 만들 수 있다. 만약 “K”가 적힌 카드를 가져와서 가장 왼쪽에 두고, 이어서 “U”가 적힌 카드를 가져와서 가장 오른쪽에 두면 “KMU”라는 문자열을 만들 수 있다. 이때, 태욱이가 만들 수 있는 문자열 중 사전 순으로 가장 빠른 문자열은 “KMU”이다.</p><p>N장의 카드에 적혀있는 알파벳의 처음 순서가 주어질 때, 태욱이가 만들 수 있는 카드 문자열 중 사전 순으로 가장 빠른 문자열을 출력하는 프로그램을 작성하시오.</p><hr><h3 id="입력"><a href="#입력" class="headerlink" title="입력"></a>입력</h3><p>입력 데이터는 표준 입력을 사용한다. 입력은 T개의 테스트 데이터로 구성된다. 입력의 첫째 줄에 테스트 케이스의 개수를 나타내는 자연수 T가 주어진다. 각각의 테스트 케이스의 첫째 줄에 처음에 놓여있는 카드의 개수 N(1 ≤ N ≤ 1,000)이 주어진다. 두 번째 줄에는 N장의 카드에 적힌 알파벳의 초기 순서가 주어진다. 가장 왼쪽에 있는 카드에 적혀있는 알파벳부터 순서대로 N개가 공백으로 구분되어 주어진다. 모든 카드에는 한 개씩의 알파벳이 적혀있으며, 모두 대문자이다. </p><hr><h3 id="출력"><a href="#출력" class="headerlink" title="출력"></a>출력</h3><p>출력은 표준 출력을 사용한다. 입력받은 데이터에 대해, 한 줄에 1개씩 태욱이가 만들 수 있는 문자열 중에서 사전 순으로 가장 빠른 문자열을 출력한다.</p><hr><h3 id="예제-입력-1"><a href="#예제-입력-1" class="headerlink" title="예제 입력 1"></a>예제 입력 1</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">3</span><br><span class="line">M K U</span><br><span class="line">5</span><br><span class="line">A S D F G</span><br><span class="line">7</span><br><span class="line">B A C A B A C</span><br></pre></td></tr></table></figure><h3 id="예제-출력-1"><a href="#예제-출력-1" class="headerlink" title="예제 출력 1"></a>예제 출력 1</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">KMU</span><br><span class="line">ASDFG</span><br><span class="line">AAABCBC</span><br></pre></td></tr></table></figure><hr><h3 id="출처"><a href="#출처" class="headerlink" title="출처"></a>출처</h3><ul><li><a href="https://www.acmicpc.net/category/5">University</a> &gt; <a href="https://www.acmicpc.net/category/361">국민대학교</a> &gt; <a href="https://www.acmicpc.net/category/detail/1541">2016 국민대학교 교내 경시대회</a> E번<ul><li>문제를 만든 사람: <a href="https://www.acmicpc.net/user/game2k">game2k</a></li></ul></li></ul><hr><h3 id="알고리즘-분류"><a href="#알고리즘-분류" class="headerlink" title="알고리즘 분류"></a>알고리즘 분류</h3><ul><li><a href="https://www.acmicpc.net/problem/tag/175">자료 구조</a></li><li><a href="https://www.acmicpc.net/problem/tag/158">문자열</a></li><li><a href="https://www.acmicpc.net/problem/tag/33">그리디 알고리즘</a></li><li><a href="https://www.acmicpc.net/problem/tag/73">덱</a></li></ul><hr><h3 id="소스코드"><a href="#소스코드" class="headerlink" title="소스코드"></a>소스코드</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> deque</span><br><span class="line"></span><br><span class="line"><span class="built_in">input</span> = sys.stdin.readline</span><br><span class="line"></span><br><span class="line">T = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(T):</span><br><span class="line">    N = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">    card_list = deque(<span class="built_in">input</span>().rstrip().split())</span><br><span class="line">    new_list = deque(card_list.popleft())</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> card_list:</span><br><span class="line">        temp = card_list.popleft()</span><br><span class="line">        <span class="keyword">if</span> temp &gt; new_list[<span class="number">0</span>]:</span><br><span class="line">            new_list.append(temp)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            new_list.appendleft(temp)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;&#x27;</span>.join(new_list))</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content:encoded>
-      
-      
-      <category domain="https://chlee1001.github.io/categories/Algorithm/">Algorithm</category>
-      
-      <category domain="https://chlee1001.github.io/categories/Algorithm/Python/">Python</category>
-      
-      
-      <category domain="https://chlee1001.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">알고리즘</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EB%B0%B1%EC%A4%80/">백준</category>
-      
-      <category domain="https://chlee1001.github.io/tags/Python/">Python</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/">자료구조</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%ED%81%90/">큐</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EB%AC%B8%EC%9E%90%EC%97%B4/">문자열</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EA%B7%B8%EB%A6%AC%EB%94%94%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">그리디알고리즘</category>
-      
-      
-      <comments>https://chlee1001.github.io/2021/07/26/BAEKJOON-13417-21-07-26/#disqus_thread</comments>
       
     </item>
     
