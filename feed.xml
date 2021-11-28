@@ -9,8 +9,91 @@
     <atom:link href="https://chlee1001.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Chaehyeon&#39;s Dev Blog</description>
-    <pubDate>Mon, 30 Aug 2021 14:44:32 GMT</pubDate>
+    <pubDate>Sun, 28 Nov 2021 11:41:57 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[Ubuntu] Certbot을 이용한 인증서 발급하기</title>
+      <link>https://chlee1001.github.io/2021/11/28/UBUNTU-Certbot-21-11-28/</link>
+      <guid>https://chlee1001.github.io/2021/11/28/UBUNTU-Certbot-21-11-28/</guid>
+      <pubDate>Sun, 28 Nov 2021 11:26:50 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;a href=&quot;https://eggplant-berry-3f8.notion.site/Ubuntu-EC2-Ubuntu-c6fd0310dcc8468fac90797ffce9edfd&quot;&gt;노션에서 보기&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;이채현&lt;/em&gt;&lt;/p&gt;
+&lt;aside&gt; 💡 Certbot을 통해 무료로 서버인증서를 발급하고, 자동으로 갱신 가능 &lt;/aside&gt;
+
+&lt;h1 id=&quot;snapd-설치하기-snapd-없는-경우&quot;&gt;&lt;a href=&quot;#snapd-설치하기-snapd-없는-경우&quot; class=&quot;headerlink&quot; title=&quot;snapd 설치하기 (snapd 없는 경우)&quot;&gt;&lt;/a&gt;snapd 설치하기 (snapd 없는 경우)&lt;/h1&gt;&lt;p&gt;최신 버전의 우분투에는 snapd가 설치되어있는 것으로 알고 있음&lt;/p&gt;</description>
+      
+      
+      
+      <content:encoded><![CDATA[<p><a href="https://eggplant-berry-3f8.notion.site/Ubuntu-EC2-Ubuntu-c6fd0310dcc8468fac90797ffce9edfd">노션에서 보기</a></p><p><em>이채현</em></p><aside> 💡 Certbot을 통해 무료로 서버인증서를 발급하고, 자동으로 갱신 가능 </aside><h1 id="snapd-설치하기-snapd-없는-경우"><a href="#snapd-설치하기-snapd-없는-경우" class="headerlink" title="snapd 설치하기 (snapd 없는 경우)"></a>snapd 설치하기 (snapd 없는 경우)</h1><p>최신 버전의 우분투에는 snapd가 설치되어있는 것으로 알고 있음</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># apt # snap</span></span><br><span class="line"><span class="comment"># Ubuntu</span></span><br><span class="line">sudo apt install snapd</span><br><span class="line">sudo reboot</span><br></pre></td></tr></table></figure><h1 id="certbot-설치하기-snap"><a href="#certbot-설치하기-snap" class="headerlink" title="certbot 설치하기 (snap)"></a>certbot 설치하기 (snap)</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo snap install core; sudo snap refresh core</span><br><span class="line">sudo snap install --classic certbot</span><br><span class="line">sudo ln -s /snap/bin/certbot /usr/bin/certbot</span><br></pre></td></tr></table></figure><h1 id="cloudflare-plugin-설치하기"><a href="#cloudflare-plugin-설치하기" class="headerlink" title="cloudflare plugin 설치하기"></a>cloudflare plugin 설치하기</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># dns  cloudflare</span></span><br><span class="line">sudo snap <span class="built_in">set</span> certbot trust-plugin-with-root=ok</span><br><span class="line">sudo snap install certbot-dns-cloudflare</span><br></pre></td></tr></table></figure><h1 id="cloudflare-api-token-넣기"><a href="#cloudflare-api-token-넣기" class="headerlink" title="cloudflare api token 넣기"></a>cloudflare api token 넣기</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p ~/.secrets/certbot</span><br><span class="line">vi ~/.secrets/certbot/cloudflare.ini</span><br><span class="line">----------------------------------</span><br><span class="line"><span class="comment"># Cloudflare API token used by Certbot</span></span><br><span class="line">dns_cloudflare_api_token = IdgrE2pGEQxdq43kQPJ8*****************</span><br><span class="line">chmod 600 ~/.secrets/certbot/cloudflare.ini</span><br></pre></td></tr></table></figure><h1 id="자신의-도메인-인증서-등록하기"><a href="#자신의-도메인-인증서-등록하기" class="headerlink" title="자신의 도메인 인증서 등록하기"></a>자신의 도메인 인증서 등록하기</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># *.4084.live</span></span><br><span class="line">sudo certbot certonly --dns-cloudflare \\</span><br><span class="line">   --dns-cloudflare-credentials ~/.secrets/certbot/cloudflare.ini \\</span><br><span class="line">   -d *.4084.live</span><br><span class="line"></span><br><span class="line">-----------------</span><br><span class="line">ubuntu@dev-project-app:~$ sudo certbot certonly --dns-cloudflare \\</span><br><span class="line">&gt;    --dns-cloudflare-credentials ~/.secrets/certbot/cloudflare.ini \\</span><br><span class="line">&gt;    -d *.4084.live</span><br><span class="line">Saving debug <span class="built_in">log</span> to /var/<span class="built_in">log</span>/letsencrypt/letsencrypt.log</span><br><span class="line">Enter email address (used <span class="keyword">for</span> urgent renewal and security notices)</span><br><span class="line"> (Enter <span class="string">&#x27;c&#x27;</span> to cancel): ----@gmail.com</span><br><span class="line"></span><br><span class="line">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</span><br><span class="line">Please <span class="built_in">read</span> the Terms of Service at</span><br><span class="line">&lt;https://letsencrypt.org/documents/LE-SA-v1.2-November-15-2017.pdf&gt;. You must</span><br><span class="line">agree <span class="keyword">in</span> order to register with the ACME server. Do you agree?</span><br><span class="line">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</span><br><span class="line">(Y)es/(N)o: Y</span><br><span class="line"></span><br><span class="line">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</span><br><span class="line">Would you be willing, once your first certificate is successfully issued, to</span><br><span class="line">share your email address with the Electronic Frontier Foundation, a founding</span><br><span class="line">partner of the Let<span class="string">&#x27;s Encrypt project and the non-profit organization that</span></span><br><span class="line"><span class="string">develops Certbot? We&#x27;</span>d like to send you email about our work encrypting the web,</span><br><span class="line">EFF news, campaigns, and ways to support digital freedom.</span><br><span class="line">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</span><br><span class="line">(Y)es/(N)o: Y</span><br><span class="line">Account registered.</span><br><span class="line">Requesting a certificate <span class="keyword">for</span> *.4084.live</span><br><span class="line">Waiting 10 seconds <span class="keyword">for</span> DNS changes to propagate</span><br><span class="line"></span><br><span class="line">Successfully received certificate.</span><br><span class="line">Certificate is saved at: /etc/letsencrypt/live/4084.live/fullchain.pem</span><br><span class="line">Key is saved at:         /etc/letsencrypt/live/4084.live/privkey.pem</span><br><span class="line">This certificate expires on 2022-02-26.</span><br><span class="line">These files will be updated when the certificate renews.</span><br><span class="line">Certbot has <span class="built_in">set</span> up a scheduled task to automatically renew this certificate <span class="keyword">in</span> the background.</span><br><span class="line"></span><br><span class="line">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</span><br><span class="line">If you like Certbot, please consider supporting our work by:</span><br><span class="line"> * Donating to ISRG / Let<span class="string">&#x27;s Encrypt:   &lt;https://letsencrypt.org/donate&gt;</span></span><br><span class="line"><span class="string"> * Donating to EFF:                    &lt;https://eff.org/donate-le&gt;</span></span><br><span class="line"><span class="string">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</span></span><br></pre></td></tr></table></figure><p>생성된 인증서 경로 /etc/letsencrypt/live/4084.live/fullchain.pem /etc/letsencrypt/live/4084.live/privkey.pem</p><h1 id="인증서-갱신하기"><a href="#인증서-갱신하기" class="headerlink" title="인증서 갱신하기"></a>인증서 갱신하기</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#     (--dry-run)</span></span><br><span class="line">sudo certbot renew --dry-run</span><br><span class="line"></span><br><span class="line"><span class="comment">#(xx )</span></span><br><span class="line">sudo certbot renew</span><br></pre></td></tr></table></figure><h1 id="crontab을-이용하여-주기적으로-갱신"><a href="#crontab을-이용하여-주기적으로-갱신" class="headerlink" title="crontab을 이용하여 주기적으로 갱신"></a>crontab을 이용하여 주기적으로 갱신</h1><p>(매주 일요일 2시 1분에 실행)</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">crontab -e</span><br><span class="line">-----------</span><br><span class="line"><span class="comment"># cert renewal</span></span><br><span class="line">1 2 * * 0 sudo /usr/bin/certbot renew</span><br></pre></td></tr></table></figure><p>참고링크</p><hr><ul><li><a href="https://letsencrypt.org/">Let’s Encrypt (letsencrypt.org)</a></li><li><a href="https://certbot.eff.org/">https://certbot.eff.org/</a></li><li><a href="https://eff-certbot.readthedocs.io/en/stable/using.html">User Guide — Certbot 1.15.0.dev0 documentation (eff.org)</a></li><li><a href="https://certbot-dns-cloudflare.readthedocs.io/en/stable/">https://certbot-dns-cloudflare.readthedocs.io/en/stable/</a></li><li><a href="https://eff-certbot.readthedocs.io/en/stable/using.html#dns-plugins">User Guide — Certbot 1.15.0.dev0 documentation (eff.org)</a></li><li><a href="https://levelup.gitconnected.com/how-to-install-ssl-certificate-for-nginx-server-in-amazon-linux-2986f51371fb">How to install SSL certificate for Nginx server in Amazon Linux | by Sagar Shrestha | Level Up Coding (gitconnected.com)</a></li></ul>]]></content:encoded>
+      
+      
+      <category domain="https://chlee1001.github.io/categories/Linux/">Linux</category>
+      
+      <category domain="https://chlee1001.github.io/categories/Linux/Ubuntu/">Ubuntu</category>
+      
+      
+      <category domain="https://chlee1001.github.io/tags/AWS/">AWS</category>
+      
+      <category domain="https://chlee1001.github.io/tags/Ubuntu/">Ubuntu</category>
+      
+      <category domain="https://chlee1001.github.io/tags/Linux/">Linux</category>
+      
+      <category domain="https://chlee1001.github.io/tags/Certbot/">Certbot</category>
+      
+      <category domain="https://chlee1001.github.io/tags/letsencrypt/">letsencrypt</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EC%9D%B8%EC%A6%9D%EC%84%9C/">인증서</category>
+      
+      
+      <comments>https://chlee1001.github.io/2021/11/28/UBUNTU-Certbot-21-11-28/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[Ubuntu] EC2 Ubuntu에 접속 후 초기 셋팅</title>
+      <link>https://chlee1001.github.io/2021/11/28/UBUNTU-Connect1-21-11-28/</link>
+      <guid>https://chlee1001.github.io/2021/11/28/UBUNTU-Connect1-21-11-28/</guid>
+      <pubDate>Sun, 28 Nov 2021 09:26:50 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;a href=&quot;https://eggplant-berry-3f8.notion.site/Ubuntu-Certbot-9de75d4e532b4243bdf1a67a8504279f&quot;&gt;노션에서 보기&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;이채현&lt;/em&gt;&lt;/p&gt;
+&lt;aside&gt;
+💡 키를 이용하여 생성한 EC2 Ubuntu 인스턴스에 접속해보자 (mac os 기준)
+&lt;/aside&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;인스턴스를 생성할 때 키페어 생성하여 위치확인하기&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&quot;키-페어-저장&quot;&gt;&lt;a href=&quot;#키-페어-저장&quot; class=&quot;headerlink&quot; title=&quot;키 페어 저장&quot;&gt;&lt;/a&gt;키 페어 저장&lt;/h1&gt;</description>
+      
+      
+      
+      <content:encoded><![CDATA[<p><a href="https://eggplant-berry-3f8.notion.site/Ubuntu-Certbot-9de75d4e532b4243bdf1a67a8504279f">노션에서 보기</a></p><p><em>이채현</em></p><aside>💡 키를 이용하여 생성한 EC2 Ubuntu 인스턴스에 접속해보자 (mac os 기준)</aside><p><strong>인스턴스를 생성할 때 키페어 생성하여 위치확인하기</strong></p><h1 id="키-페어-저장"><a href="#키-페어-저장" class="headerlink" title="키 페어 저장"></a>키 페어 저장</h1><p>다운로드 한 키페어를 ~/.ssh 폴더 안에 위치시키고 권한을 600으로 변경한다</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cp ~/Downloads/&#123;keypair-name.pem&#125; ~/.ssh/AWS</span><br><span class="line">chmod 600 &#123;keypair-name.pem&#125;</span><br></pre></td></tr></table></figure><h1 id="접속"><a href="#접속" class="headerlink" title="접속"></a>접속</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -i ./&#123;keypair-name.pem&#125; ubuntu@&#123;public ipv4 주소&#125;</span><br></pre></td></tr></table></figure><h1 id="로그인-후"><a href="#로그인-후" class="headerlink" title="로그인 후"></a>로그인 후</h1><h2 id="패키지-업데이트"><a href="#패키지-업데이트" class="headerlink" title="패키지 업데이트"></a>패키지 업데이트</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade</span><br></pre></td></tr></table></figure><h2 id="hostname-변경"><a href="#hostname-변경" class="headerlink" title="hostname 변경"></a>hostname 변경</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo hostnamectl set-hostname &#123;원하는 이름&#125;</span><br><span class="line"><span class="comment"># 재접속</span></span><br></pre></td></tr></table></figure><h2 id="타임존-변경"><a href="#타임존-변경" class="headerlink" title="타임존 변경"></a>타임존 변경</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo timedatectl set-timezone Asia/Seoul</span><br></pre></td></tr></table></figure><h1 id="개인PC에서-간단히-접속하기"><a href="#개인PC에서-간단히-접속하기" class="headerlink" title="개인PC에서 간단히 접속하기"></a>개인PC에서 간단히 접속하기</h1><p>ssh명령어를 이용하여 접속할 때에는 인증키의 위치를 계정명, 주소를 같이 입력해줘야하는 번거로움이 있다.</p><p>이를 개인pc의 인증서를 등록하여 인증서없이 바로 로그인해보자</p><h2 id="id-rsa-키-생성하기-개인-Mac"><a href="#id-rsa-키-생성하기-개인-Mac" class="headerlink" title="id_rsa 키 생성하기 (개인-Mac)"></a>id_rsa 키 생성하기 (개인-Mac)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br><span class="line">ssh-keygen</span><br></pre></td></tr></table></figure><p>이후 ~/.ssh 폴더 내부에 생성 된 id_rsa(private) id_rsa.pub(public) 두개의 키를 확인할 수 있다.<br>이 중 id_rsa.pub의 내용을 복사한다.</p><h2 id="authorized-keys-수정하기-원격-Ubuntu"><a href="#authorized-keys-수정하기-원격-Ubuntu" class="headerlink" title="authorized_keys 수정하기 (원격-Ubuntu)"></a>authorized_keys 수정하기 (원격-Ubuntu)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.ssh/authorized_keys</span><br><span class="line">위에서 복사한 id_rsa.pub 내용을 붙여넣고 저장한다.</span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      
+      <category domain="https://chlee1001.github.io/categories/Linux/">Linux</category>
+      
+      <category domain="https://chlee1001.github.io/categories/Linux/Ubuntu/">Ubuntu</category>
+      
+      
+      <category domain="https://chlee1001.github.io/tags/AWS/">AWS</category>
+      
+      <category domain="https://chlee1001.github.io/tags/Ubuntu/">Ubuntu</category>
+      
+      <category domain="https://chlee1001.github.io/tags/Linux/">Linux</category>
+      
+      <category domain="https://chlee1001.github.io/tags/Mac/">Mac</category>
+      
+      <category domain="https://chlee1001.github.io/tags/key/">key</category>
+      
+      <category domain="https://chlee1001.github.io/tags/id-rsa/">id_rsa</category>
+      
+      
+      <comments>https://chlee1001.github.io/2021/11/28/UBUNTU-Connect1-21-11-28/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>2021년 08월 30일 월요일 IT뉴스</title>
@@ -935,104 +1018,6 @@
       
       
       <comments>https://chlee1001.github.io/2021/08/05/AWS-MYSQL2-21-08-05/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[AWS] EC2 Ubuntu에서 MySQL 사용하기</title>
-      <link>https://chlee1001.github.io/2021/08/05/AWS-MYSQL1-21-08-05/</link>
-      <guid>https://chlee1001.github.io/2021/08/05/AWS-MYSQL1-21-08-05/</guid>
-      <pubDate>Thu, 05 Aug 2021 06:26:50 GMT</pubDate>
-      
-      <description>&lt;h1 id=&quot;Ubuntu-패키지-정보-업데이트&quot;&gt;&lt;a href=&quot;#Ubuntu-패키지-정보-업데이트&quot; class=&quot;headerlink&quot; title=&quot;Ubuntu 패키지 정보 업데이트&quot;&gt;&lt;/a&gt;Ubuntu 패키지 정보 업데이트&lt;/h1&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo apt update&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt upgrade&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;hr&gt;
-&lt;h1 id=&quot;MySQL-설치&quot;&gt;&lt;a href=&quot;#MySQL-설치&quot; class=&quot;headerlink&quot; title=&quot;MySQL 설치&quot;&gt;&lt;/a&gt;MySQL 설치&lt;/h1&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo apt install -y mysql-server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</description>
-      
-      
-      
-      <content:encoded><![CDATA[<h1 id="Ubuntu-패키지-정보-업데이트"><a href="#Ubuntu-패키지-정보-업데이트" class="headerlink" title="Ubuntu 패키지 정보 업데이트"></a>Ubuntu 패키지 정보 업데이트</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade</span><br></pre></td></tr></table></figure><hr><h1 id="MySQL-설치"><a href="#MySQL-설치" class="headerlink" title="MySQL 설치"></a>MySQL 설치</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install -y mysql-server</span><br></pre></td></tr></table></figure><hr><h1 id="MySQL-기본-세팅"><a href="#MySQL-기본-세팅" class="headerlink" title="MySQL 기본 세팅"></a>MySQL 기본 세팅</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo ufw allow mysql # 외부 접속 기능 설정 (포트 3306 오픈)</span><br><span class="line">sudo systemctl start mysql # Mysql 실행</span><br><span class="line">sudo systemctl enable mysql # Ubuntu 서버 재시작시 Mysql 자동 재시작</span><br></pre></td></tr></table></figure><h2 id="MySQL-외부접속-설정"><a href="#MySQL-외부접속-설정" class="headerlink" title="MySQL 외부접속 설정"></a>MySQL 외부접속 설정</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf</span><br></pre></td></tr></table></figure><p>bind-address를 127.0.0.1 -&gt; 0.0.0.0 으로 변경</p><p><img src="https://chlee1001.github.io/images/posts/programming/AWS/ubuntu/mysql/mysql_external_connection.png"></p><h2 id="MySQL-언어셋-한글-설정"><a href="#MySQL-언어셋-한글-설정" class="headerlink" title="MySQL 언어셋 한글 설정"></a>MySQL 언어셋 한글 설정</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/mysql/my.cnf</span><br></pre></td></tr></table></figure><p>맨 밑에 다음 코드 첨부</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[client]</span><br><span class="line">default-character-set = utf8</span><br><span class="line"></span><br><span class="line">[mysqld]</span><br><span class="line">init_connect = SET collation_connection = utf8_general_ci</span><br><span class="line">init_connect = SET NAMES utf8</span><br><span class="line">character-set-server = utf8</span><br><span class="line">collation-server = utf8_general_ci</span><br><span class="line"></span><br><span class="line">[mysqldump]</span><br><span class="line">default-character-set = utf8</span><br><span class="line"></span><br><span class="line">[mysql]</span><br><span class="line">default-character-set = utf8</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart mysql # Mysql 재실행</span><br><span class="line">sudo mysql # MySQL 접속</span><br><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> status;</span></span><br></pre></td></tr></table></figure><p><img src="https://chlee1001.github.io/images/posts/programming/AWS/ubuntu/mysql/mysql_language.png"></p><h2 id="MySQL-상태확인"><a href="#MySQL-상태확인" class="headerlink" title="MySQL 상태확인"></a>MySQL 상태확인</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl status mysql</span><br></pre></td></tr></table></figure><p><img src="https://chlee1001.github.io/images/posts/programming/AWS/ubuntu/mysql/mysql_status.png"></p><hr><h1 id="MySQL-사용자-등록-및-권한-설정"><a href="#MySQL-사용자-등록-및-권한-설정" class="headerlink" title="MySQL 사용자 등록 및 권한 설정"></a>MySQL 사용자 등록 및 권한 설정</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; create user &#39;계정이름&#39;@&#39;%&#39; identified by &#39;패스워드&#39;;</span><br><span class="line">mysql&gt; grant all privileges on *.* to &#39;계정이름&#39;@&#39;%&#39; with grant option;</span><br></pre></td></tr></table></figure><hr><h1 id="인스턴스-인바운드-규칙-설정"><a href="#인스턴스-인바운드-규칙-설정" class="headerlink" title="인스턴스 인바운드 규칙 설정"></a>인스턴스 인바운드 규칙 설정</h1><p><img src="https://chlee1001.github.io/images/posts/programming/AWS/ubuntu/mysql/mysql_inbound.png"></p><hr><h1 id="외부에서-MySQL-접속확인"><a href="#외부에서-MySQL-접속확인" class="headerlink" title="외부에서 MySQL 접속확인"></a>외부에서 MySQL 접속확인</h1><p>MySQL Workbench를 이용하여 접속확인을 한다.</p><p><img src="https://chlee1001.github.io/images/posts/programming/AWS/ubuntu/mysql/mysql_connection_check.png"></p>]]></content:encoded>
-      
-      
-      <category domain="https://chlee1001.github.io/categories/Programming/">Programming</category>
-      
-      <category domain="https://chlee1001.github.io/categories/Programming/AWS/">AWS</category>
-      
-      
-      <category domain="https://chlee1001.github.io/tags/Programming/">Programming</category>
-      
-      <category domain="https://chlee1001.github.io/tags/AWS/">AWS</category>
-      
-      <category domain="https://chlee1001.github.io/tags/EC2/">EC2</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EC%9A%B0%EB%B6%84%ED%88%AC/">우분투</category>
-      
-      <category domain="https://chlee1001.github.io/tags/Ubuntu/">Ubuntu</category>
-      
-      <category domain="https://chlee1001.github.io/tags/MySQL/">MySQL</category>
-      
-      
-      <comments>https://chlee1001.github.io/2021/08/05/AWS-MYSQL1-21-08-05/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[백준] 2810번 컵홀더</title>
-      <link>https://chlee1001.github.io/2021/08/05/BAEKJOON-2810-21-08-05/</link>
-      <guid>https://chlee1001.github.io/2021/08/05/BAEKJOON-2810-21-08-05/</guid>
-      <pubDate>Thu, 05 Aug 2021 03:26:50 GMT</pubDate>
-      
-      <description>&lt;p&gt;출처: &lt;a href=&quot;https://www.acmicpc.net/problem/2810&quot;&gt;[백준] 2810번 컵홀더&lt;/a&gt; &lt;/p&gt;
-&lt;hr&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&quot;left&quot;&gt;시간 제한&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;메모리 제한&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;제출&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;정답&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;맞은 사람&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;정답 비율&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;1 초&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;128 MB&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;5819&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;2412&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;2094&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;40.787%&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;문제&quot;&gt;&lt;a href=&quot;#문제&quot; class=&quot;headerlink&quot; title=&quot;문제&quot;&gt;&lt;/a&gt;문제&lt;/h2&gt;</description>
-      
-      
-      
-      <content:encoded><![CDATA[<p>출처: <a href="https://www.acmicpc.net/problem/2810">[백준] 2810번 컵홀더</a> </p><hr><table><thead><tr><th align="left">시간 제한</th><th align="left">메모리 제한</th><th align="left">제출</th><th align="left">정답</th><th align="left">맞은 사람</th><th align="left">정답 비율</th></tr></thead><tbody><tr><td align="left">1 초</td><td align="left">128 MB</td><td align="left">5819</td><td align="left">2412</td><td align="left">2094</td><td align="left">40.787%</td></tr></tbody></table><hr><h2 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h2><p>십년이면 강산이 변한다.</p><p>강산이네 동네에 드디어 극장이 생겼고, 강산이는 극장에 놀러갔다. 매점에서 콜라를 산 뒤, 자리에 앉은 강산이는 큰 혼란에 빠졌다. 양쪽 컵홀더를 이미 옆 사람들이 차지했기 때문에 콜라를 꽂을 컵 홀더가 없었기 때문이다. 영화를 보는 내내 콜라를 손에 들고 있던 강산이는 극장에 다시 왔을 때는 꼭 콜라를 컵 홀더에 놓겠다는 다짐을 한 후 집에 돌아갔다.</p><p>극장의 한 줄에는 자리가 N개가 있다. 서로 인접한 좌석 사이에는 컵홀더가 하나씩 있고, 양 끝 좌석에는 컵홀더가 하나씩 더 있다. 또, 이 극장에는 커플석이 있다. 커플석 사이에는 컵홀더가 없다.</p><p>극장의 한 줄의 정보가 주어진다. 이때, 이 줄에 사람들이 모두 앉았을 때, 컵홀더에 컵을 꽂을 수 있는 최대 사람의 수를 구하는 프로그램을 작성하시오. 모든 사람은 컵을 한 개만 들고 있고, 자신의 좌석의 양 옆에 있는 컵홀더에만 컵을 꽂을 수 있다.</p><p>S는 일반 좌석, L은 커플석을 의미하며, L은 항상 두개씩 쌍으로 주어진다.</p><p>어떤 좌석의 배치가 SLLLLSSLL일때, 컵홀더를 *로 표시하면 아래와 같다.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*S*LL*LL*S*S*LL*</span><br></pre></td></tr></table></figure><p>위의 예에서 적어도 두 명은 컵홀더를 사용할 수 없다.</p><hr><h2 id="입력"><a href="#입력" class="headerlink" title="입력"></a>입력</h2><p>첫째 줄에 좌석의 수 N이 주어진다. (1 ≤ N ≤ 50) 둘째 줄에는 좌석의 정보가 주어진다.</p><hr><h2 id="출력"><a href="#출력" class="headerlink" title="출력"></a>출력</h2><p>컵을 컵홀더에 놓을 수 있는 최대 사람의 수를 출력한다.</p><hr><h2 id="예제-입력-1"><a href="#예제-입력-1" class="headerlink" title="예제 입력 1"></a>예제 입력 1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">SSS</span><br></pre></td></tr></table></figure><h2 id="예제-출력-1"><a href="#예제-출력-1" class="headerlink" title="예제 출력 1"></a>예제 출력 1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure><h2 id="예제-입력-2"><a href="#예제-입력-2" class="headerlink" title="예제 입력 2"></a>예제 입력 2</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">SLLS</span><br></pre></td></tr></table></figure><h2 id="예제-출력-2"><a href="#예제-출력-2" class="headerlink" title="예제 출력 2"></a>예제 출력 2</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure><h2 id="예제-입력-3"><a href="#예제-입력-3" class="headerlink" title="예제 입력 3"></a>예제 입력 3</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">9</span><br><span class="line">SLLLLSSLL</span><br></pre></td></tr></table></figure><h2 id="예제-출력-3"><a href="#예제-출력-3" class="headerlink" title="예제 출력 3"></a>예제 출력 3</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">7</span><br></pre></td></tr></table></figure><hr><h2 id="출처"><a href="#출처" class="headerlink" title="출처"></a>출처</h2><ul><li><a href="https://www.acmicpc.net/category/45">Contest</a> &gt; <a href="https://www.acmicpc.net/category/17">Croatian Open Competition in Informatics</a> &gt; <a href="https://www.acmicpc.net/category/19">COCI 2011/2012</a> &gt; <a href="https://www.acmicpc.net/category/detail/71">Contest #4</a> 1번<ul><li>문제를 번역한 사람: <a href="https://www.acmicpc.net/user/baekjoon">baekjoon</a></li><li>문제의 오타를 찾은 사람: <a href="https://www.acmicpc.net/user/silvercube">silvercube</a></li></ul></li></ul><hr><h2 id="알고리즘-분류"><a href="#알고리즘-분류" class="headerlink" title="알고리즘 분류"></a>알고리즘 분류</h2><ul><li><a href="https://www.acmicpc.net/problem/tag/102">구현</a></li><li><a href="https://www.acmicpc.net/problem/tag/158">문자열</a></li><li><a href="https://www.acmicpc.net/problem/tag/33">그리디 알고리즘</a></li></ul><hr><h2 id="소스코드"><a href="#소스코드" class="headerlink" title="소스코드"></a>소스코드</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="built_in">input</span> = sys.stdin.readline</span><br><span class="line"></span><br><span class="line">N = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">seats = <span class="built_in">input</span>().rstrip()</span><br><span class="line"></span><br><span class="line">couples = seats.count(<span class="string">&#x27;LL&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> couples &lt; <span class="number">2</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">len</span>(seats))</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">len</span>(seats) - couples + <span class="number">1</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content:encoded>
-      
-      
-      <category domain="https://chlee1001.github.io/categories/Algorithm/">Algorithm</category>
-      
-      <category domain="https://chlee1001.github.io/categories/Algorithm/Python/">Python</category>
-      
-      
-      <category domain="https://chlee1001.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">알고리즘</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EB%B0%B1%EC%A4%80/">백준</category>
-      
-      <category domain="https://chlee1001.github.io/tags/Python/">Python</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EA%B5%AC%ED%98%84/">구현</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EB%AC%B8%EC%9E%90%EC%97%B4/">문자열</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EA%B7%B8%EB%A6%AC%EB%94%94%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">그리디알고리즘</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EA%B7%B8%EB%A6%AC%EB%94%94/">그리디</category>
-      
-      
-      <comments>https://chlee1001.github.io/2021/08/05/BAEKJOON-2810-21-08-05/#disqus_thread</comments>
       
     </item>
     

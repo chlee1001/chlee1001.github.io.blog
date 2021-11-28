@@ -9,6 +9,22 @@
 
 
     <url>
+        <loc>https://chlee1001.github.io/2021/11/28/UBUNTU-Certbot-21-11-28/</loc>
+        <lastmod>2021-11-28T11:41:57.786Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
+        <loc>https://chlee1001.github.io/2021/11/28/UBUNTU-Connect1-21-11-28/</loc>
+        <lastmod>2021-11-28T11:41:39.104Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
         <loc>https://chlee1001.github.io/2021/08/30/21-08-30-IT_News/</loc>
         <lastmod>2021-08-30T14:44:32.457Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1009,8 +1025,8 @@
     </url>
 
     <url>
-        <loc>https://chlee1001.github.io/2019/04/25/%5BC++%5D-String%20%ED%81%B4%EB%9E%98%EC%8A%A4-2019-04-25/</loc>
-        <lastmod>2021-06-24T15:18:54.064Z</lastmod>
+        <loc>https://chlee1001.github.io/2019/04/25/%5BC++%5D-String%20%E1%84%8F%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A2%E1%84%89%E1%85%B3-2019-04-25/</loc>
+        <lastmod>2021-06-24T15:18:54.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
 
@@ -1873,8 +1889,8 @@
     </url>
 
     <url>
-        <loc>https://chlee1001.github.io/2021/04/08/%EC%BD%94%EB%93%9C%EC%9E%87-%EA%B0%95%EB%82%A8%EC%97%AD-%EC%B9%A8%EC%88%98-21-04-08/</loc>
-        <lastmod>2021-04-08T08:35:26.139Z</lastmod>
+        <loc>https://chlee1001.github.io/2021/04/08/%E1%84%8F%E1%85%A9%E1%84%83%E1%85%B3%E1%84%8B%E1%85%B5%E1%86%BA-%E1%84%80%E1%85%A1%E1%86%BC%E1%84%82%E1%85%A1%E1%86%B7%E1%84%8B%E1%85%A7%E1%86%A8-%E1%84%8E%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE-21-04-08/</loc>
+        <lastmod>2021-04-08T08:35:26.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
 
@@ -2257,8 +2273,8 @@
     </url>
 
     <url>
-        <loc>https://chlee1001.github.io/2019/04/18/%5BJS%5D%20%5B%EB%B2%88%EC%97%AD%5D%2040%EA%B0%80%EC%A7%80%EC%9D%98%20%EC%9C%A0%EC%9A%A9%ED%95%9C%20JavaScript%ED%8C%81,%20%ED%8A%B8%EB%A6%AD%EA%B3%BC%20%EB%AA%A8%EB%B2%94%EC%82%AC%EB%A1%80-2019-04-17s/</loc>
-        <lastmod>2021-03-30T10:19:55.457Z</lastmod>
+        <loc>https://chlee1001.github.io/2019/04/18/%5BJS%5D%20%5B%E1%84%87%E1%85%A5%E1%86%AB%E1%84%8B%E1%85%A7%E1%86%A8%5D%2040%E1%84%80%E1%85%A1%E1%84%8C%E1%85%B5%E1%84%8B%E1%85%B4%20%E1%84%8B%E1%85%B2%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%92%E1%85%A1%E1%86%AB%20JavaScript%E1%84%90%E1%85%B5%E1%86%B8,%20%E1%84%90%E1%85%B3%E1%84%85%E1%85%B5%E1%86%A8%E1%84%80%E1%85%AA%20%E1%84%86%E1%85%A9%E1%84%87%E1%85%A5%E1%86%B7%E1%84%89%E1%85%A1%E1%84%85%E1%85%A8-2019-04-17s/</loc>
+        <lastmod>2021-03-30T10:19:55.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
 
@@ -2465,8 +2481,8 @@
     </url>
 
     <url>
-        <loc>https://chlee1001.github.io/2019/04/19/2019-04-19-%EC%B0%B8%EA%B3%A0-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EB%AA%A8%EC%9D%8C/</loc>
-        <lastmod>2021-03-08T04:53:37.728Z</lastmod>
+        <loc>https://chlee1001.github.io/2019/04/19/2019-04-19-%E1%84%8E%E1%85%A1%E1%86%B7%E1%84%80%E1%85%A9-%E1%84%89%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%90%E1%85%B3-%E1%84%86%E1%85%A9%E1%84%8B%E1%85%B3%E1%86%B7/</loc>
+        <lastmod>2021-03-08T04:53:37.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
 
