@@ -9,8 +9,49 @@
     <atom:link href="https://chlee1001.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Chaehyeon&#39;s Dev Blog</description>
-    <pubDate>Sun, 02 Jan 2022 14:55:36 GMT</pubDate>
+    <pubDate>Mon, 31 Jan 2022 09:57:59 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[JS] Algorithm - 자주 쓰이는 구문 정리(22.01.13)</title>
+      <link>https://chlee1001.github.io/2022/01/31/JS-Algorithm-1-22-01-31/</link>
+      <guid>https://chlee1001.github.io/2022/01/31/JS-Algorithm-1-22-01-31/</guid>
+      <pubDate>Mon, 31 Jan 2022 09:26:50 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;em&gt;이채현&lt;/em&gt;&lt;/p&gt;
+&lt;aside&gt;
+💡 Javascript를 이용하여 알고리즘 문제를 풀 때 자주 쓰이는 구문을 정리하자!
+&lt;/aside&gt;
+
+
+&lt;h1 id=&quot;배열-중복값-개수-구하기&quot;&gt;&lt;a href=&quot;#배열-중복값-개수-구하기&quot; class=&quot;headerlink&quot; title=&quot;배열 중복값 개수 구하기&quot;&gt;&lt;/a&gt;배열 중복값 개수 구하기&lt;/h1&gt;&lt;h3 id=&quot;reduce&quot;&gt;&lt;a href=&quot;#reduce&quot; class=&quot;headerlink&quot; title=&quot;reduce()&quot;&gt;&lt;/a&gt;reduce()&lt;/h3&gt;&lt;p&gt;reduce() 함수는, 배열의 값을 순회하면서 배열의 값을 특정 형태로 누적하는데 사용합니다.&lt;/p&gt;</description>
+      
+      
+      
+      <content:encoded><![CDATA[<p><em>이채현</em></p><aside>💡 Javascript를 이용하여 알고리즘 문제를 풀 때 자주 쓰이는 구문을 정리하자!</aside><h1 id="배열-중복값-개수-구하기"><a href="#배열-중복값-개수-구하기" class="headerlink" title="배열 중복값 개수 구하기"></a>배열 중복값 개수 구하기</h1><h3 id="reduce"><a href="#reduce" class="headerlink" title="reduce()"></a>reduce()</h3><p>reduce() 함수는, 배열의 값을 순회하면서 배열의 값을 특정 형태로 누적하는데 사용합니다.</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> inputNum = [<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> result1 = inputNum.reduce(<span class="function">(<span class="params">obj, t</span>) =&gt;</span> (obj[t] = obj[t] ? obj[t] + <span class="number">1</span> : <span class="number">1</span>, obj), &#123;&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> result2 = inputNum.reduce(<span class="function">(<span class="params">obj, t</span>) =&gt;</span> &#123;</span><br><span class="line">    obj[t] = (obj[t] || <span class="number">0</span>) + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> obj;</span><br><span class="line">&#125;, &#123;&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// &#123; &#x27;1&#x27;: 3, &#x27;2&#x27;: 2, &#x27;3&#x27;: 1, &#x27;4&#x27;: 1 &#125;</span></span><br></pre></td></tr></table></figure><h3 id="forEach"><a href="#forEach" class="headerlink" title="forEach()"></a>forEach()</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> cnt = &#123;&#125;</span><br><span class="line">inputNum.forEach(<span class="function">(<span class="params">x</span>) =&gt;</span> (cnt[x] ? (cnt[x] += <span class="number">1</span>) : (cnt[x] = <span class="number">1</span>)));</span><br><span class="line"><span class="comment">// &#123; &#x27;1&#x27;: 3, &#x27;2&#x27;: 2, &#x27;3&#x27;: 1, &#x27;4&#x27;: 1 &#125;</span></span><br></pre></td></tr></table></figure><p>forEach의 callback함수를 풀어쓰면 아래와 같다.</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(cnt[x]) &#123;</span><br><span class="line">cnt[x] = cnt[x] + <span class="number">1</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">cnt[x] = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>즉, 처음에 배열의 첫 번째 값인 ‘1’이 들어오면, cnt[x] (cnt.1)은 undefined이다.</p><p>cnt[x]가 undefinded이므로 cnt에 key ‘1’를 추가하고 value 1을 세팅해준다. </p><p>이후 다시 ‘1’이 들어오면 cnt[1]은 존재하므로, cnt[1]값 1에 1을 더해준다.</p><hr><h1 id="배열에-1-N-값-세팅하기"><a href="#배열에-1-N-값-세팅하기" class="headerlink" title="배열에 1 ~ N 값 세팅하기"></a>배열에 1 ~ N 값 세팅하기</h1><h3 id="기본-반복문을-이용"><a href="#기본-반복문을-이용" class="headerlink" title="기본 반복문을 이용"></a>기본 반복문을 이용</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [];</span><br><span class="line"><span class="keyword">const</span> N = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">    arr.push(i);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br><span class="line"><span class="comment">// [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="ES6의-Array-from-and-keys-이용"><a href="#ES6의-Array-from-and-keys-이용" class="headerlink" title="ES6의 Array from() and keys() 이용"></a>ES6의 Array <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from">from()</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/keys">keys()</a> 이용</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = <span class="built_in">Array</span>.from(<span class="built_in">Array</span>(N).keys());</span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br><span class="line"><span class="comment">// [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]</span></span><br></pre></td></tr></table></figure><h3 id="Spread를-이용한-방법"><a href="#Spread를-이용한-방법" class="headerlink" title="Spread를 이용한 방법"></a>Spread를 이용한 방법</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [...Array(<span class="number">10</span>).keys()];</span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br><span class="line"><span class="comment">// [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]</span></span><br></pre></td></tr></table></figure><h3 id="1부터-시작하기-위해-from과-length-property-이용"><a href="#1부터-시작하기-위해-from과-length-property-이용" class="headerlink" title="1부터 시작하기 위해 from과 length property 이용"></a>1부터 시작하기 위해 from과 length property 이용</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = <span class="built_in">Array</span>.from(&#123;<span class="attr">length</span>: <span class="number">10</span>&#125;, <span class="function">(<span class="params">_, i</span>) =&gt;</span> i + <span class="number">1</span>)</span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br><span class="line"><span class="comment">// [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]</span></span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      
+      <category domain="https://chlee1001.github.io/categories/Algorithm/">Algorithm</category>
+      
+      <category domain="https://chlee1001.github.io/categories/Algorithm/Javascript/">Javascript</category>
+      
+      
+      <category domain="https://chlee1001.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">알고리즘</category>
+      
+      <category domain="https://chlee1001.github.io/tags/JS/">JS</category>
+      
+      <category domain="https://chlee1001.github.io/tags/Javascript/">Javascript</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/">자바스크립트</category>
+      
+      <category domain="https://chlee1001.github.io/tags/ES6/">ES6</category>
+      
+      <category domain="https://chlee1001.github.io/tags/Algorithm/">Algorithm</category>
+      
+      
+      <comments>https://chlee1001.github.io/2022/01/31/JS-Algorithm-1-22-01-31/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[JS] ES6 - Promise</title>
@@ -837,62 +878,6 @@
       
       
       <comments>https://chlee1001.github.io/2021/08/13/BAEKJOON-11497-21-08-13/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[백준] 14659번 한조서열정리하고옴ㅋㅋ</title>
-      <link>https://chlee1001.github.io/2021/08/11/BAEKJOON-14659-21-08-11/</link>
-      <guid>https://chlee1001.github.io/2021/08/11/BAEKJOON-14659-21-08-11/</guid>
-      <pubDate>Wed, 11 Aug 2021 14:26:50 GMT</pubDate>
-      
-      <description>&lt;p&gt;출처: &lt;a href=&quot;https://www.acmicpc.net/problem/14659&quot;&gt;[백준] 14659번 한조서열정리하고옴ㅋㅋ&lt;/a&gt; &lt;/p&gt;
-&lt;hr&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&quot;left&quot;&gt;시간 제한&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;메모리 제한&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;제출&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;정답&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;맞은 사람&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;정답 비율&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;2 초&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;256 MB&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;4488&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;1959&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;1548&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;43.180%&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;문제&quot;&gt;&lt;a href=&quot;#문제&quot; class=&quot;headerlink&quot; title=&quot;문제&quot;&gt;&lt;/a&gt;문제&lt;/h2&gt;</description>
-      
-      
-      
-      <content:encoded><![CDATA[<p>출처: <a href="https://www.acmicpc.net/problem/14659">[백준] 14659번 한조서열정리하고옴ㅋㅋ</a> </p><hr><table><thead><tr><th align="left">시간 제한</th><th align="left">메모리 제한</th><th align="left">제출</th><th align="left">정답</th><th align="left">맞은 사람</th><th align="left">정답 비율</th></tr></thead><tbody><tr><td align="left">2 초</td><td align="left">256 MB</td><td align="left">4488</td><td align="left">1959</td><td align="left">1548</td><td align="left">43.180%</td></tr></tbody></table><hr><h2 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h2><p>“반갑다. 내 이름은 반고흐#31555! 조선 최고의 활잡이지. 오늘도 난 금강산 위에서 적들을 노리고 있지. 내 앞에 있는 적들이라면 누구도 놓치지 않아! 좋아, 이제 곧 월식이 시작되는군. 월식이 시작되면 용이 적들을 집어삼킬 것이다. 잘 봐두어라! 마장동 활잡이 반고흐#31555님의 실력을-!”</p><p>반고흐#31555는 자기 뒤쪽 봉우리에 덩기#3958이 있음을 전혀 모르고 있었다. 덩기#3958도 반고흐#31555와 마찬가지로 월식이 시작되면 용을 불러내어 눈앞에 있는 다른 활잡이들을 모두 처치할 생각이다. 사실, 반고흐#31555와 덩기#3958 뿐만 아니라 금강 산맥의 N개 봉우리에 있는 모든 활잡이들이 같은 생각을 가지고 있다.</p><p>반고흐#31555가 있는 금강 산맥에는 총 N개의 봉우리가 있고, 모든 봉우리마다 한 명의 활잡이가 서서 월식이 시작되기만을 기다리고 있다. 다만, 애석하게도, 천계에 맥도날드가 생겨 용들이 살이 찐 탓에 용들은 자신보다 낮은 봉우리에 서있는 적들만 처치할 수 있게 되었다. 또한 용들은 처음 출발한 봉우리보다 높은 봉우리를 만나면 그대로 공격을 포기하고 금강산자락에 드러누워 낮잠을 청한다고 한다. 봉우리의 높이는 모두 다르고 모든 용들은 오른쪽으로만 나아가며, 중간에 방향을 틀거나, 봉우리가 무너지거나 솟아나는 경우는 없다.</p><p>“달에 마구니가 끼었구나.”</p><p>드디어 월식이 시작됐다! 과연 이들 활잡이 중 최고의 활잡이는 누구일까? 최고의 활잡이가 최대 몇 명의 적을 처치할 수 있는지 알아보자.</p><hr><h2 id="입력"><a href="#입력" class="headerlink" title="입력"></a>입력</h2><p>첫째 줄에 봉우리의 수 겸 활잡이의 수 N이 주어진다. (1 ≤ N ≤ 30,000) 둘째 줄에 N개 봉우리의 높이가 왼쪽 봉우리부터 순서대로 주어진다. (1 ≤ 높이 ≤ 100,000) 각각 봉우리의 높이는 중복 없이 유일하다.</p><hr><h2 id="출력"><a href="#출력" class="headerlink" title="출력"></a>출력</h2><p>최고의 활잡이가 처치할 수 있는 적의 최대 숫자를 출력한다.</p><hr><h2 id="예제-입력-1"><a href="#예제-입력-1" class="headerlink" title="예제 입력 1"></a>예제 입력 1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">7</span><br><span class="line">6 4 10 2 5 7 11</span><br></pre></td></tr></table></figure><h2 id="예제-출력-1"><a href="#예제-출력-1" class="headerlink" title="예제 출력 1"></a>예제 출력 1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure><hr><h2 id="힌트"><a href="#힌트" class="headerlink" title="힌트"></a>힌트</h2><p>높이 10 봉우리에 있는 활잡이가 높이 2, 5, 7 봉우리에 있는 활잡이들을 처치할 수 있다.</p><hr><h2 id="출처"><a href="#출처" class="headerlink" title="출처"></a>출처</h2><ul><li><a href="https://www.acmicpc.net/category/97">High School</a> &gt; <a href="https://www.acmicpc.net/category/394">선린인터넷고등학교</a> &gt; <a href="https://www.acmicpc.net/category/detail/1749">제1회 천하제일 코딩대회 본선</a> J번<ul><li>데이터를 추가한 사람: <a href="https://www.acmicpc.net/user/YunGoon">YunGoon</a></li></ul></li></ul><hr><h2 id="알고리즘-분류"><a href="#알고리즘-분류" class="headerlink" title="알고리즘 분류"></a>알고리즘 분류</h2><ul><li><a href="https://www.acmicpc.net/problem/tag/33">그리디 알고리즘</a></li></ul><hr><h2 id="소스코드-최초"><a href="#소스코드-최초" class="headerlink" title="소스코드 (최초)"></a>소스코드 (최초)</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="built_in">input</span> = sys.stdin.readline</span><br><span class="line"></span><br><span class="line">N = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">archer = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">int</span>, <span class="built_in">input</span>().split()))</span><br><span class="line">scores = [<span class="number">0</span>] * N</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i + <span class="number">1</span>, N):</span><br><span class="line">        <span class="keyword">if</span> archer[i] &lt; archer[j]:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            scores[i] += <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">max</span>(scores))</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="소스코드-수정"><a href="#소스코드-수정" class="headerlink" title="소스코드 (수정)"></a>소스코드 (수정)</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="built_in">input</span> = sys.stdin.readline</span><br><span class="line"></span><br><span class="line">N = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">heights = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">int</span>, <span class="built_in">input</span>().split()))</span><br><span class="line">maxHeight = <span class="number">0</span></span><br><span class="line">score = <span class="number">0</span></span><br><span class="line">result = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> height <span class="keyword">in</span> heights:</span><br><span class="line">    <span class="keyword">if</span> height &gt; maxHeight:</span><br><span class="line">        maxHeight = height</span><br><span class="line">        score = <span class="number">0</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        score += <span class="number">1</span></span><br><span class="line">    result = <span class="built_in">max</span>(result, score)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(result)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content:encoded>
-      
-      
-      <category domain="https://chlee1001.github.io/categories/Algorithm/">Algorithm</category>
-      
-      <category domain="https://chlee1001.github.io/categories/Algorithm/Python/">Python</category>
-      
-      
-      <category domain="https://chlee1001.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">알고리즘</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EB%B0%B1%EC%A4%80/">백준</category>
-      
-      <category domain="https://chlee1001.github.io/tags/Python/">Python</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EA%B7%B8%EB%A6%AC%EB%94%94%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">그리디알고리즘</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EA%B7%B8%EB%A6%AC%EB%94%94/">그리디</category>
-      
-      
-      <comments>https://chlee1001.github.io/2021/08/11/BAEKJOON-14659-21-08-11/#disqus_thread</comments>
       
     </item>
     
