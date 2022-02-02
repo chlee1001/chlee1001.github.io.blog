@@ -9,6 +9,22 @@
 
 
     <url>
+        <loc>https://chlee1001.github.io/2022/02/02/JS-Object-1-22-02-02/</loc>
+        <lastmod>2022-02-02T14:44:29.169Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
+        <loc>https://chlee1001.github.io/2022/02/02/JS-DOM-1-22-02-02/</loc>
+        <lastmod>2022-02-02T12:57:30.658Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
         <loc>https://chlee1001.github.io/2022/01/31/JS-Algorithm-1-22-01-31/</loc>
         <lastmod>2022-01-31T09:57:59.812Z</lastmod>
         <changefreq>weekly</changefreq>

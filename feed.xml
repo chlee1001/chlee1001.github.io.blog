@@ -9,8 +9,95 @@
     <atom:link href="https://chlee1001.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Chaehyeon&#39;s Dev Blog</description>
-    <pubDate>Mon, 31 Jan 2022 09:57:59 GMT</pubDate>
+    <pubDate>Wed, 02 Feb 2022 14:44:29 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[JS] Object 객체</title>
+      <link>https://chlee1001.github.io/2022/02/02/JS-Object-1-22-02-02/</link>
+      <guid>https://chlee1001.github.io/2022/02/02/JS-Object-1-22-02-02/</guid>
+      <pubDate>Wed, 02 Feb 2022 14:45:00 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;em&gt;이채현&lt;/em&gt;&lt;/p&gt;
+&lt;aside&gt;
+💡 Javascript Object
+&lt;/aside&gt;
+
+&lt;h1 id=&quot;객체-생성&quot;&gt;&lt;a href=&quot;#객체-생성&quot; class=&quot;headerlink&quot; title=&quot;객체 생성&quot;&gt;&lt;/a&gt;객체 생성&lt;/h1&gt;&lt;p&gt;일반적으로 생성 할 수 있는 객체&lt;/p&gt;
+&lt;h3 id=&quot;싱글-리터럴-Literal-객체&quot;&gt;&lt;a href=&quot;#싱글-리터럴-Literal-객체&quot; class=&quot;headerlink&quot; title=&quot;싱글 리터럴 (Literal) 객체&quot;&gt;&lt;/a&gt;싱글 리터럴 (Literal) 객체&lt;/h3&gt;</description>
+      
+      
+      
+      <content:encoded><![CDATA[<p><em>이채현</em></p><aside>💡 Javascript Object</aside><h1 id="객체-생성"><a href="#객체-생성" class="headerlink" title="객체 생성"></a>객체 생성</h1><p>일반적으로 생성 할 수 있는 객체</p><h3 id="싱글-리터럴-Literal-객체"><a href="#싱글-리터럴-Literal-객체" class="headerlink" title="싱글 리터럴 (Literal) 객체"></a>싱글 리터럴 (Literal) 객체</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> object = &#123;</span><br><span class="line">property: <span class="string">&#x27;value&#x27;</span>,</span><br><span class="line">method: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="생성자-함수-객체-PascalCase"><a href="#생성자-함수-객체-PascalCase" class="headerlink" title="생성자 함수 객체 // PascalCase"></a>생성자 함수 객체 // PascalCase</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">NewObject</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line"><span class="built_in">this</span>.name = name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> newObject = <span class="keyword">new</span> NewObject(’Lee’);</span><br></pre></td></tr></table></figure><p>파스칼 케이스 → 암묵적, 명시적 생성자 함수</p><h3 id="Object-Create"><a href="#Object-Create" class="headerlink" title="Object.Create()"></a>Object.Create()</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> newObject2 = <span class="built_in">Object</span>.create(<span class="built_in">Object</span>.prototype, &#123;</span><br><span class="line">name: &#123;</span><br><span class="line">value: <span class="string">&#x27;lee&#x27;</span>,</span><br><span class="line">writable: <span class="literal">true</span>, <span class="comment">// 덮어쓸 수 있는지</span></span><br><span class="line">enumerable: <span class="literal">true</span>, <span class="comment">// forin문과 같은 것으로 열거할 수 있는지</span></span><br><span class="line">configurable: <span class="literal">true</span>, <span class="comment">// 객체 기술자를 수정할 수 있는지</span></span><br><span class="line">&#125;,</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// const newObject2 = Object.create(프로토타입, 객체 서술자(기술자));</span></span><br><span class="line"></span><br><span class="line">newObject2.name = <span class="string">&#x27;Kim&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> key <span class="keyword">in</span> newObject2) &#123;</span><br><span class="line"><span class="built_in">console</span>.log(key);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="프로퍼티-열거"><a href="#프로퍼티-열거" class="headerlink" title="프로퍼티 열거"></a>프로퍼티 열거</h1><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">prop1: <span class="string">&#x27;value1&#x27;</span>,</span><br><span class="line">prop2: <span class="string">&#x27;value2&#x27;</span>,</span><br><span class="line">prop3: <span class="string">&#x27;value3&#x27;</span>,</span><br><span class="line">prop4: <span class="string">&#x27;value4&#x27;</span>,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> prop = <span class="string">&#x27;prop&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> prop1 = <span class="string">&#x27;prop1&#x27;</span>;</span><br><span class="line"></span><br><span class="line">obj.prop1 <span class="comment">// value1</span></span><br><span class="line">obj[<span class="string">&#x27;prop1&#x27;</span>] <span class="comment">// value1</span></span><br><span class="line">obj[prop + <span class="number">1</span>] <span class="comment">// value1</span></span><br><span class="line">obj[prop1] <span class="comment">// value1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> key <span class="keyword">in</span> obj) &#123;</span><br><span class="line"><span class="built_in">console</span>.log(key); <span class="comment">// prop1, prop2, prop3, prop4</span></span><br><span class="line"><span class="built_in">console</span>.log(obj[key]); <span class="comment">// value1, value2, value3, value4</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="체인닝-방지를-위해"><a href="#체인닝-방지를-위해" class="headerlink" title="체인닝 방지를 위해"></a>체인닝 방지를 위해</h2><p>블록 스코프 내에 변수가 없으면 그 위로 찾아 간다…</p><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> key <span class="keyword">in</span> obj) &#123;</span><br><span class="line"><span class="keyword">if</span> (obj.hasOwnProperty(key)) &#123;</span><br><span class="line"><span class="built_in">console</span>.log(obj[key]); <span class="comment">// value1, value2, value3, value4</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 상속되거나 확장되어 사용 된 객체의 상위에서 꺼내오지 않도록 하는 방어문</span></span><br></pre></td></tr></table></figure><h1 id="프로퍼티-조작"><a href="#프로퍼티-조작" class="headerlink" title="프로퍼티 조작"></a>프로퍼티 조작</h1><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">firstName: <span class="string">&quot;Chaehyeon&quot;</span>,</span><br><span class="line">location: <span class="string">&quot;Korea&quot;</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 추가</span></span><br><span class="line">person.lastName: <span class="string">&quot;Lee&quot;</span></span><br><span class="line"><span class="comment">// 수정</span></span><br><span class="line">person.lastName: <span class="string">&quot;lee&quot;</span></span><br><span class="line"><span class="comment">// 삭제</span></span><br><span class="line">delet person.location;</span><br><span class="line"></span><br><span class="line">person; <span class="comment">// &#123; firstName: &quot;Chaehyeon&quot;, lastName: &quot;lee&quot; &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// const는 재할당을 막는 것... 그래서 가능</span></span><br></pre></td></tr></table></figure><h1 id="프로퍼티-접근자-getter-setter"><a href="#프로퍼티-접근자-getter-setter" class="headerlink" title="프로퍼티 접근자 (getter, setter)"></a>프로퍼티 접근자 (getter, setter)</h1><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 추가, 수정, 삭제 등을 접근해서 조작할 때 안전하게 하기 위해</span></span><br><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">_firstName: <span class="string">&quot;Chaehyeon&quot;</span>,</span><br><span class="line">lastName: <span class="string">&quot;Lee&quot;</span>,</span><br><span class="line"></span><br><span class="line"><span class="keyword">get</span> <span class="title">firstName</span>() &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="built_in">this</span>._firstName.toUpperCase();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">set</span> <span class="title">firstName</span>(<span class="params">newFirstName</span>) &#123;</span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> newFirstName !== <span class="string">&#x27;string&#x27;</span>) &#123;</span><br><span class="line"><span class="built_in">this</span>._firstName = <span class="string">&#x27;undefinedName&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">this</span>._firstName = newFirstName;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">get</span> <span class="title">fullName</span>() &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="built_in">this</span>._firstName + <span class="built_in">this</span>.lastName + <span class="string">&#x27;입니다&#x27;</span>.</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// console.log(person.firstName); // CHAEHYEON</span></span><br><span class="line"><span class="comment">// console.log(person.fullName); // LeeChaehyeon입니다</span></span><br><span class="line"></span><br><span class="line">person.firstName = <span class="number">12345</span>;</span><br><span class="line"><span class="built_in">console</span>.log(person.firstName); <span class="comment">// UNDEFINDEDNAME</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><h1 id="인스턴스"><a href="#인스턴스" class="headerlink" title="인스턴스"></a>인스턴스</h1><p>OOP</p><p>인스턴스 === 유일한, 고유한 객체?</p><p>객체 하나하나가 곧 인스턴스이다.</p><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> me = &#123;</span><br><span class="line">name: <span class="string">&#x27;chaehyeon&#x27;</span>,</span><br><span class="line">age: <span class="number">26</span>,</span><br><span class="line">locaiton: <span class="string">&#x27;korea&#x27;</span>,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> me2 = &#123;</span><br><span class="line">name: <span class="string">&#x27;chaehyeon&#x27;</span>,</span><br><span class="line">age: <span class="number">26</span>,</span><br><span class="line">locaiton: <span class="string">&#x27;korea&#x27;</span>,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(me === me2); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(me.name === me2.name); <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 객체 그 자체를 비교할 때에는 객체의 메모리 주소를 본다.</span></span><br><span class="line"><span class="comment">// 당연히 메모리주소는 다르다</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><h1 id="생성자"><a href="#생성자" class="headerlink" title="생성자"></a>생성자</h1><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> me = &#123;</span><br><span class="line">name: <span class="string">&#x27;chaehyeon&#x27;</span>,</span><br><span class="line">age: <span class="number">26</span>,</span><br><span class="line">locaiton: <span class="string">&#x27;korea&#x27;</span>,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 객체를 자주 만들고 싶을 때 -&gt; 생성자 함수</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name, age, location</span>) </span>&#123;</span><br><span class="line"><span class="built_in">this</span>.name = name;</span><br><span class="line"><span class="built_in">this</span>.age = age;</span><br><span class="line"><span class="built_in">this</span>.location = location;</span><br><span class="line"></span><br><span class="line"><span class="built_in">this</span>.getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="built_in">this</span>.name + <span class="string">&#x27; 입니다&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 여기서 this는 &quot;생성 될&quot; 인스턴스를 가리킨다.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> me2 = <span class="keyword">new</span> Person(<span class="string">&#x27;ChaehyeonLee&#x27;</span>, <span class="number">26</span>, <span class="string">&#x27;korea&#x27;</span>);</span><br><span class="line"><span class="comment">// Person &#123; name: &#x27;ChaehyeonLee&#x27;, age: 26, location: &#x27;korea&#x27; &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> you <span class="keyword">new</span> Person(<span class="string">&#x27;Kim&#x27;</span>, <span class="number">20</span>, <span class="string">&#x27;korea&#x27;</span>);</span><br><span class="line"><span class="comment">// Person &#123; name: &#x27;Kim&#x27;, age: 20, location: &#x27;korea&#x27; &#125;</span></span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      
+      <category domain="https://chlee1001.github.io/categories/Web/">Web</category>
+      
+      <category domain="https://chlee1001.github.io/categories/Web/Javascript/">Javascript</category>
+      
+      
+      <category domain="https://chlee1001.github.io/tags/JS/">JS</category>
+      
+      <category domain="https://chlee1001.github.io/tags/Javascript/">Javascript</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/">자바스크립트</category>
+      
+      <category domain="https://chlee1001.github.io/tags/Object/">Object</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EA%B0%9D%EC%B2%B4/">객체</category>
+      
+      
+      <comments>https://chlee1001.github.io/2022/02/02/JS-Object-1-22-02-02/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[JS] DOM 문서 객체 모델</title>
+      <link>https://chlee1001.github.io/2022/02/02/JS-DOM-1-22-02-02/</link>
+      <guid>https://chlee1001.github.io/2022/02/02/JS-DOM-1-22-02-02/</guid>
+      <pubDate>Wed, 02 Feb 2022 13:00:00 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;em&gt;이채현&lt;/em&gt;&lt;/p&gt;
+&lt;aside&gt;
+💡 Javascript DOM
+&lt;/aside&gt;
+
+
+
+&lt;h2 id=&quot;DOM-문서-객체-모델…Document-Object-Model&quot;&gt;&lt;a href=&quot;#DOM-문서-객체-모델…Document-Object-Model&quot; class=&quot;headerlink&quot; title=&quot;DOM (문서 객체 모델…Document Object Model)&quot;&gt;&lt;/a&gt;DOM (문서 객체 모델…Document Object Model)&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;HTML ⇒ 문서&lt;/li&gt;
+&lt;li&gt;문서를 조작하는 언어 ⇒ JavaScript&lt;/li&gt;
+&lt;li&gt;Document Object Model ← JavaScript가 DOM을 통해 HTML을 조작&lt;/li&gt;
+&lt;li&gt;DOM 내부에는 Node: HTML 요소 하나하나 전부를 지칭&lt;ul&gt;
+&lt;li&gt;Node는 Tree형태로 부모노드가 자식노드를, 자식노드가 그 자식노드를…&lt;/li&gt;
+&lt;li&gt;각 Node에는 수 많은 Properties, Methods…가 존재&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;결론&quot;&gt;&lt;a href=&quot;#결론&quot; class=&quot;headerlink&quot; title=&quot;결론&quot;&gt;&lt;/a&gt;결론&lt;/h3&gt;</description>
+      
+      
+      
+      <content:encoded><![CDATA[<p><em>이채현</em></p><aside>💡 Javascript DOM</aside><h2 id="DOM-문서-객체-모델…Document-Object-Model"><a href="#DOM-문서-객체-모델…Document-Object-Model" class="headerlink" title="DOM (문서 객체 모델…Document Object Model)"></a>DOM (문서 객체 모델…Document Object Model)</h2><ul><li>HTML ⇒ 문서</li><li>문서를 조작하는 언어 ⇒ JavaScript</li><li>Document Object Model ← JavaScript가 DOM을 통해 HTML을 조작</li><li>DOM 내부에는 Node: HTML 요소 하나하나 전부를 지칭<ul><li>Node는 Tree형태로 부모노드가 자식노드를, 자식노드가 그 자식노드를…</li><li>각 Node에는 수 많은 Properties, Methods…가 존재</li></ul></li></ul><h3 id="결론"><a href="#결론" class="headerlink" title="결론"></a>결론</h3><ul><li>HTML문서를 JavaScript로 모델링 한 것이 DOM</li><li>인터페이스를 하나하나 자르면 단위가 Node이며, Node는 Tree구조로 이루어져있다.</li></ul><p>Eg) ’li’ 태그를 뽑아보면 정보가아래처럼 수 많이 담겨있다.</p><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">accessKey: <span class="string">&quot;&quot;</span></span><br><span class="line">ariaAtomic: <span class="literal">null</span></span><br><span class="line">ariaAutoComplete: <span class="literal">null</span></span><br><span class="line">ariaBusy: <span class="literal">null</span></span><br><span class="line">ariaChecked: <span class="literal">null</span></span><br><span class="line">ariaColCount: <span class="literal">null</span></span><br><span class="line">ariaColIndex: <span class="literal">null</span></span><br><span class="line">ariaColSpan: <span class="literal">null</span></span><br><span class="line">...</span><br></pre></td></tr></table></figure><h2 id="Dom-선택"><a href="#Dom-선택" class="headerlink" title="Dom 선택"></a>Dom 선택</h2><h2 id="자바스크립트에서-HTML-특정-Element들을-가져오는-법-고전적"><a href="#자바스크립트에서-HTML-특정-Element들을-가져오는-법-고전적" class="headerlink" title="자바스크립트에서 HTML 특정 Element들을 가져오는 법 (고전적)"></a>자바스크립트에서 HTML 특정 Element들을 가져오는 법 (고전적)</h2><ul><li><p>Document.getElementById() 문서에 특정 id만 가져오고 싶을 때</p></li><li><p>Element.getElementsByClassName()</p><p>클래스 이름으로… 모든 자식의 엘리먼트를 가져온다. → HTML Collection 형태로 가져온다.</p></li><li><p>Document.getElementsByTagName()</p><p>태그 이름으로 가져온다.</p></li></ul><h2 id="자바스크립트에서-HTML-특정-Element들을-가져오는-법-비교적-최신"><a href="#자바스크립트에서-HTML-특정-Element들을-가져오는-법-비교적-최신" class="headerlink" title="자바스크립트에서 HTML 특정 Element들을 가져오는 법 (비교적 최신)"></a>자바스크립트에서 HTML 특정 Element들을 가져오는 법 (비교적 최신)</h2><ul><li><p>Document.querySelector()</p><p>id(.), class(#), tag name 모두에 사용가능, 첫번째로 보이는 것을 가져온다.</p></li><li><p>document.querySelectorAll()</p><p>해당하는 것을 모두 가져온다. (문자열 O) ⇒ NodeList로 가져오기 때문에 Array로 변환해서 사용한다.</p></li><li><p>그 외 다양한 조합으로 사용가능하다.</p><p>eg) div.note → div태그 내에 note id를 가져온다.</p></li></ul><h2 id="Dom-조작"><a href="#Dom-조작" class="headerlink" title="Dom 조작"></a>Dom 조작</h2><p>조작하기 위한 method들도 매우 많기 때문에 MDN문서를 보면서…</p><ul><li><a href="https://developer.mozilla.org/ko/docs/Web/API/Node/textContent">textContent</a>()… 텍스트 삽입</li><li>removeChild()… child 제거</li><li><a href="https://developer.mozilla.org/ko/docs/Web/API/Document/createElement">createElement</a>()…element 삽입</li><li><a href="https://developer.mozilla.org/ko/docs/Web/API/Node/appendChild">appendChild</a>()</li></ul><hr><ul><li><a href="https://developer.mozilla.org/ko/docs/Web/API/Element/innerHTML">innerHTML</a>을 통해서 문자열로 컨트롤 가능하다.</li></ul>]]></content:encoded>
+      
+      
+      <category domain="https://chlee1001.github.io/categories/Web/">Web</category>
+      
+      <category domain="https://chlee1001.github.io/categories/Web/Javascript/">Javascript</category>
+      
+      
+      <category domain="https://chlee1001.github.io/tags/JS/">JS</category>
+      
+      <category domain="https://chlee1001.github.io/tags/Javascript/">Javascript</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/">자바스크립트</category>
+      
+      <category domain="https://chlee1001.github.io/tags/DOM/">DOM</category>
+      
+      
+      <comments>https://chlee1001.github.io/2022/02/02/JS-DOM-1-22-02-02/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[JS] Algorithm - 자주 쓰이는 구문 정리(22.01.13)</title>
@@ -770,114 +857,6 @@
       
       
       <comments>https://chlee1001.github.io/2021/08/15/BAEKJOON-1449-21-08-15/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>2021년 08월 13일 금요일 IT뉴스</title>
-      <link>https://chlee1001.github.io/2021/08/13/21-08-13-IT_News/</link>
-      <guid>https://chlee1001.github.io/2021/08/13/21-08-13-IT_News/</guid>
-      <pubDate>Fri, 13 Aug 2021 08:00:19 GMT</pubDate>
-      
-      <description>&lt;h2 id=&quot;1-디즈니-예상-뛰어넘는-실적…테마파크-개장·디즈니-효과&quot;&gt;&lt;a href=&quot;#1-디즈니-예상-뛰어넘는-실적…테마파크-개장·디즈니-효과&quot; class=&quot;headerlink&quot; title=&quot;1. 디즈니, 예상 뛰어넘는 실적…테마파크 개장·디즈니+ 효과&quot;&gt;&lt;/a&gt;1. 디즈니, 예상 뛰어넘는 실적…테마파크 개장·디즈니+ 효과&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://news.naver.com/main/read.naver?mode=LSD&amp;mid=shm&amp;sid1=105&amp;oid=003&amp;aid=0010663505&quot;&gt;디즈니, 예상 뛰어넘는 실적…테마파크 개장·디즈니+ 효과&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;디즈니가 테마파크 재개장과 스트리밍 서비스 호조에 힘입어 예상을 뛰어넘는 2분기 실적을 기록했고, 2분기 매출은 170억달러(약 19조8500억원)로, 작년 동기 대비 45% 상승했다. 월가 예상을 뛰어넘는 수치에 디즈니 주가는 시간외거래에서 4% 올랐다.&lt;/p&gt;
-&lt;p&gt;전 세계 모든 디즈니 테마파크가 문을 연 덕분에 테마파크는 2분기에만 43억달러(약 5조172억원)를 벌어들였고, 디즈니의 스트리밍 서비스인 디즈니플러스(Disney+)는 2분기에 월가 추정치를 상회하는 가입자 1억1600만명을 기록했다.&lt;/p&gt;
-&lt;hr&gt;</description>
-      
-      
-      
-      <content:encoded><![CDATA[<h2 id="1-디즈니-예상-뛰어넘는-실적…테마파크-개장·디즈니-효과"><a href="#1-디즈니-예상-뛰어넘는-실적…테마파크-개장·디즈니-효과" class="headerlink" title="1. 디즈니, 예상 뛰어넘는 실적…테마파크 개장·디즈니+ 효과"></a>1. 디즈니, 예상 뛰어넘는 실적…테마파크 개장·디즈니+ 효과</h2><p><a href="https://news.naver.com/main/read.naver?mode=LSD&mid=shm&sid1=105&oid=003&aid=0010663505">디즈니, 예상 뛰어넘는 실적…테마파크 개장·디즈니+ 효과</a></p><p>디즈니가 테마파크 재개장과 스트리밍 서비스 호조에 힘입어 예상을 뛰어넘는 2분기 실적을 기록했고, 2분기 매출은 170억달러(약 19조8500억원)로, 작년 동기 대비 45% 상승했다. 월가 예상을 뛰어넘는 수치에 디즈니 주가는 시간외거래에서 4% 올랐다.</p><p>전 세계 모든 디즈니 테마파크가 문을 연 덕분에 테마파크는 2분기에만 43억달러(약 5조172억원)를 벌어들였고, 디즈니의 스트리밍 서비스인 디즈니플러스(Disney+)는 2분기에 월가 추정치를 상회하는 가입자 1억1600만명을 기록했다.</p><hr><h2 id="2-비난-여론에-한발-물러선-카카오-택시·바이크-요금-다시-내린다"><a href="#2-비난-여론에-한발-물러선-카카오-택시·바이크-요금-다시-내린다" class="headerlink" title="2. 비난 여론에 한발 물러선 카카오, 택시·바이크 요금 다시 내린다"></a>2. 비난 여론에 한발 물러선 카카오, 택시·바이크 요금 다시 내린다</h2><p><a href="https://news.naver.com/main/read.naver?mode=LSD&mid=shm&sid1=105&oid=629&aid=0000100599">비난 여론에 한발 물러선 카카오, 택시·바이크 요금 다시 내린다</a></p><p>앞서 카카오모빌리티는 지난 2일부터 ‘스마트호출’ 비용을 기존 1000원(야간 2000원) 정액제에서 ‘0~5000원’의 탄력요금제로 변경했으나 독점적인 지위를 바탕으로 일방적인 서비스 요금 인상을 단행한다는 비판 목소리가 택시 업계 및 이용자를 중심으로 커졌고 ‘스마트호출’의 요금 범위를 ‘0~2000원’으로 재조정한다고 13일 공지했다.</p><p>이날 카카오모빌리티는 바이크 요금도 중장거리 이용자의 부담이 커진다는 의견에 따라 이용자 부담이 늘지 않는 방향으로 재조정할 예정이라고 발표했다. 구체적인 내용은 결정되면 별도 공지를 통해 안내할 계획이다.</p><hr><h2 id="3-MG새마을금고중앙회-RPA-도입으로-업무-혁신-꿈꾼다"><a href="#3-MG새마을금고중앙회-RPA-도입으로-업무-혁신-꿈꾼다" class="headerlink" title="3. MG새마을금고중앙회, RPA 도입으로 업무 혁신 꿈꾼다"></a>3. MG새마을금고중앙회, RPA 도입으로 업무 혁신 꿈꾼다</h2><p><a href="https://news.naver.com/main/read.naver?mode=LSD&mid=shm&sid1=105&oid=020&aid=0003375929">MG새마을금고중앙회, RPA 도입으로 업무 혁신 꿈꾼다</a></p><p>RPA 소프트웨어는 컴퓨터가 특정한 알고리즘으로 동작하도록 구성하며, 정량적 데이터를 다루는 분야일수록 정확도와 활용도가 높아서 금융업계의 관심도 높았지만, 보안이나 개인정보 등의 문제로 초기 도입부터 실용화 단계까지 오랜 시간과 노력이 필요해 경영진의 확실한 의사가 있어야 RPA를 추진할 수 있다. </p><p>현재 MG새마을금고중앙회는 계정계 시스템에서 보고서 작성, 자료 검증작업, 예탁금 처리, 회계 결산 등의 업무에 RPA를 도입한 상태로 보고서 작성의 경우, 업무 화면을 조회하고 결과 자료를 엑셀로 다운로드한 후 편집하는 모든 과정이 RPA를 통해 자동으로 진행된다.</p><p>업무 가능 범위도 단순 보고서화를 넘어서 PPT 파일, 워드 파일 작성 등 모든 작업이 가능해 기존에 하루가 걸리던 작업이 1~2시간 이내에 완료할 수 있게 됐으며 RPA를 활용해 내부망 시스템에 쌓인 보안 자료를 정리하는 ‘클린봇’이나 보안 패스워드를 관리하는 ‘패스워드봇’ 등을 구축하는 등 활용 범위를 확장하고 있다.</p><ul><li>RPA(Robotic Process Automation, 로봇 프로세스 자동화)</li><li>유아이패스는 RPA(Robotic Process Automation, 로봇 프로세스 자동화) 소프트웨어를 개발하는 전문 기업으로, 일반인들에게는 생소하지만 ICT 기술을 활용하는 기업들 사이에서는 널리 알려져 있다.</li></ul><hr><h2 id="4-DGB금융그룹-핀테크사-뉴지스탁-인수…-10번째-자회사-편입"><a href="#4-DGB금융그룹-핀테크사-뉴지스탁-인수…-10번째-자회사-편입" class="headerlink" title="4. DGB금융그룹, 핀테크사 뉴지스탁 인수… 10번째 자회사 편입"></a>4. DGB금융그룹, 핀테크사 뉴지스탁 인수… 10번째 자회사 편입</h2><p><a href="https://platum.kr/archives/168773">DGB금융그룹, 핀테크사 뉴지스탁 인수… 10번째 자회사 편입</a></p><p>DGB금융그룹이 핀테크 기업인 뉴지스탁(대표 문경록, 문호준)의 지분 74.03%를 인수해 그룹의 10번째 자회사로 편입한다. 국내 금융그룹이 핀테크사를 인수한 최초의 사례이다.</p><p>뉴지스탁 문경록 대표는 “핀테크 서비스와 제도권 금융업의 경계가 허물어지고 있는 이 시기에, 핀테크 스타트업 최초로 10대 금융지주 중 하나인 DGB금융그룹과 함께하게 되어 큰 기대를 하고 있으며”, DGB금융그룹 김태오 회장은 “뉴지스탁 인수를 통해 그룹의 디지털 자산관리 경쟁력을 대폭 업그레이드하고 핀테크 산업 활성화에 기여할 수 있을 것으로 기대한다”고 밝혔다.</p><ul><li>뉴지스탁은 ‘개인투자자도 수익을 낼 수 있는 환경을 만들자’는 가치를 내걸고 2011년 설립됐으며, 현재 10만명 이상의 고객을 확보하고 12개 주요 증권사들과 제휴하고 있는 국내 1위의 알고리즘 주식투자 플랫폼 기업이다.</li></ul><hr>]]></content:encoded>
-      
-      
-      <category domain="https://chlee1001.github.io/categories/IT%EC%A0%95%EB%B3%B4/">IT정보</category>
-      
-      <category domain="https://chlee1001.github.io/categories/IT%EC%A0%95%EB%B3%B4/%EB%A7%A4%EC%9D%BC30%EB%B6%84-IT%EB%89%B4%EC%8A%A4/">매일30분 IT뉴스</category>
-      
-      
-      <category domain="https://chlee1001.github.io/tags/IT%EB%89%B4%EC%8A%A4/">IT뉴스</category>
-      
-      <category domain="https://chlee1001.github.io/tags/IT-Issues/">IT Issues</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EC%B9%B4%EC%B9%B4%EC%98%A4/">카카오</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85/">스타트업</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EB%94%94%EC%A6%88%EB%8B%88/">디즈니</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EC%B9%B4%EC%B9%B4%EC%98%A4%EB%AA%A8%EB%B9%8C%EB%A6%AC%ED%8B%B0/">카카오모빌리티</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EB%94%94%EC%A6%88%EB%8B%88%ED%94%8C%EB%9F%AC%EC%8A%A4/">디즈니플러스</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%ED%95%80%ED%85%8C%ED%81%AC/">핀테크</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EC%B9%B4%EC%B9%B4%EC%98%A4%EB%B0%94%EC%9D%B4%ED%81%AC/">카카오바이크</category>
-      
-      <category domain="https://chlee1001.github.io/tags/RPA/">RPA</category>
-      
-      <category domain="https://chlee1001.github.io/tags/MG%EC%83%88%EB%A7%88%EC%9D%84%EA%B8%88%EA%B3%A0%EC%A4%91%EC%95%99%ED%9A%8C/">MG새마을금고중앙회</category>
-      
-      <category domain="https://chlee1001.github.io/tags/DGB%EA%B8%88%EC%9C%B5%EA%B7%B8%EB%A3%B9/">DGB금융그룹</category>
-      
-      
-      <comments>https://chlee1001.github.io/2021/08/13/21-08-13-IT_News/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>[백준] 11497번 통나무 건너뛰기</title>
-      <link>https://chlee1001.github.io/2021/08/13/BAEKJOON-11497-21-08-13/</link>
-      <guid>https://chlee1001.github.io/2021/08/13/BAEKJOON-11497-21-08-13/</guid>
-      <pubDate>Fri, 13 Aug 2021 01:26:50 GMT</pubDate>
-      
-      <description>&lt;p&gt;출처: &lt;a href=&quot;https://www.acmicpc.net/problem/11497&quot;&gt;[백준] 11497번 통나무 건너뛰기&lt;/a&gt; &lt;/p&gt;
-&lt;hr&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&quot;left&quot;&gt;시간 제한&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;메모리 제한&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;제출&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;정답&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;맞은 사람&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;정답 비율&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;1 초&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;256 MB&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;3887&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;2184&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;1803&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;59.643%&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;문제&quot;&gt;&lt;a href=&quot;#문제&quot; class=&quot;headerlink&quot; title=&quot;문제&quot;&gt;&lt;/a&gt;문제&lt;/h2&gt;</description>
-      
-      
-      
-      <content:encoded><![CDATA[<p>출처: <a href="https://www.acmicpc.net/problem/11497">[백준] 11497번 통나무 건너뛰기</a> </p><hr><table><thead><tr><th align="left">시간 제한</th><th align="left">메모리 제한</th><th align="left">제출</th><th align="left">정답</th><th align="left">맞은 사람</th><th align="left">정답 비율</th></tr></thead><tbody><tr><td align="left">1 초</td><td align="left">256 MB</td><td align="left">3887</td><td align="left">2184</td><td align="left">1803</td><td align="left">59.643%</td></tr></tbody></table><hr><h2 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h2><p>남규는 통나무를 세워 놓고 건너뛰기를 좋아한다. 그래서 N개의 통나무를 원형으로 세워 놓고 뛰어놀려고 한다. 남규는 원형으로 인접한 옆 통나무로 건너뛰는데, 이때 각 인접한 통나무의 높이 차가 최소가 되게 하려 한다.</p><p><img src="https://onlinejudgeimages.s3-ap-northeast-1.amazonaws.com/problem/11497/1.png" alt="img"></p><p>통나무 건너뛰기의 난이도는 인접한 두 통나무 간의 높이의 차의 최댓값으로 결정된다. 높이가 {2, 4, 5, 7, 9}인 통나무들을 세우려 한다고 가정하자. 이를 [2, 9, 7, 4, 5]의 순서로 세웠다면, 가장 첫 통나무와 가장 마지막 통나무 역시 인접해 있다. 즉, 높이가 2인 것과 높이가 5인 것도 서로 인접해 있다. 배열 [2, 9, 7, 4, 5]의 난이도는 |2-9| = 7이다. 우리는 더 나은 배열 [2, 5, 9, 7, 4]를 만들 수 있으며 이 배열의 난이도는 |5-9| = 4이다. 이 배열보다 난이도가 낮은 배열은 만들 수 없으므로 이 배열이 남규가 찾는 답이 된다.</p><hr><h2 id="입력"><a href="#입력" class="headerlink" title="입력"></a>입력</h2><p>입력은 T개의 테스트 케이스로 이루어져 있다. 첫 줄에 T가 주어진다.</p><p>이어지는 각 줄마다 첫 줄에 통나무의 개수를 나타내는 정수 N(5 ≤ N ≤ 10,000), 둘째 줄에 각 통나무의 높이를 나타내는 정수 Li가 주어진다. (1 ≤ Li ≤ 100,000)</p><hr><h2 id="출력"><a href="#출력" class="headerlink" title="출력"></a>출력</h2><p>각 테스트 케이스마다 한 줄에 주어진 통나무들로 만들 수 있는 최소 난이도를 출력하시오.</p><hr><h2 id="예제-입력-1"><a href="#예제-입력-1" class="headerlink" title="예제 입력 1"></a>예제 입력 1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">7</span><br><span class="line">13 10 12 11 10 11 12</span><br><span class="line">5</span><br><span class="line">2 4 5 7 9</span><br><span class="line">8</span><br><span class="line">6 6 6 6 6 6 6 6</span><br></pre></td></tr></table></figure><h2 id="예제-출력-1"><a href="#예제-출력-1" class="headerlink" title="예제 출력 1"></a>예제 출력 1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">4</span><br><span class="line">0</span><br></pre></td></tr></table></figure><hr><h2 id="출처"><a href="#출처" class="headerlink" title="출처"></a>출처</h2><ul><li><a href="https://www.acmicpc.net/category/1">ICPC</a> &gt; <a href="https://www.acmicpc.net/category/7">Regionals</a> &gt; <a href="https://www.acmicpc.net/category/42">Asia Pacific</a> &gt; <a href="https://www.acmicpc.net/category/211">Korea</a> &gt; <a href="https://www.acmicpc.net/category/detail/1413">Asia Regional - Daejeon 2015</a> E번<ul><li>문제를 번역한 사람: <a href="https://www.acmicpc.net/user/kks227">kks227</a></li><li>문제의 오타를 찾은 사람: <a href="https://www.acmicpc.net/user/ntopia">ntopia</a></li></ul></li></ul><hr><h2 id="알고리즘-분류"><a href="#알고리즘-분류" class="headerlink" title="알고리즘 분류"></a>알고리즘 분류</h2><ul><li><a href="https://www.acmicpc.net/problem/tag/33">그리디 알고리즘</a></li><li><a href="https://www.acmicpc.net/problem/tag/97">정렬</a></li></ul><hr><h2 id="소스코드"><a href="#소스코드" class="headerlink" title="소스코드"></a>소스코드</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="built_in">input</span> = sys.stdin.readline</span><br><span class="line"></span><br><span class="line">T = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">lowLevelSort</span>(<span class="params">trees</span>):</span></span><br><span class="line">    new_trees = [<span class="number">0</span>] * <span class="built_in">len</span>(trees)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(trees)):</span><br><span class="line">        <span class="keyword">if</span> (i + <span class="number">1</span>) % <span class="number">2</span> == <span class="number">1</span>:</span><br><span class="line">            new_trees[i // <span class="number">2</span>] = trees[i]</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            new_trees[<span class="built_in">len</span>(trees) - (i // <span class="number">2</span> + <span class="number">1</span>)] = trees[i]</span><br><span class="line">    <span class="keyword">return</span> new_trees</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(T):</span><br><span class="line">    N = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">    log_trees = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">int</span>, <span class="built_in">input</span>().split()))</span><br><span class="line">    log_trees = lowLevelSort(<span class="built_in">sorted</span>(log_trees))</span><br><span class="line"></span><br><span class="line">    max_level = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N - <span class="number">1</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">abs</span>(log_trees[i] - log_trees[i + <span class="number">1</span>]) &gt; max_level:</span><br><span class="line">            max_level = <span class="built_in">abs</span>(log_trees[i] - log_trees[i + <span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">abs</span>(log_trees[-<span class="number">1</span>] - log_trees[<span class="number">0</span>]) &gt; max_level:</span><br><span class="line">        max_level = <span class="built_in">abs</span>(log_trees[-<span class="number">1</span>] - log_trees[<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(max_level)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content:encoded>
-      
-      
-      <category domain="https://chlee1001.github.io/categories/Algorithm/">Algorithm</category>
-      
-      <category domain="https://chlee1001.github.io/categories/Algorithm/Python/">Python</category>
-      
-      
-      <category domain="https://chlee1001.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">알고리즘</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EB%B0%B1%EC%A4%80/">백준</category>
-      
-      <category domain="https://chlee1001.github.io/tags/Python/">Python</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EC%A0%95%EB%A0%AC/">정렬</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EA%B7%B8%EB%A6%AC%EB%94%94%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">그리디알고리즘</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EA%B7%B8%EB%A6%AC%EB%94%94/">그리디</category>
-      
-      
-      <comments>https://chlee1001.github.io/2021/08/13/BAEKJOON-11497-21-08-13/#disqus_thread</comments>
       
     </item>
     
