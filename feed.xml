@@ -9,8 +9,103 @@
     <atom:link href="https://chlee1001.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>Chaehyeon&#39;s Dev Blog</description>
-    <pubDate>Wed, 09 Feb 2022 16:01:04 GMT</pubDate>
+    <pubDate>Thu, 10 Feb 2022 13:54:26 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>[JS] 프로토타입 간단 정리</title>
+      <link>https://chlee1001.github.io/2022/02/10/JS-Prototype-1-22-02-10/</link>
+      <guid>https://chlee1001.github.io/2022/02/10/JS-Prototype-1-22-02-10/</guid>
+      <pubDate>Thu, 10 Feb 2022 14:00:00 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;em&gt;이채현&lt;/em&gt;&lt;/p&gt;
+&lt;aside&gt;
+💡 Javascript Prototype
+&lt;/aside&gt;
+
+
+
+&lt;p&gt;자바스크립트는 프로토타입 기반의 언어다.&lt;/p&gt;
+&lt;h1 id=&quot;constructor-생성자&quot;&gt;&lt;a href=&quot;#constructor-생성자&quot; class=&quot;headerlink&quot; title=&quot;constructor (생성자)&quot;&gt;&lt;/a&gt;constructor (생성자)&lt;/h1&gt;&lt;figure class=&quot;highlight jsx&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Person&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;name, age&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;this&lt;/span&gt;.name = name;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;this&lt;/span&gt;.age = age;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Paerson&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;constructor&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</description>
+      
+      
+      
+      <content:encoded><![CDATA[<p><em>이채현</em></p><aside>💡 Javascript Prototype</aside><p>자바스크립트는 프로토타입 기반의 언어다.</p><h1 id="constructor-생성자"><a href="#constructor-생성자" class="headerlink" title="constructor (생성자)"></a>constructor (생성자)</h1><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name, age</span>) </span>&#123;</span><br><span class="line"><span class="built_in">this</span>.name = name;</span><br><span class="line"><span class="built_in">this</span>.age = age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Paerson</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="title">constructor</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>생성자함수는 프로토타입이 모든 자바스크립트에 들어있듯이 생성자도 모든 자바스크립트에서 확인가능하다.</p><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> one = <span class="keyword">new</span> Person(<span class="string">&#x27;one&#x27;</span>, <span class="number">1</span>);</span><br><span class="line"><span class="keyword">const</span> two = <span class="keyword">new</span> Person(<span class="string">&#x27;two&#x27;</span>, <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(one.constructor); <span class="comment">// [Function: Person]</span></span><br><span class="line"><span class="built_in">console</span>.log(two.constructor.name); <span class="comment">// Person</span></span><br></pre></td></tr></table></figure><p>어떠한 생성자로부터 생성되었는지 유추할 수 있다.</p><p><code>instanceof</code>로 식별</p><p>object instanceof constructor</p><h1 id="proto"><a href="#proto" class="headerlink" title="proto"></a><strong><strong>proto</strong></strong></h1><p>브라우저에서 비표준으로 제공했던…</p><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array.__proto__ ...로 array의 프로토타입에 접근</span><br></pre></td></tr></table></figure><p>자바스크립트의 프로토타입에 직접 접근이 아니라 접근제어자로 접근할 수 있도록 도와주는 것으로 생각하면 됨. ⇒ <strong>하지만 사용하지 않는 것이 좋음</strong></p><p>ECMA Script2015부터는 표준화 된</p><ul><li>getPrototypeOf()</li><li>setPrototypeOf()</li></ul><p>를 사용하는 것을 추천</p><h1 id="프로토타입-체인"><a href="#프로토타입-체인" class="headerlink" title="프로토타입 체인"></a>프로토타입 체인</h1><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> animal = &#123;</span><br><span class="line">    <span class="function"><span class="title">sayName</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27;ANIMAL&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(animal.sayName()); <span class="comment">// ANIMAL</span></span><br><span class="line"><span class="keyword">const</span> dog = <span class="built_in">Object</span>.create(animal);</span><br><span class="line"><span class="built_in">console</span>.log(dog.sayName()); <span class="comment">// ANIMAL</span></span><br></pre></td></tr></table></figure><h1 id="프로토타입-확장-extends-상속"><a href="#프로토타입-확장-extends-상속" class="headerlink" title="프로토타입 확장 (extends, 상속)"></a>프로토타입 확장 (extends, 상속)</h1><p>부모 ⇒ 자식 … 상속보단 확장이란 개념이 더 이해하기 쉽다. 부모가 가진 기능보다 자식이 더 많이 가질 수 있기 때문</p><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Super Class</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Animal</span>(<span class="params">name, sound</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.name = name</span><br><span class="line">    <span class="built_in">this</span>.sound = sound;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Animal.prototype.getInfo = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.name + <span class="string">&#x27;가(이)&#x27;</span> + <span class="built_in">this</span>.sound + <span class="string">&#x27;소리를 낸다.&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Sub Class</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Friends</span>(<span class="params">name, sound</span>) </span>&#123;</span><br><span class="line">    Animal.call(<span class="built_in">this</span>, name, sound); <span class="comment">// 명시적 바인딩 -&gt; Animal함수의 this를 Friends로 바인딩</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Friends.prototype = <span class="built_in">Object</span>.create(Animal.prototype);</span><br><span class="line">Friends.prototype.constructor = Friends;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> dog = <span class="keyword">new</span> Friends(<span class="string">&#x27;개&#x27;</span>, <span class="string">&#x27;멍멍&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> cat = <span class="keyword">new</span> Friends(<span class="string">&#x27;고양이&#x27;</span>, <span class="string">&#x27;냐옹&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(dog.getInfo()); <span class="comment">// 개가(이)멍멍소리를 낸다.</span></span><br><span class="line"><span class="built_in">console</span>.log(cat.getInfo()); <span class="comment">// 고양이가(이)냐옹소리를 낸다.</span></span><br><span class="line"></span><br><span class="line">-------</span><br><span class="line"></span><br><span class="line">dog.contructor.name <span class="comment">// Friends</span></span><br><span class="line"></span><br><span class="line">dog <span class="keyword">instanceof</span> Friends <span class="comment">// true</span></span><br><span class="line">dog <span class="keyword">instanceof</span> Animal <span class="comment">// true</span></span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      
+      <category domain="https://chlee1001.github.io/categories/Web/">Web</category>
+      
+      <category domain="https://chlee1001.github.io/categories/Web/Javascript/">Javascript</category>
+      
+      
+      <category domain="https://chlee1001.github.io/tags/JS/">JS</category>
+      
+      <category domain="https://chlee1001.github.io/tags/Javascript/">Javascript</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/">자바스크립트</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85/">프로토타입</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85-%EC%B2%B4%EC%9D%B8/">프로토타입 체인</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EC%83%9D%EC%84%B1%EC%9E%90/">생성자</category>
+      
+      
+      <comments>https://chlee1001.github.io/2022/02/10/JS-Prototype-1-22-02-10/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>[JS] this 간단 정리</title>
+      <link>https://chlee1001.github.io/2022/02/10/JS-This-1-22-02-10/</link>
+      <guid>https://chlee1001.github.io/2022/02/10/JS-This-1-22-02-10/</guid>
+      <pubDate>Thu, 10 Feb 2022 12:30:00 GMT</pubDate>
+      
+      <description>&lt;p&gt;&lt;em&gt;이채현&lt;/em&gt;&lt;/p&gt;
+&lt;aside&gt;
+💡 Javascript this
+&lt;/aside&gt;
+
+
+
+&lt;p&gt;JavaScript에서 함수의 &lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/this&quot;&gt;this&lt;/a&gt; 키워드는 다른 언어와 조금 다르게 동작한다.&lt;/p&gt;
+&lt;p&gt;엄격모드와 비엄격 모드에서도 일부 차이가 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;this는 scope와 관계가 있다.&lt;/li&gt;
+&lt;li&gt;객체에도 영향을 준다.&lt;/li&gt;
+&lt;li&gt;this가 어디에 묶여있냐를 아는 것이 코드를 작성하는 시점, 동작하는 시점에 차이가 있을 수 있다.&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+      
+      
+      <content:encoded><![CDATA[<p><em>이채현</em></p><aside>💡 Javascript this</aside><p>JavaScript에서 함수의 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/this">this</a> 키워드는 다른 언어와 조금 다르게 동작한다.</p><p>엄격모드와 비엄격 모드에서도 일부 차이가 있다.</p><ul><li>this는 scope와 관계가 있다.</li><li>객체에도 영향을 준다.</li><li>this가 어디에 묶여있냐를 아는 것이 코드를 작성하는 시점, 동작하는 시점에 차이가 있을 수 있다.</li></ul><p>(함수를 어떻게 호출했는지 상관하지 않고 this값을 설정할 수 있는 <code>bind</code>메서드를 도입했고, ES2015는 스스로의 this 바인딩을 제공하지 않는 화살표 함수 를 추가했습니다.)</p><h2 id="암시적-바인딩"><a href="#암시적-바인딩" class="headerlink" title="암시적 바인딩"></a>암시적 바인딩</h2><p>암시적인 this 바인딩.. 사용자가 생각하지 않은대로 동작할 수 있다.</p><h3 id="전역-공간에서의-this"><a href="#전역-공간에서의-this" class="headerlink" title="전역 공간에서의 this"></a>전역 공간에서의 this</h3><ul><li>node.js 환경에서의 this는 <code>global</code></li><li>브라우저에서의 this는 <code>window</code></li></ul><h3 id="함수"><a href="#함수" class="headerlink" title="함수"></a>함수</h3><ul><li>함수에서의 this는 <code>window</code> ⇒ 전역공간에서의 this와 다르지 않다.</li></ul><h3 id="객체-메서드"><a href="#객체-메서드" class="headerlink" title="객체 (메서드)"></a>객체 (메서드)</h3><ul><li>this는 호출되는 대상의 객체를 가리키고 있다.</li></ul><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">name: <span class="string">&#x27;obj&#x27;</span>,</span><br><span class="line">method: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="built_in">this</span>.name</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">obj.method() <span class="comment">// &#x27;obj&#x27;</span></span><br></pre></td></tr></table></figure><h2 id="명시적-바인딩"><a href="#명시적-바인딩" class="headerlink" title="명시적 바인딩"></a>명시적 바인딩</h2><ul><li>call(), bind(), apply()</li></ul><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">    name: <span class="string">&#x27;Lee&#x27;</span>,</span><br><span class="line">    sayName: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.name + <span class="string">&#x27;입니다&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> zero = &#123;</span><br><span class="line">    name: <span class="string">&#x27;베이스&#x27;</span>,</span><br><span class="line">    sayName: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.name + <span class="string">&#x27;입니다&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li>call()</li></ul><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sayFullName</span>(<span class="params">firstName</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> firstName + <span class="built_in">this</span>.sayName()</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> result = sayFullName.call(person, <span class="string">&#x27;Chaehyeon &#x27;</span>);</span><br><span class="line"><span class="comment">// Chaehyeon Lee입니다.</span></span><br></pre></td></tr></table></figure><ul><li>apply()</li></ul><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sayFullName</span>(<span class="params">firstName</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">arguments</span>[<span class="number">1</span>] + <span class="built_in">this</span>.sayName()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> result = sayFullName.apply(person, [<span class="string">&#x27;Chaehyeon &#x27;</span>,<span class="string">&#x27;채현 &#x27;</span>]);</span><br><span class="line"><span class="comment">// 채현 Lee입니다.</span></span><br></pre></td></tr></table></figure><ul><li>bind()<ul><li>this를 묶어서 사용가능한다.</li><li>React Class Component에서 사용했다.</li></ul></li></ul>]]></content:encoded>
+      
+      
+      <category domain="https://chlee1001.github.io/categories/Web/">Web</category>
+      
+      <category domain="https://chlee1001.github.io/categories/Web/Javascript/">Javascript</category>
+      
+      
+      <category domain="https://chlee1001.github.io/tags/JS/">JS</category>
+      
+      <category domain="https://chlee1001.github.io/tags/Javascript/">Javascript</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/">자바스크립트</category>
+      
+      <category domain="https://chlee1001.github.io/tags/Object/">Object</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EA%B0%9D%EC%B2%B4/">객체</category>
+      
+      <category domain="https://chlee1001.github.io/tags/this/">this</category>
+      
+      <category domain="https://chlee1001.github.io/tags/bind/">bind</category>
+      
+      <category domain="https://chlee1001.github.io/tags/%EB%B0%94%EC%9D%B8%EB%94%A9/">바인딩</category>
+      
+      
+      <comments>https://chlee1001.github.io/2022/02/10/JS-This-1-22-02-10/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>[JS] 스코프 간단 정리</title>
@@ -762,102 +857,6 @@
       
       
       <comments>https://chlee1001.github.io/2021/08/25/21-08-25-IT_News/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>2021년 08월 20일 금요일 IT뉴스</title>
-      <link>https://chlee1001.github.io/2021/08/20/21-08-20-IT_News/</link>
-      <guid>https://chlee1001.github.io/2021/08/20/21-08-20-IT_News/</guid>
-      <pubDate>Fri, 20 Aug 2021 03:00:19 GMT</pubDate>
-      
-      <description>&lt;h2 id=&quot;1-아이폰에-지문-인식-다시-생기나…코로나19가-바꾼-생체인식-시장&quot;&gt;&lt;a href=&quot;#1-아이폰에-지문-인식-다시-생기나…코로나19가-바꾼-생체인식-시장&quot; class=&quot;headerlink&quot; title=&quot;1. 아이폰에 지문 인식 다시 생기나…코로나19가 바꾼 생체인식 시장&quot;&gt;&lt;/a&gt;1. 아이폰에 지문 인식 다시 생기나…코로나19가 바꾼 생체인식 시장&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://news.naver.com/main/read.naver?mode=LSD&amp;mid=shm&amp;sid1=105&amp;oid=584&amp;aid=0000015618&quot;&gt;아이폰에 지문 인식 다시 생기나…코로나19가 바꾼 생체인식 시장&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;신종 코로나바이러스 감염증(코로나19) 팬데믹(대유행)이 생체인식 시장의 기술 지형을 바꿔놓고 있다. 마스크를 착용한 상태에서 페이스ID가 작동하지 않는 데 따른 불편함을 해소하기 위해서 애플은 다음 달 출시할 새로운 아이폰 모델에 지문인식을 다시 탑재할 것이라는 소문이 파다하다. &lt;/p&gt;
-&lt;p&gt;개인이 사용하는 스마트폰을 제외한 분야에서는 코로나19로 비접촉식 인증 방식에 대한 수요가 폭증하면서 안면 인식 기술이 생체인식 시장을 점령하고 있다.  NEC가 올해 도쿄 올림픽에 공급한 네오페이스 워치는 인공 신경망 모델을 적용해 2차원 얼굴 이미지를 3차원으로 전환해 인식하며, 0.3초 만에 160만 개의 얼굴을 검사할 수 있다. 정확도는 99.7%다.&lt;/p&gt;
-&lt;hr&gt;</description>
-      
-      
-      
-      <content:encoded><![CDATA[<h2 id="1-아이폰에-지문-인식-다시-생기나…코로나19가-바꾼-생체인식-시장"><a href="#1-아이폰에-지문-인식-다시-생기나…코로나19가-바꾼-생체인식-시장" class="headerlink" title="1. 아이폰에 지문 인식 다시 생기나…코로나19가 바꾼 생체인식 시장"></a>1. 아이폰에 지문 인식 다시 생기나…코로나19가 바꾼 생체인식 시장</h2><p><a href="https://news.naver.com/main/read.naver?mode=LSD&mid=shm&sid1=105&oid=584&aid=0000015618">아이폰에 지문 인식 다시 생기나…코로나19가 바꾼 생체인식 시장</a></p><p>신종 코로나바이러스 감염증(코로나19) 팬데믹(대유행)이 생체인식 시장의 기술 지형을 바꿔놓고 있다. 마스크를 착용한 상태에서 페이스ID가 작동하지 않는 데 따른 불편함을 해소하기 위해서 애플은 다음 달 출시할 새로운 아이폰 모델에 지문인식을 다시 탑재할 것이라는 소문이 파다하다. </p><p>개인이 사용하는 스마트폰을 제외한 분야에서는 코로나19로 비접촉식 인증 방식에 대한 수요가 폭증하면서 안면 인식 기술이 생체인식 시장을 점령하고 있다.  NEC가 올해 도쿄 올림픽에 공급한 네오페이스 워치는 인공 신경망 모델을 적용해 2차원 얼굴 이미지를 3차원으로 전환해 인식하며, 0.3초 만에 160만 개의 얼굴을 검사할 수 있다. 정확도는 99.7%다.</p><hr><h2 id="2-도미노피자-주문하면-드론으로-배송한다"><a href="#2-도미노피자-주문하면-드론으로-배송한다" class="headerlink" title="2. 도미노피자, 주문하면 드론으로 배송한다"></a>2. 도미노피자, 주문하면 드론으로 배송한다</h2><p><a href="https://news.naver.com/main/read.naver?mode=LSD&mid=shm&sid1=105&oid=092&aid=0002231218">도미노피자, 주문하면 드론으로 배송한다</a></p><p><img src="https://imgnews.pstatic.net/image/092/2021/08/20/0002231218_001_20210820111108190.jpg?type=w647" alt="피자배달 드론과 착륙대"></p><p>국토교통부는 드론업체 피스퀘어와 글로벌 피자 체인 도미노피자와 협업해 세종시에서 21일부터 피자 드론 배송 상용화 서비스를 개시한다고 밝혔으며, 드론배송 상용화 구간은 도미노피자 세종보람점에서 세종호수공원까지로 21일부터 10월 31일까지 토요일과 일요일 오후 1시부터 6시까지 시간당 2~3회로 예상하고 있다..</p><p>그동안 국토부는 드론 산업 육성을 위해 ▲드론 특별자유화구역(33개 구역 지정) ▲드론 규제 샌드박스 사업(13개 업체) ▲드론 실증도시(10개 도시) 지정 등 드론을 활용한 서비스를 개발하고 실증하는데 집중해 왔으며 특히, 국내기술로 개발된 드론의 국제 경쟁력 강화와 신서비스 창출을 위해 제도완화, 자금지원, 수요-공급 매칭 등 체계적인 지원을 하고 있다.</p><hr><h2 id="3-OTT온에어-디즈니-한국-진출…풀어야-할-규제-산적"><a href="#3-OTT온에어-디즈니-한국-진출…풀어야-할-규제-산적" class="headerlink" title="3. [OTT온에어] 디즈니+ 한국 진출…풀어야 할 규제 산적"></a>3. [OTT온에어] 디즈니+ 한국 진출…풀어야 할 규제 산적</h2><p><a href="https://news.naver.com/main/read.naver?mode=LSD&mid=shm&sid1=105&oid=031&aid=0000619684">[OTT온에어] 디즈니+ 한국 진출…풀어야 할 규제 산적</a></p><p>디즈니플러스가 올 11월 국내 시장 진출을 본격화함에 따라 관련 업계에서는 현재 국내 OTT 시장 쟁점인 망 사용료, 음악 저작권료 문제를 어떻게 풀어갈지 관심이다.</p><p>디즈니는 국내 통신사에 콘텐츠 전송 네트워크(CDN)사업자를 통해 일종의 ‘망 사용료’를 지불하는 것으로 나타났다. CDN은 다양한 데이터를 미리 저장해 놓거나, 전송방식을 효율화해 최적의 경로로 사용자에 콘텐츠를 전달하는 서비스다.</p><p>디즈니플러스 콘텐츠에 쓰인 음악은 신탁단체에 신탁하지 않는 업무상 저작물이 대부분인 것이 넷플릭스·국내 OTT와 차이점이다. 그러나 디즈니플러스가 현지화를 위해 조달할 국내 오리지널 콘텐츠에 대해서는 신탁단체를 통한 저작권료 징수가 발생할 것으로 보인다. 디즈니플러스는 지난 4월 미디어 그룹 NEW의 콘텐츠 제작사업 계열사 스튜디오앤뉴와 5년간 장기 콘텐츠 파트너십을 맺었다. 이를 통해 양사는 매년 한편 이상의 오리지널 시리즈와 콘텐츠를 선보이기 위해 협력하기로 했다.</p><hr><h2 id="4-SKT-이프랜드-오픈-메타버스-플랫폼으로…-마켓-시스템∙공간제작-기능-등-적용"><a href="#4-SKT-이프랜드-오픈-메타버스-플랫폼으로…-마켓-시스템∙공간제작-기능-등-적용" class="headerlink" title="4. SKT 이프랜드, 오픈 메타버스 플랫폼으로… 마켓 시스템∙공간제작 기능 등 적용"></a>4. SKT 이프랜드, 오픈 메타버스 플랫폼으로… 마켓 시스템∙공간제작 기능 등 적용</h2><p><a href="https://platum.kr/archives/169316">SKT 이프랜드, 오픈 메타버스 플랫폼으로… 마켓 시스템∙공간제작 기능 등 적용</a></p><p><img src="https://platum.kr/wp-content/uploads/2021/08/ifland.jpg"></p><p>SK텔레콤이 19일 메타버스 공간에서 기자 간담회를 열고 ‘이프랜드(ifland)’를 통한 메타버스 청사진을 발표했다. 이프랜드는 SKT가 선보이는 메타버스 플랫폼으로 앞으로 마켓 시스템 및 공간제작 플랫폼 등을 적용하고 대학축제·K팝 팬미팅 등 대형 이벤트 등을 통해 코로나19 시대 비대면 트렌드를 주도한다는 계획이다.</p><hr><h2 id="5-7월-한국인이-가장-많이-쓴-금융-앱-삼성페이…자주-쓴-앱-업비트"><a href="#5-7월-한국인이-가장-많이-쓴-금융-앱-삼성페이…자주-쓴-앱-업비트" class="headerlink" title="5. 7월 한국인이 가장 많이 쓴 금융 앱 삼성페이…자주 쓴 앱 업비트"></a>5. 7월 한국인이 가장 많이 쓴 금융 앱 삼성페이…자주 쓴 앱 업비트</h2><p><a href="http://www.digitaltoday.co.kr/news/articleView.html?idxno=413617">7월 한국인이 가장 많이 쓴 금융 앱 삼성페이…자주 쓴 앱 업비트</a></p><p>삼성전자 모바일 결제 서비스 삼성페이가 한국에서 가장 많이 쓰는 금융앱이라는 조사 결과가 나왔다.</p><p>7월에 가장 자주 실행한 금융 앱은 ‘업비트’로 실행횟수가 26.1억회로 조사됐고, 토스 11.3억회, 카카오뱅크 8.8억회, 키움증권 영웅문S 7.8억회, 모바일증권 나무 6.6억회, 삼성페이 5.4억회, 증권통 5.1억회, 신한 쏠 5.0억회 순이었다.</p><p><img src="https://cdn.digitaltoday.co.kr/news/photo/202108/413617_407173_383.jpg"></p><p><img src="https://cdn.digitaltoday.co.kr/news/photo/202108/413617_407174_3818.jpg"></p>]]></content:encoded>
-      
-      
-      <category domain="https://chlee1001.github.io/categories/IT%EC%A0%95%EB%B3%B4/">IT정보</category>
-      
-      <category domain="https://chlee1001.github.io/categories/IT%EC%A0%95%EB%B3%B4/%EB%A7%A4%EC%9D%BC30%EB%B6%84-IT%EB%89%B4%EC%8A%A4/">매일30분 IT뉴스</category>
-      
-      
-      <category domain="https://chlee1001.github.io/tags/IT%EB%89%B4%EC%8A%A4/">IT뉴스</category>
-      
-      <category domain="https://chlee1001.github.io/tags/IT-Issues/">IT Issues</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EC%95%84%EC%9D%B4%ED%8F%B0/">아이폰</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EB%94%94%EC%A6%88%EB%8B%88%ED%94%8C%EB%9F%AC%EC%8A%A4/">디즈니플러스</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EB%94%94%EC%A6%88%EB%8B%88/">디즈니+</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EC%A7%80%EB%AC%B8%EC%9D%B8%EC%8B%9D/">지문인식</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EC%83%9D%EC%B2%B4%EC%9D%B8%EC%8B%9D/">생체인식</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EB%8F%84%EB%AF%B8%EB%85%B8%ED%94%BC%EC%9E%90/">도미노피자</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EB%93%9C%EB%A1%A0/">드론</category>
-      
-      <category domain="https://chlee1001.github.io/tags/SKT/">SKT</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EC%9D%B4%ED%94%84%EB%9E%9C%EB%93%9C/">이프랜드</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EC%82%BC%EC%84%B1%ED%8E%98%EC%9D%B4/">삼성페이</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EC%97%85%EB%B9%84%ED%8A%B8/">업비트</category>
-      
-      
-      <comments>https://chlee1001.github.io/2021/08/20/21-08-20-IT_News/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>2021년 08월 18일 수요일 IT뉴스</title>
-      <link>https://chlee1001.github.io/2021/08/18/21-08-18-IT_News/</link>
-      <guid>https://chlee1001.github.io/2021/08/18/21-08-18-IT_News/</guid>
-      <pubDate>Wed, 18 Aug 2021 05:00:19 GMT</pubDate>
-      
-      <description>&lt;h2 id=&quot;1-“당근하세요-”…50만→1500만명-폭발적-성장&quot;&gt;&lt;a href=&quot;#1-“당근하세요-”…50만→1500만명-폭발적-성장&quot; class=&quot;headerlink&quot; title=&quot;1. “당근하세요?”…50만→1500만명 폭발적 성장&quot;&gt;&lt;/a&gt;1. “당근하세요?”…50만→1500만명 폭발적 성장&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://news.naver.com/main/read.naver?mode=LSD&amp;mid=shm&amp;sid1=105&amp;oid=016&amp;aid=0001875929&quot;&gt;“당근하세요?”…50만→1500만명 폭발적 성장&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://imgnews.pstatic.net/image/016/2021/08/18/20210818000566_0_20210818134306006.jpg?type=w647&quot; alt=&quot;[당근마켓 제공]&quot;&gt;&lt;/p&gt;
-&lt;p&gt;당근마켓이 1800억원 규모의 투자 유치를 마무리하며 유니콘기업 (기업가치 1조원 이상의 비상장 기업) 반열에 올랐으며,  누적 투자액수는 2270억원으로, 투자 유치 과정에서 기업가치 3조원을 인정받았다.&lt;/p&gt;
-&lt;p&gt;당근마켓은 신규 투자 자금을 기반으로 하이퍼로컬 혁신을 가속화한다는 방침이며, 지속적인 기술 고도화와 함께 사업 확장을 위한 인력 채용, 해외 시장 진출 확대, 국내외 마케팅 강화 등에 집중하며 로컬 슈퍼앱으로서의 비전을 완성해 나갈 계획이다.&lt;/p&gt;</description>
-      
-      
-      
-      <content:encoded><![CDATA[<h2 id="1-“당근하세요-”…50만→1500만명-폭발적-성장"><a href="#1-“당근하세요-”…50만→1500만명-폭발적-성장" class="headerlink" title="1. “당근하세요?”…50만→1500만명 폭발적 성장"></a>1. “당근하세요?”…50만→1500만명 폭발적 성장</h2><p><a href="https://news.naver.com/main/read.naver?mode=LSD&mid=shm&sid1=105&oid=016&aid=0001875929">“당근하세요?”…50만→1500만명 폭발적 성장</a></p><p><img src="https://imgnews.pstatic.net/image/016/2021/08/18/20210818000566_0_20210818134306006.jpg?type=w647" alt="[당근마켓 제공]"></p><p>당근마켓이 1800억원 규모의 투자 유치를 마무리하며 유니콘기업 (기업가치 1조원 이상의 비상장 기업) 반열에 올랐으며,  누적 투자액수는 2270억원으로, 투자 유치 과정에서 기업가치 3조원을 인정받았다.</p><p>당근마켓은 신규 투자 자금을 기반으로 하이퍼로컬 혁신을 가속화한다는 방침이며, 지속적인 기술 고도화와 함께 사업 확장을 위한 인력 채용, 해외 시장 진출 확대, 국내외 마케팅 강화 등에 집중하며 로컬 슈퍼앱으로서의 비전을 완성해 나갈 계획이다.</p><p>그 일환으로 올 하반기 당근페이와 함께 지역 커머스 강화에 본격 나서고 있으며, 농수산물, 신선식품 등 지역 상권과 주민들을 더욱 긴밀하게 연결하는 온-오프라인 연계 비즈니스 활성화에 힘을 쏟을 예정이다.</p><hr><h2 id="2-네이버-“예스24-인수-완전-사실무근”…예스24-주가는-급등"><a href="#2-네이버-“예스24-인수-완전-사실무근”…예스24-주가는-급등" class="headerlink" title="2. 네이버 “예스24 인수, 완전 사실무근”…예스24 주가는 급등"></a>2. 네이버 “예스24 인수, 완전 사실무근”…예스24 주가는 급등</h2><p><a href="https://news.naver.com/main/read.naver?mode=LSD&mid=shm&sid1=105&oid=018&aid=0005013809">네이버 “예스24 인수, 완전 사실무근”…예스24 주가는 급등</a></p><p>네이버(035420)가 온라인 문화상품 유통 플랫폼 및 인터넷 서점 사업을 하는 ‘예스24’ 인수 추진 보도에 대해 “완전 사실무근”이라고 밝혔다. 해당 소식이 전해진 후 예스24(053280)는 주가가 급등해 이날 오전 11시35분 현재 전 거래일보다 3500원(21.54%) 오른 1만9750원에 거래됐다.</p><hr><h2 id="3-이슈진단-사업확장-제동-걸린-카카오T·직방·로톡…”소비자-편익-우선”"><a href="#3-이슈진단-사업확장-제동-걸린-카카오T·직방·로톡…”소비자-편익-우선”" class="headerlink" title="3. [이슈진단+] 사업확장 제동 걸린 카카오T·직방·로톡…”소비자 편익 우선”"></a>3. [이슈진단+] 사업확장 제동 걸린 카카오T·직방·로톡…”소비자 편익 우선”</h2><p><a href="https://news.naver.com/main/read.naver?mode=LSD&mid=shm&sid1=105&oid=092&aid=0002230775">[이슈진단+] 사업확장 제동 걸린 카카오T·직방·로톡…”소비자 편익 우선”</a></p><p>플랫폼 사업자들은 빠르고 쉬운 서비스로 소비자 편의성이 높아지고 기존 사업자와의 상생도 가능하다는 입장과 기존 사업가 단체들은 플랫폼의 업계 진출이 결국 기존 사업가의 수익 감소로 이어질 것을 우려로 갈등이 심화되고 있다.</p><p><strong>로톡</strong>은 그간 변호사 광고, 상담 예약, 온라인 상담, AI 형량 예측 등 법률 서비스를 제공해왔지만, 대한변협은 로톡의 법률 서비스가 플랫폼이 변호사의 업무와 역할을 침해한다며, 지난 5월 ‘변호사 광고에 관한 규정’ 개정안을 내놨다. 로톡 측은 “변호사법을 위반한 적이 없고, 오히려 로톡을 통해 이용자들이 손쉽게 변호사를 찾고 상담하기가 쉬워졌다”는 입장이다. </p><p>부동산 업계에서는 부동산 플랫폼 **’직방’**의 직접 중개를 두고 한국공인중개사협회가 반발하고 있다. 온택트파트너스란, 직방이 공인중개사와 제휴를 맺고 플랫폼상에서 거래 계약까지 성사하는 제도로 직방이 공인중개사의 수수료 절반을 사용료로 받는것으로 중개사협회는 이를 “직방의 직접 중개”라면서 “광고 플랫폼이었던 직방이 사실상 중개까지 나서는 것은 중개사 생존권을 위협하는 것”이라고 주장했다. 수수료 절반을 직방이 가져가는 온택트파트너스 제도가 중개업자의 수익 감소로 이어질 뿐 아니라, 향후 영세 부동산 업체들이 대형 플랫폼인 직방과 경쟁을 해야할 수도 있다는 우려다.</p><p><em>업계 관계자들과 학계는 산업의 디지털 전환은 시대적 흐름이며, 갈등 과정에서 소비자 편익을 우선적으로 고려해야 한다는 목소리를 내놨다.</em></p><p><em>한 IT업계 관계자는 “디지털 전환은 시대적인 흐름”이라며 “변화의 흐름을 무조건 거부할 것이 아니라 어떤 부분이 이점이고 어떤 부분은 변화해야 할지 플랫폼과 업계 양측이 논의를 해나가야 한다”고 제언했다.</em></p><hr>]]></content:encoded>
-      
-      
-      <category domain="https://chlee1001.github.io/categories/IT%EC%A0%95%EB%B3%B4/">IT정보</category>
-      
-      <category domain="https://chlee1001.github.io/categories/IT%EC%A0%95%EB%B3%B4/%EB%A7%A4%EC%9D%BC30%EB%B6%84-IT%EB%89%B4%EC%8A%A4/">매일30분 IT뉴스</category>
-      
-      
-      <category domain="https://chlee1001.github.io/tags/IT%EB%89%B4%EC%8A%A4/">IT뉴스</category>
-      
-      <category domain="https://chlee1001.github.io/tags/IT-Issues/">IT Issues</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EB%84%A4%EC%9D%B4%EB%B2%84/">네이버</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EB%8B%B9%EA%B7%BC%EB%A7%88%EC%BC%93/">당근마켓</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EC%B9%B4%EC%B9%B4%EC%98%A4T/">카카오T</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EC%98%88%EC%8A%A424/">예스24</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%ED%94%8C%EB%9E%AB%ED%8F%BC/">플랫폼</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EC%A7%81%EB%B0%A9/">직방</category>
-      
-      <category domain="https://chlee1001.github.io/tags/%EB%A1%9C%ED%86%A1/">로톡</category>
-      
-      
-      <comments>https://chlee1001.github.io/2021/08/18/21-08-18-IT_News/#disqus_thread</comments>
       
     </item>
     
