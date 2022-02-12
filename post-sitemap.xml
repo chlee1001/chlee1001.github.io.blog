@@ -9,8 +9,16 @@
 
 
     <url>
-        <loc>https://chlee1001.github.io/2022/02/10/JS-Prototype-1-22-02-10/</loc>
-        <lastmod>2022-02-10T13:54:26.542Z</lastmod>
+        <loc>https://chlee1001.github.io/2022/02/12/JS-Closure-1-22-02-012/</loc>
+        <lastmod>2022-02-12T12:50:17.927Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
+        <loc>https://chlee1001.github.io/2022/02/06/JS-Data-1-22-02-06/</loc>
+        <lastmod>2022-02-12T12:26:39.691Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
 
@@ -18,7 +26,23 @@
 
     <url>
         <loc>https://chlee1001.github.io/2022/02/10/JS-This-1-22-02-10/</loc>
-        <lastmod>2022-02-10T13:52:37.996Z</lastmod>
+        <lastmod>2022-02-12T12:25:57.058Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
+        <loc>https://chlee1001.github.io/2022/02/12/JS-Class-1-22-02-12/</loc>
+        <lastmod>2022-02-12T12:25:10.896Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
+        <loc>https://chlee1001.github.io/2022/02/10/JS-Prototype-1-22-02-10/</loc>
+        <lastmod>2022-02-10T13:54:26.542Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
 
@@ -35,14 +59,6 @@
     <url>
         <loc>https://chlee1001.github.io/2022/01/31/JS-Algorithm-1-22-01-31/</loc>
         <lastmod>2022-02-06T06:06:48.326Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-
-    </url>
-
-    <url>
-        <loc>https://chlee1001.github.io/2022/02/06/JS-Data-1-22-02-06/</loc>
-        <lastmod>2022-02-05T16:19:04.432Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
 
