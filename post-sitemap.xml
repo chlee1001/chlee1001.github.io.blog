@@ -9,16 +9,8 @@
 
 
     <url>
-        <loc>https://chlee1001.github.io/2022/02/12/JS-Closure-1-22-02-012/</loc>
-        <lastmod>2022-02-12T12:50:17.927Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-
-    </url>
-
-    <url>
-        <loc>https://chlee1001.github.io/2022/02/06/JS-Data-1-22-02-06/</loc>
-        <lastmod>2022-02-12T12:26:39.691Z</lastmod>
+        <loc>https://chlee1001.github.io/2022/06/01/Fastlane-1-22-06-01/</loc>
+        <lastmod>2022-06-26T07:06:28.730Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
 
@@ -26,7 +18,15 @@
 
     <url>
         <loc>https://chlee1001.github.io/2022/02/10/JS-This-1-22-02-10/</loc>
-        <lastmod>2022-02-12T12:25:57.058Z</lastmod>
+        <lastmod>2022-06-26T06:54:13.030Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
+        <loc>https://chlee1001.github.io/2019/04/18/JS%20%5B%E1%84%87%E1%85%A5%E1%86%AB%E1%84%8B%E1%85%A7%E1%86%A8%5D%2040%E1%84%80%E1%85%A1%E1%84%8C%E1%85%B5%E1%84%8B%E1%85%B4%20%E1%84%8B%E1%85%B2%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%92%E1%85%A1%E1%86%AB%20JavaScript%E1%84%90%E1%85%B5%E1%86%B8,%20%E1%84%90%E1%85%B3%E1%84%85%E1%85%B5%E1%86%A8%E1%84%80%E1%85%AA%20%E1%84%86%E1%85%A9%E1%84%87%E1%85%A5%E1%86%B7%E1%84%89%E1%85%A1%E1%84%85%E1%85%A8-2019-04-17s/</loc>
+        <lastmod>2022-06-26T06:53:58.709Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
 
@@ -34,7 +34,103 @@
 
     <url>
         <loc>https://chlee1001.github.io/2022/02/12/JS-Class-1-22-02-12/</loc>
-        <lastmod>2022-02-12T12:25:10.896Z</lastmod>
+        <lastmod>2022-06-26T06:53:49.972Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
+        <loc>https://chlee1001.github.io/2022/02/12/JS-Closure-1-22-02-012/</loc>
+        <lastmod>2022-06-26T06:53:48.520Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
+        <loc>https://chlee1001.github.io/2022/02/06/JS-Data-1-22-02-06/</loc>
+        <lastmod>2022-06-26T06:53:47.204Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
+        <loc>https://chlee1001.github.io/2022/02/02/JS-DOM-1-22-02-02/</loc>
+        <lastmod>2022-06-26T06:53:45.795Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
+        <loc>https://chlee1001.github.io/2021/12/30/JS-ES6-1-22-01-01/</loc>
+        <lastmod>2022-06-26T06:53:44.335Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
+        <loc>https://chlee1001.github.io/2022/01/01/JS-ES6-2-22-01-01/</loc>
+        <lastmod>2022-06-26T06:53:42.859Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
+        <loc>https://chlee1001.github.io/2022/01/01/JS-ES6-3-22-01-01/</loc>
+        <lastmod>2022-06-26T06:53:41.487Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
+        <loc>https://chlee1001.github.io/2022/01/01/JS-ES6-4-22-01-01/</loc>
+        <lastmod>2022-06-26T06:53:39.940Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
+        <loc>https://chlee1001.github.io/2022/01/02/JS-ES6-5-22-01-02/</loc>
+        <lastmod>2022-06-26T06:53:38.300Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
+        <loc>https://chlee1001.github.io/2022/01/02/JS-ES6-6-22-01-02/</loc>
+        <lastmod>2022-06-26T06:53:36.821Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
+        <loc>https://chlee1001.github.io/2022/01/02/JS-ES6-7-22-01-02/</loc>
+        <lastmod>2022-06-26T06:53:31.885Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
+        <loc>https://chlee1001.github.io/2022/01/03/JS-ES6-8-22-01-03/</loc>
+        <lastmod>2022-06-26T06:53:27.608Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+
+    <url>
+        <loc>https://chlee1001.github.io/2022/02/02/JS-Object-1-22-02-02/</loc>
+        <lastmod>2022-06-26T06:53:15.626Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
 
@@ -42,7 +138,7 @@
 
     <url>
         <loc>https://chlee1001.github.io/2022/02/10/JS-Prototype-1-22-02-10/</loc>
-        <lastmod>2022-02-10T13:54:26.542Z</lastmod>
+        <lastmod>2022-06-26T06:53:11.912Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
 
@@ -50,7 +146,7 @@
 
     <url>
         <loc>https://chlee1001.github.io/2022/02/10/JS-Scope-1-22-02-10/</loc>
-        <lastmod>2022-02-09T16:01:04.791Z</lastmod>
+        <lastmod>2022-06-26T06:53:06.175Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
 
@@ -59,94 +155,6 @@
     <url>
         <loc>https://chlee1001.github.io/2022/01/31/JS-Algorithm-1-22-01-31/</loc>
         <lastmod>2022-02-06T06:06:48.326Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-
-    </url>
-
-    <url>
-        <loc>https://chlee1001.github.io/2022/02/02/JS-Object-1-22-02-02/</loc>
-        <lastmod>2022-02-02T14:44:29.169Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-
-    </url>
-
-    <url>
-        <loc>https://chlee1001.github.io/2022/02/02/JS-DOM-1-22-02-02/</loc>
-        <lastmod>2022-02-02T12:57:30.658Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-
-    </url>
-
-    <url>
-        <loc>https://chlee1001.github.io/2022/01/02/JS-ES6-7-22-01-02/</loc>
-        <lastmod>2022-01-02T14:55:48.444Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-
-    </url>
-
-    <url>
-        <loc>https://chlee1001.github.io/2022/01/03/JS-ES6-8-22-01-03/</loc>
-        <lastmod>2022-01-02T14:55:36.262Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-
-    </url>
-
-    <url>
-        <loc>https://chlee1001.github.io/2022/01/02/JS-ES6-6-22-01-02/</loc>
-        <lastmod>2022-01-02T09:19:22.298Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-
-    </url>
-
-    <url>
-        <loc>https://chlee1001.github.io/2022/01/02/JS-ES6-5-22-01-02/</loc>
-        <lastmod>2022-01-02T09:18:26.199Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-
-    </url>
-
-    <url>
-        <loc>https://chlee1001.github.io/2022/01/01/JS-ES6-4-22-01-01/</loc>
-        <lastmod>2022-01-01T06:29:44.809Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-
-    </url>
-
-    <url>
-        <loc>https://chlee1001.github.io/2022/01/01/JS-ES6-3-22-01-01/</loc>
-        <lastmod>2022-01-01T05:49:48.254Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-
-    </url>
-
-    <url>
-        <loc>https://chlee1001.github.io/2022/01/01/JS-ES6-2-22-01-01/</loc>
-        <lastmod>2022-01-01T04:39:20.915Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-
-    </url>
-
-    <url>
-        <loc>https://chlee1001.github.io/2021/12/30/JS-ES6-1-22-01-01/</loc>
-        <lastmod>2022-01-01T04:38:43.728Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-
-    </url>
-
-    <url>
-        <loc>https://chlee1001.github.io/2019/04/18/JS%20%5B%E1%84%87%E1%85%A5%E1%86%AB%E1%84%8B%E1%85%A7%E1%86%A8%5D%2040%E1%84%80%E1%85%A1%E1%84%8C%E1%85%B5%E1%84%8B%E1%85%B4%20%E1%84%8B%E1%85%B2%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%92%E1%85%A1%E1%86%AB%20JavaScript%E1%84%90%E1%85%B5%E1%86%B8,%20%E1%84%90%E1%85%B3%E1%84%85%E1%85%B5%E1%86%A8%E1%84%80%E1%85%AA%20%E1%84%86%E1%85%A9%E1%84%87%E1%85%A5%E1%86%B7%E1%84%89%E1%85%A1%E1%84%85%E1%85%A8-2019-04-17s/</loc>
-        <lastmod>2022-01-01T04:34:59.907Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
 
